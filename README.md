@@ -128,6 +128,9 @@ Boot is about 2.5 seconds. The knowledge base, the glyph grammar and the
 cross-tier bridge matrix are built in memory at every start; nothing is cached
 to disk, because the same records always produce the same matrix.
 
+EQ will not start until the knowledge base is built. Complete the mining steps
+above first; the volumes must sit beside the runtime files.
+
 Type `!help` for the codes, `!about` for what the screen labels mean, and
 `!spfs` for the formula system.
 
@@ -157,7 +160,8 @@ Free for non-commercial use — personal, study, teaching, academic research,
 non-profit organisations — with credit to this repository. You may integrate it
 into your own systems, including AI and LLM systems.
 
-Commercial use requires a separate agreement. Open an issue to arrange one.
+Commercial use requires a separate agreement.
+[Open an issue](https://github.com/limabravoecho-collab/enquerant/issues) to arrange one.
 
 See LICENSE.md for the full terms.
 
