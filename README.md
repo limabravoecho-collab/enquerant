@@ -70,6 +70,10 @@ from the source rather than receiving a binary.
    python3 mine_delm_complete.py
    ```
 
+If you change the miner's cleaning rules, delete `article_cache/` before
+re-mining. The cache holds already-cleaned text, so a rule change has no
+effect until the cache is rebuilt.
+
 4. Copy the sealed volumes up to the runtime directory.
 
    ```
