@@ -357,6 +357,19 @@ def clean_wikitext(text: str) -> str:
 
     # Inline templates carrying content rather than formatting. These must be
     # unwrapped before strip_templates, which removes braces wholesale.
+    #
+    # Fractions resolve FIRST. The math rule's body admits no braces, so a
+    # nested {{math|1={{sfrac|1|2}}}} failed to match and strip_templates then
+    # took the whole thing: the Riemann hypothesis lead read "complex numbers
+    # with real part ." Resolving the inner template leaves plain text for the
+    # outer rule to unwrap.
+    t = re.sub(r"\{\{\s*s?frac\s*\|\s*([^|{}]+)\|\s*([^|{}]+)\}\}",
+               r" (\1)/(\2) ", t, flags=re.I)
+    # One parameter means a numerator of 1: {{sfrac|2}} is one half. Requiring
+    # two dropped it, and the Riemann hypothesis lead lost its defining value —
+    # "complex numbers with real part ."
+    t = re.sub(r"\{\{\s*s?frac\s*\|\s*([^|{}]+)\}\}",
+               r" (1)/(\1) ", t, flags=re.I)
     t = re.sub(r"\{\{\s*(?:math|mvar|nowrap)\s*\|\s*(?:1=)?([^{}|]*)\}\}",
                r" \1 ", t, flags=re.I)
     t = re.sub(r"\{\{\s*val\s*\|([^{}]*)\}\}", _expand_val, t, flags=re.I)
@@ -365,8 +378,6 @@ def clean_wikitext(text: str) -> str:
     t = re.sub(
         r"\{\{\s*(?:convert|cvt)\s*\|\s*([^|{}]+)\|\s*([^|{}]+)(?:\|[^{}]*)?\}\}",
         r" \1 \2 ", t, flags=re.I)
-    t = re.sub(r"\{\{\s*s?frac\s*\|\s*([^|{}]+)\|\s*([^|{}]+)\}\}",
-               r" (\1)/(\2) ", t, flags=re.I)
     # Spacing templates. Removed wholesale they fuse adjacent words.
     t = re.sub(r"\{\{\s*(?:nbsp|snd|spaces?)\s*(?:\|[^{}]*)?\}\}", " ",
                t, flags=re.I)
@@ -788,6 +799,21 @@ class Validator:
         # this carries no relation even when it holds an operator.
         if rel == REL_FORMULA and len(obj) < 3:
             return self._reject("formula_too_short")
+
+        # A caption that survived its image markup is not a formula. Two such
+        # records reached the corpus: an .svg caption and a .gif one, each
+        # carrying an operator from the prose around it.
+        if rel in (REL_FORMULA, REL_LEAD) and re.search(
+                r"File:|Image:|\.svg|\.ogg|\.png|\.jpe?g|\.gif|thumb\|", obj, re.I):
+            return self._reject("media_caption")
+
+        # Both sides a bare number is a table cell or a page counter, not a
+        # statement of relation: "0 = 2657", "2 = 3", "1 = 0.9". Tested against
+        # the whole corpus before adding — a bare number on the LEFT alone is
+        # common and legitimate ("-1 = e^(i pi)"), so only both sides reject.
+        if rel == REL_FORMULA and re.fullmatch(
+                r"\s*-?[\d,. ]+\s*[=<>]+\s*-?[\d,. ]+\s*", obj):
+            return self._reject("formula_numeric_identity")
 
         # A run-on sentence is a cleaning failure, not a claim.
         if rel == REL_LEAD and len(obj) > MAX_SENTENCE_CHARS:
