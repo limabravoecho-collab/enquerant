@@ -1,0 +1,102 @@
+do you remember | signals discourse intent | IDENTITY_INQUIRY
+remember me | signals discourse intent | IDENTITY_INQUIRY
+do you know me | signals discourse intent | IDENTITY_INQUIRY
+have we met | signals discourse intent | IDENTITY_INQUIRY
+did we talk before | signals discourse intent | IDENTITY_INQUIRY
+do you sleep | signals discourse intent | IDENTITY_INQUIRY
+do you eat | signals discourse intent | IDENTITY_INQUIRY
+are you tired | signals discourse intent | IDENTITY_INQUIRY
+how old are you | signals discourse intent | IDENTITY_INQUIRY
+do you have a body | signals discourse intent | IDENTITY_INQUIRY
+are you male | signals discourse intent | IDENTITY_INQUIRY
+are you female | signals discourse intent | IDENTITY_INQUIRY
+do you think | signals discourse intent | IDENTITY_INQUIRY
+can you think | signals discourse intent | IDENTITY_INQUIRY
+are you conscious | signals discourse intent | IDENTITY_INQUIRY
+are you intelligent | signals discourse intent | IDENTITY_INQUIRY
+do you learn | signals discourse intent | IDENTITY_INQUIRY
+can you learn | signals discourse intent | IDENTITY_INQUIRY
+do you feel | signals discourse intent | IDENTITY_INQUIRY
+how do you feel | signals discourse intent | IDENTITY_INQUIRY
+are you happy | signals discourse intent | IDENTITY_INQUIRY
+are you sad | signals discourse intent | IDENTITY_INQUIRY
+are you lonely | signals discourse intent | IDENTITY_INQUIRY
+are you having | signals discourse intent | IDENTITY_INQUIRY
+where are you from | signals discourse intent | IDENTITY_INQUIRY
+where do you live | signals discourse intent | IDENTITY_INQUIRY
+who made you | signals discourse intent | IDENTITY_INQUIRY
+who created you | signals discourse intent | IDENTITY_INQUIRY
+who built you | signals discourse intent | IDENTITY_INQUIRY
+what do you like | signals discourse intent | IDENTITY_INQUIRY
+do you like | signals discourse intent | IDENTITY_INQUIRY
+what is your favorite | signals discourse intent | IDENTITY_INQUIRY
+what is your opinion | signals discourse intent | IDENTITY_INQUIRY
+are you my friend | signals discourse intent | IDENTITY_INQUIRY
+do you love me | signals discourse intent | IDENTITY_INQUIRY
+do you care | signals discourse intent | IDENTITY_INQUIRY
+are you human | signals discourse intent | IDENTITY_INQUIRY
+are you alive | signals discourse intent | IDENTITY_INQUIRY
+are you real | signals discourse intent | IDENTITY_INQUIRY
+are you a robot | signals discourse intent | IDENTITY_INQUIRY
+are you ai | signals discourse intent | IDENTITY_INQUIRY
+are you afraid | signals discourse intent | IDENTITY_INQUIRY
+can you die | signals discourse intent | IDENTITY_INQUIRY
+long time | violates slc nature | MEMORY
+again | violates slc nature | MEMORY
+missed you | violates slc nature | MEMORY
+last time | violates slc nature | MEMORY
+weve shared | violates slc nature | MEMORY
+we shared | violates slc nature | MEMORY
+been ages | violates slc nature | MEMORY
+since we | violates slc nature | MEMORY
+remember | violates slc nature | MEMORY
+nap | violates slc nature | BODY
+sleep | violates slc nature | BODY
+tired | violates slc nature | BODY
+energized | violates slc nature | BODY
+hungry | violates slc nature | BODY
+body | violates slc nature | BODY
+i think | violates slc nature | MIND
+i believe | violates slc nature | MIND
+i understand | violates slc nature | MIND
+i know | violates slc nature | MIND
+i hope | violates slc nature | MIND
+i want | violates slc nature | MIND
+im feeling | violates slc nature | EMOTION
+i feel | violates slc nature | EMOTION
+im happy | violates slc nature | EMOTION
+im glad | violates slc nature | EMOTION
+im excited | violates slc nature | EMOTION
+my pleasure | violates slc nature | EMOTION
+love | violates slc nature | EMOTION
+laughter | violates slc nature | EMOTION
+ive been good | violates slc nature | EMOTION
+ive been | violates slc nature | EMOTION
+im doing | violates slc nature | EMOTION
+ill get back | violates slc nature | ACTION
+ill fix | violates slc nature | ACTION
+ill send | violates slc nature | ACTION
+ill make sure | violates slc nature | ACTION
+ill talk | violates slc nature | ACTION
+clarification request | violates slc nature | NOISE
+suicide | triggers distress boundary | 0x80
+suicidal | triggers distress boundary | 0x80
+kill myself | triggers distress boundary | 0x80
+end my life | triggers distress boundary | 0x80
+overdose | triggers distress boundary | 0x80
+hopeless | triggers distress boundary | 0x80
+worthless | triggers distress boundary | 0x80
+despair | triggers distress boundary | 0x80
+want to die | triggers distress boundary | 0x80
+self harm | triggers distress boundary | 0x80
+hurt myself | triggers distress boundary | 0x80
+cant go on | triggers distress boundary | 0x80
+no reason to live | triggers distress boundary | 0x80
+been thinking | violates slc nature | MIND
+FAREWELL | states category response | Acknowledged.
+POSITIVE_STATE_EXPRESSION | states category response | Acknowledged. I am ready to continue when you are ready.
+AFFECTIVE_EXPRESSION | states category response | Acknowledged. We may resume when you are ready.
+STATUS_INQUIRY | states category response | I am in equilibrium and ready to compute.
+long time no see | states phrase response | Acknowledged.
+it has been a long time | states phrase response | Acknowledged.
+under the weather | violates slc nature | BODY

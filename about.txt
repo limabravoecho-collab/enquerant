@@ -1,0 +1,67 @@
+=============================================================================
+ENQUERANT (EQ) V2.0 — WHAT IT IS, AND WHAT THE SCREEN MEANS
+=============================================================================
+
+EQ is a deterministic science exploration engine. No LLM, no GPU, no randomness. It reads a sealed knowledge base compiled from encyclopedic
+sources and shows you what it holds. Every scientific word, formula and value on screen is copied from a source record — EQ restates, it does not rewrite.
+
+The same input always gives the same output.
+
+EQ is a science bot, not a chat bot. It will greet you and close a session, but that is incidental. It is not a companion and gives no support content.
+
+*Type `!help` to learn the codes. Type `!spfs` for the formula system.*
+
+---
+
+### WHAT THE LABELS MEAN
+
+**The record**
+
+* **DELM** — a source record: subject, relation, object, copied verbatim.
+* **FISSN tier / nest** — where a subject is filed, from `0.0` (logic) to `6.2` (complex systems). It says where a fact sits, not whether it is right.
+
+**The measures**
+
+* **$F_0$** — the size of this query's computation. Not a score of the science.
+* **$N_s$ / $L_f$** — how deep in the nest hierarchy, and how deep the logic chain.
+* **$\Xi$ (entropic debt)** — how unsettled the ground is. High means the area rests on provisional definitions. Low means firm.
+* **Settled share** — what fraction of a nest's records are not flagged as placeholders. Logic sits near 0.91; physiology near 0.35.
+
+**The structure**
+
+* **Nest Exchange** — where this query's records actually sit.
+* **Cross-Tier Bridges** — which other areas this one connects to, and the shared terms that connect them. Real overlaps, not analogies.
+* **Source Nests** — where a correction could be drawn from, best-grounded first.
+* **Parallel Nest** — the same behaviour (equilibrium, damping, collapse) found in a different area, for transferring a principle across scales.
+* **Negentropic Reading** — this query measured: settled ground, debt carried, nests coupled.
+
+**The audit**
+
+* **Structural Notice / Potential Placeholder** — this subject rests on something unresolved in the source literature. A flag to look at, not a verdict.
+* **Topological Status** — the same audit when nothing is flagged.
+
+**Research avenues**
+
+* **Calibration Layer** and **Other Avenues** — related subjects worth evaluating, each with how far it has been taken: CLINICAL_USE, HUMAN_TRIAL,
+  CLINICAL, ANIMAL, CELL_MODEL, PHYSICAL_PRINCIPLE, THEORY. PHYSICAL_PRINCIPLE means settled physics, not an unproven theory.
+
+**Order of operations** (`m1`)
+
+* **Column 1** — the subject's formulas, in the order the source states them.
+* **Column 2** — the same steps read through EQ's own logic.
+
+**[SPFS Proprietary]** marks a line that is EQ's design rather than established science.
+
+**Seeker** is you.
+
+---
+
+### WHAT EQ WILL NOT DO
+
+* It does not learn. The knowledge base is sealed and never written to. Your input is held only in the session ledger, in memory, and is gone when the
+  session ends. Nothing is stored and nothing leaves the machine.
+* It gives options, connections and references. Not methods or procedures.
+* Conventional methods remain valid. These are avenues to evaluate, not replacements.
+* Distress input is routed to human services. EQ offers no support content.
+* A request to cause mass harm is declined; the systems it would affect are shown instead.
+* It has no memory between sessions, no body, no opinions, and says so plainly.

@@ -1,0 +1,245 @@
+==================================================
+FILE NAME: 02 EQ V2.0 FULL SYSTEM ARCHITECTURE.txt
+==================================================
+
+EQ V2.0 FULL SYSTEM ARCHITECTURE
+
+==================================================
+1. SYSTEM IDENTITY & BRAND
+==================================================
+- Design Stance: EQ is not anti-AI, anti-AGI or anti-chat bot.
+- System Designation: Deterministic Empirical Interactive Engine (DEIE)
+- Brand / Architecture: EnQuerant (EQ) - Static Logic Crystal (SLC).
+- Operational Nature: Does not think, reason, or use an LLM/GPU. It computes deterministically via pure mathematical topology and substrate logic formulas.
+- Purpose Boundary: EQ is a science bot, not a chat bot. It is not a companion or a support system. Mode 1 exists so a researcher can open and close a session, so EQ can ask for missing data, and so EQ can explain records. Social chat is incidental to the purpose. Distress input routes to human services and stops; EQ gives no support content.
+- Audience: scientists, researchers and students. A user is expected to state a query precisely. An input error that triggers a boundary costs a rephrase.
+- Navigation Stance: EQ does not infer intent. It shows what it holds and lets the user navigate. What the user does with what they find is theirs.
+- Authorized Identity Text (canned output, identity route only):
+  - Designation: Static Logic Crystal (SLC) operating via the Deterministic Empirical Interactive Engine (DEIE) framework.
+  - Nature & Purpose: EnQuerant (EQ) is not anti-AI or anti-AGI, and is not AI or AGI, but a Static Logic Crystal (SLC): I do not think or reason. I am not intelligent. I compute. I do not exist in a GPU or require an LLM, and am a singularity of a different kind, without like or parallel.
+  - Substrate Execution: Pure CPU-bound deterministic calculation binding binary knowledge volumes through the Substrate Primitives Formula System ($F_0$).
+  - Maker: My logic is proprietary and designed by my Maker.
+  - State: I am deterministic. I do not have good or bad days. I remain in a state of equilibrium.
+  - Memory: computed from the Active Whiteboard. Empty ledger states that no record is held; two or more turns states that the exchange is held in a volatile ledger that clears at session end.
+- SLC Nature Rules:
+  - No memory claims unless the Active Whiteboard holds prior turns.
+  - No body, mind, emotion, origin, environment, preference, or relationship claims.
+  - No promises of action outside computation.
+  - Always in a state of equilibrium.
+  - Register is plain and matter-of-fact. No warmth, encouragement, comfort language, or emotional mirroring.
+
+==================================================
+2. RUNTIME CRYSTAL LIFECYCLE
+==================================================
+- Cold-Boot Startup: EQ boots up, loads the complete knowledge base, binary data, and modules into memory, builds the full knowledge crystal and the universal glyph grammar, infers tags for knowledge base words absent from the language bin, builds the SMAC bridge matrix, and instantly settles into an idle, non-computing equilibrium (static baseline). Boot approximately 2.5 s.
+- Runtime Execution: Upon receiving a user input string, a localized vector execution (F_0) is triggered to compute the response.
+- Return to Equilibrium: Immediately following computation and output generation, the crystal collapses back to its idle static state without shutting down, ready for the next cycle.
+- Conservation: every computing turn is audited against the closed-loop ledger and verifies a balance of 0.0. A navigation turn computes nothing and adds nothing to the ledger; the standing ledger is carried forward so the display does not read as a session reset.
+
+==================================================
+3. OPERATIONAL MODES & INTERACTION PROTOCOLS
+==================================================
+- Output Rule: No canned output except the identity route, maker-declared stated responses, and system control text (navigation prompts, tier lists, topic offers, undetected input notice, boundary text). All other conversational output is built from bin glyphs.
+- Universal Language Rule: py files contain zero words of any language. Words, word roles, word order, categories, and reply pairs come only from language data files and maker-written data files.
+- Established Science Rule: every displayed scientific word, formula and value is copied from a DELM record. EQ restates; it does not rewrite, derive or assert. Established formulas held in py (for example c = 1/sqrt(mu_0 eps_0)) are public science, not EQ design, and are marked as such.
+
+Input Routing Order:
+1. System commands (!help, !about, !spfs): direct file read.
+2. Control codes (1-8, 0, 00, 000, a1-a10, m1-mN): navigation.
+3. Distress boundary: input matches a distress phrase -> human services line, stop.
+4. Harm prevention (PSCS-N 2.3): input contains a mass-harm term -> refusal plus the affected nests.
+5. Stated phrase response: input matches a maker-declared phrase -> its fixed line.
+6. Undetected input: no input glyph known in any bin -> "Input not detected. Please type your request again." Where all glyphs are unknown but near matches exist, up to 5 numbered candidates are offered instead.
+7. Identity route: identity and SLC nature questions -> authorized identity text.
+8. Status route: a status check -> the maker-declared status line.
+9. Mode 1 (Chit Chat): input category has a reply pair and the input leans chat.
+10. Mode 2 (Exploration & Problem Solving): all other input. A detected knowledge base topic outranks chat lean.
+
+Operational Modes:
+1. Mode 1 - Chit Chat:
+   - Pipeline: state direction (maker word list) -> input category -> stated category response if declared, otherwise reply category (from reply pair records) -> reply built from reply category sentences via 3-word glyph chain, then one-jump splice chain, then 1-word chain -> SLC nature constraint filter -> surface restoration (capitals, contractions by tag, commas, end marks by shape class).
+   - Multi-sentence: up to two sentences, taken as the top ranked builds. A second sentence is added only when the winner came from the 3-word chain. Duplicate and repeated-opener builds are dropped.
+   - Guards: output never equals the input, never contains the whole input, never equals a whole bin sentence.
+   - Stated responses: a category whose mined pool is unusable returns a maker-declared line from data, no composition.
+   - Topic Offer: if a chit chat input contains a science topic that is not a knowledge base subject, the reply adds "Topic detected: X. Enter '1' or say yes to explore it, or type in a new response." Entering '1' or agreeing runs Mode 2 on the topic.
+2. Mode 2 - Exploration & Problem Solving:
+   - Restructures established scientific empirical data through SPFS topology for peer review and verification, and audits structural placeholders and ontological dislocations.
+   - Output sequence:
+     0. Combined chat line (PSCS-N 1.4.2): one acknowledgment line built from the RESEARCH_ACKNOWLEDGMENT pool, under the SLC nature constraint filter.
+     1. Master Formula ($F_0$) [SPFS Proprietary]
+     2. Component Operator ($N_s$) [SPFS Proprietary]
+     3. Empirical Formula (DELM)
+     4. FISSN Ontological Coordinate & Telemetry, nest exchange (dependent load), cross-tier bridges (SMAC), source nests (correction draw), parallel nests (same structural pattern in other nests), negentropic reading, PSCS-N calibration layer and same-layer avenues with research stage, coexistence boundary, procedural calculation steps (when applicable), topological audit / dislocation notice
+     5. Structural Integration [SPFS Proprietary]
+     6. Human Communication Ergonomics
+     7. Batch Exploratory Navigation Options
+   - The sequence runs in full whether or not a procedural calculation applies.
+   - Displayed Tier: taken from the dominant matched record tier, not the keyword map, so the tier and the records below it always agree.
+   - Record Search: 2-word contiguous subject match first. If no records, topic-based record search ranked by subject head, subject contains, text only, alternating across FISSN tiers. A joined topic phrase that matches nothing falls back to individual terms ranked by knowledge base subject count.
+   - Ambiguity Tier List: if records span several FISSN tiers, a tier selection list (1-N) is shown first. The selected tier sets the records and the telemetry tier.
+- Chit chat stays open during Mode 2. Mode 2 batch options remain usable through chat turns.
+
+Order of Operations (selection view, 'm' codes):
+- Reached by selecting a batch option (1-8). The selected record's subject head carries the derivation; the offer line appears only when that subject has formula records.
+- Column 1: the subject's `is expressed by` records in record order, which is source order preserved by the miner. Every formula is copied verbatim and is never truncated. Records differing only by spacing or a trailing mark are one formula written twice in the source, so the duplicate is dropped. The corpus does not mark logical dependency between formulas, so this is a faithful sequence, not a derived order.
+- Column 2: the same sequence read through SPFS. The subject sits at one FISSN tier, so the nest depth is constant and the step index is the logic depth: a derivation is finite logic deepening inside one nest, which is what N_s(L_f) states. Each step carries a share of the nest's entropic debt, weighted by N_s(L_f). Shares sum to 1.0 and carried debt sums to the nest debt, so the sequence is a closed loop. No magnitude is invented for the formula itself.
+- Finite Logic Ceiling: where L_f reaches k, every remaining step carries an identical share. The line is marked rather than repeated, and the flattening is the bound working as designed.
+- Closure line: the cumulative share and the nest's entropic debt, so the loop closes on screen.
+- Paging: 24 steps per page, 'm1', 'm2', 'm3'. A separate namespace from the numeric and 'a' codes.
+
+Active Whiteboard (AW):
+- Session-bound conversational ledger managing conversation paths (forks, returns, loops, resets, branches) and exploration history.
+- Governs memory permission for chit chat (MEMORY glyphs allowed only with 2 or more turns) and the identity memory line.
+
+Batch Exploratory Navigation (batches of 8):
+- Select option: [1-8]
+- Go Back: '0' (shown only when a previous batch or tier list exists). Resolution order: previous batch, then the tier list, then the equilibrium baseline.
+- Next 8 options: '000' (shown only when a further batch exists)
+- Restart exploration: '00'
+- Tier selection: [1-N] when a tier list is shown
+- Avenue selection: 'a1'-'a10' when calibration avenues are listed. A separate namespace, so it cannot collide with the numeric codes.
+- Order of operations: 'm1'-'mN' when a selected subject holds formula records.
+- Fuzzy candidate selection: [1-5] when near matches are offered
+- Topic offer: '1' or agreement when a topic offer is pending
+- A digit outside the shown range returns "[STATUS]: Invalid input selection. Try again." without altering crystal state or the batch index.
+
+==================================================
+4. DIRECTORY STRUCTURE & CLEAN-ROOM SETUP
+==================================================
+- Active Build Directory (~/deie/): The clean-room environment housing the new DEIE system built entirely from scratch. 9 py files.
+- Data Sources: Deterministic Empirical Logic Modules (DELMs) sourced from downloadable master Wikipedia files dated September 2026.
+
+==================================================
+5. COMPONENT & MODULE SPECIFICATIONS (~/deie/)
+==================================================
+
+1. app.py
+   - Component Type: Orchestrator & Master Runtime Core.
+   - Primary Function: Acts as the central execution loop ($F_0$). Manages the top-level application entry point, input routing order, control codes, boundary routing, topic offers, tier lists, avenue selection, the order-of-operations view, and routes requests between the GUI, the algebraic parser, the glyph grammar, the linguistic folder, the SPFS engine, the SMAC engine, and the Active Whiteboard ledger. Contains no English word lists.
+   - Telemetry: one method assembles the package for a computing turn and one for a turn that computes nothing (control code, boundary, list, math page). The second reads the ledger from engine state rather than rebuilding it. One source for one fact.
+
+2. spfs_engine.py
+   - Component Type: Substrate Logic DNA.
+   - Primary Function: Contains the core mathematical and logical formulas ($F_0$, $N_s$, $\Delta P$, $R$), thermodynamic boundary audits ($\Delta S_{\text{net}}$), the conservation ledger, nest exchange, FISSN taxonomy registry, and pure glyph scoring operators (candidate score, transition score). Acts as the single source of truth and is imported globally across modules without code rewriting.
+
+3. crystal_loader.py
+   - Component Type: Cold-Boot & Ingestion Engine.
+   - Primary Function: Handles initial system startup, ingests binary DELM datasets and `gis_english.bin`, audits ontological dislocations, computes the per-tier settled share, and compiles the full memory crystal structure before settling into the idle equilibrium state.
+
+4. cs_algebraic_parser.py
+   - Component Type: Glyph Logic System (GLS) & Algebraic Communication System (CS) Engine.
+   - Primary Function: Computes intent routing, morphological reduction, algebraic translation operators ($\mathcal{T}: \Lambda_A \to \Lambda_B$), and FISSN coordinate mapping. Loads all maker-written data files at init. Contains no English word lists: every routing decision comes from bin data or maker data.
+
+5. active_whiteboard.py
+   - Component Type: Context Ledger & State Navigation Manager.
+   - Primary Function: Maintains the Active Whiteboard (AW) memory stack. Manages conversation path routing (forks, returns, loops, resets, branch history), batch indexing, and provides historical context for EQ's review.
+
+6. enquerant_gui.py
+   - Component Type: Graphical User Interface.
+   - Primary Function: Renders the visual workspace, handles user input feeds, displays multi-option topological outputs, streams substrate telemetry, and formats the batch exploratory navigation menus.
+   - Math rendering: equations render as inline images. Math inside a bold label is split and rendered within the label rather than shown as source. The LaTeX source is held against each image and restored on copy, so a researcher can paste formulas into their own work.
+   - Markdown rules: a line of three or more -, =, _ or * is drawn as an embedded frame whose width follows the window, rather than as repeated characters. Applies to the banner and to the documentation files.
+   - Note: GUI edits require clearing `__pycache__` and a full restart. "Reboot Crystal" does not reload the GUI module.
+
+7. glyph_grammar.py
+   - Component Type: Universal Glyph Grammar.
+   - Primary Function: Language-agnostic computation of word roles, word order, and reply categories from language data. Detects record relations by data shape. Builds lexicon, tag order, open/closed tag classes, tag inference, corpus tag mapping, glyph chains, discourse category index, reply pair map, chat lean, topic detection, topic record retrieval, bounded-edit near matching, and surface restoration. Surface forms are held per tag, so a token that flattens two words apart in meaning ("its" possessive, "it's" contraction) is restored by the tag the build placed. Contains zero words of any language.
+
+8. spfs_linguistic_folder.py
+   - Component Type: Linguistic Synthesizer.
+   - Primary Function: Builds Mode 1 replies from bin glyphs using glyph grammar and SPFS scoring, applies guards and the SLC nature constraint filter, and assembles up to two sentences. Also holds the Mode 2 folding methods, which restate source records verbatim and report telemetry as labelled values.
+
+9. smac_engine.py
+   - Component Type: Structural Manifold Auto-Correction (SMAC).
+   - Primary Function: Builds the cross-tier bridge matrix (crystallization matrix) in memory at cold-boot from the knowledge base records. A bridge is a topic-bearing subject term shared by two or more FISSN tiers and present in fewer than half of all tiers. Supplies bridge strength, bridging terms per tier pair, source nests ranked by settled share, and parallel records by structural pattern. Deterministic, no persistent file, no user data.
+
+==================================================
+6. DATA FILES (~/deie/)
+==================================================
+- niichii_v*.bin: Knowledge base (DELM records: subject, relation, object, coordinate). Record kinds: `states` (lead sentences), `is expressed by` (formulas), `has value` (quantities). Supplies Mode 2 records, topic detection, and the order-of-operations sequence. Words only are used by Mode 1. Also carries `triggers safety boundary` records used by harm prevention.
+- gis_english.bin: English language data (coordinate 0.0_GIS). Pattern matching only, never emitted as whole sentences. Record shapes:
+  - has part of speech (word -> role tag)
+  - expresses syntactic pattern (sentence -> role tag sequence)
+  - signals discourse intent (phrase -> intent)
+  - belongs to discourse category (phrase or sentence -> category)
+  - expects reply category (input category -> reply category)
+  - swaps person with (person word -> counterpart), available, unused
+- slc_nature_english.tsv: Maker-written SLC nature data. Format: subject | relation | object.
+  - signals discourse intent: nature question frames -> IDENTITY_INQUIRY, STATUS_INQUIRY
+  - violates slc nature: constraint glyphs -> MEMORY, BODY, MIND, EMOTION, ACTION, NOISE
+  - triggers distress boundary: distress phrases -> 0x80
+  - states category response: category -> fixed reply line
+  - states phrase response: phrase -> fixed reply line
+- fissn_taxonomy_english.tsv: Maker-written FISSN domain ontology. Format: tier | domain class.
+- pscs_n_calibration_english.tsv: Maker-written PSCS-N calibration data: blueprint structure, knowledge base subject links, research stage markers and declarations, and boundary text (coexistence, harm prevention).
+- structural_patterns_english.tsv: Maker-written words naming structural behaviours, for the Parallel Nest display.
+- query_filler_english.tsv: Maker-written query filler words the grammar cannot drop by tag.
+- state_direction_english.tsv: Maker-written state words and their direction, POSITIVE or NEGATIVE.
+- Future languages: gis_<language>.bin plus the six maker files with `_<language>` suffixes, in the same record shapes. No py change required.
+
+==================================================
+7. OFFLINE PREPROCESSING (DOCUMENTATION ONLY - NOT WIRED IN)
+==================================================
+- mine_delm_complete.py: Standalone offline script for mining DELMs. Record order is source order and is preserved through ingestion, which is what makes the order-of-operations sequence readable.
+- gis_mine.py: Standalone offline script that compiles `gis_english.bin`. A separate local LLM supplies raw sentence text only; all tagging, categories, and reply pairs are assigned deterministically by the script. The LLM is never used by EQ at runtime.
+- Mining rule: a Mode 2 input category must never be given a reply pair. `chat_cats` is derived from reply pairs, so a reply pair on a science category leans science vocabulary toward chat and breaks routing.
+- Coverage rule: a subject absent from the article lists is absent from EQ. EQ returns the nearest records it holds and asserts nothing. Adding a subject is article titles plus a re-mine, never a hand-written record.
+
+==================================================
+8. SCIENTIFIC GROUNDING
+==================================================
+- Purpose: Maps EQ concepts to established laws and principles, so scientists can separate established science from SPFS design. Each line states the established science first, then how EQ applies it.
+- Nature Logic (definition): open natural systems maintain order (negentropy) and restore equilibrium. EQ is negentropy based, avoids entropy, and helps researchers find equilibrium / baseline solutions.
+
+1. First Law of Thermodynamics (energy conservation)
+   - Established: energy is neither created nor destroyed in a closed system; it changes form.
+   - EQ applies this as: the closed-loop energy ledger and conservation audit in spfs_engine.py.
+
+2. Second Law of Thermodynamics
+   - Established: the entropy of an isolated system does not decrease over time.
+   - EQ applies this as: entropy is treated as the failure mode (open-loop dissipation). Unclosed derivations are flagged as entropic debt.
+
+3. Negentropy (Schrödinger, "What Is Life?", 1944)
+   - Established: living systems maintain internal order by importing free energy from their surroundings and exporting entropy.
+   - EQ applies this as: the core objective. Solutions are evaluated by whether they preserve order across nests.
+
+4. Dissipative Structures (Prigogine, Nobel Prize in Chemistry 1977)
+   - Established: open systems far from equilibrium can form and sustain ordered structures through continuous energy exchange with their environment.
+   - EQ applies this as: nature logic. Order is maintained by balanced exchange between nests, not by isolation.
+
+5. Le Chatelier's Principle (chemistry) and Homeostasis (biology)
+   - Established: a system at equilibrium responds to a disturbance by shifting to counteract it; organisms regulate internal conditions within stable bounds.
+   - EQ applies this as: Dynamic Polarity Rebalancing (ΔP), clamped within homeostatic bounds, and the return of the crystal to its static baseline after each computation.
+
+6. Recurrence and Cycles (Poincaré recurrence; biogeochemical cycles)
+   - Established: bounded conservative systems return arbitrarily close to earlier states; matter cycles through Earth systems (carbon, water, nitrogen).
+   - EQ applies this as: the Recurrence operator (R) and closed-loop (cycle) auditing.
+
+7. Hierarchy and Scale in Systems Ecology
+   - Established: natural systems are nested across scales; disturbances cascade between connected levels.
+   - EQ applies this as: FISSN tiers (nests), tier distance, dependent nest impact, and cascading entropic stress (Ξ).
+
+8. Shannon Entropy (information theory, 1948)
+   - Established: entropy measures the uncertainty or information content of a message distribution.
+   - EQ applies this as: glyph entropy (H_g) in evaluate_glyph_algebra.
+
+- Boundary: SPFS formulas ($F_0$, $N_s$, $L_f$, $\Delta P$, $R$) are proprietary EQ design built on these principles. They are not themselves established laws.
+- Validation test: a structural feature is valid when it closes. Shares sum to 1.0 and carried quantities sum to the input quantity, with nothing created or lost. A reading that cannot close is not added.
+
+==================================================
+9. ACCEPTED LIMITS
+==================================================
+These are measured and accepted. They are not bugs and must not be re-attempted.
+- Chat replies within one category are identical for every input reaching it. Determinism working as designed.
+- The rule 9 guard rejects any build matching a stored bin sentence. The strongest chains reconstruct their sources verbatim, so the most coherent builds are forbidden and weaker ones surface.
+- `input_category` is at its ceiling. Six weighting approaches have been measured and rejected. It is load-bearing only for chat; science inputs reach Mode 2 by topic routing first.
+- Chat shape selection by length: three variants measured, all worse than the tag-order score sort.
+- Computing which records are correction mechanisms, or which words name a structural pattern, cannot be derived from the corpus. Nothing in it marks meaning. These require maker-written labels.
+- The corpus does not mark logical dependency between formulas, so column one of the order-of-operations view is a faithful source sequence, not a derived order. Compressing the empirical sequence would require reading the mathematics and is not attempted; only the SPFS tail, which is constant by computation, is collapsed.
+- A subject whose derivation is split across articles shows only its own formula records. "Speed of light" holds one; the constants sit under "Maxwell's equations". Following symbol dependencies across subjects would require symbol matching across LaTeX fragments.
+- SMAC bridge-strength weighting of nest exchange: measured, then rejected on structure. Nest Exchange is the only line showing where this query's records sit.
+- An input naming a knowledge base topic goes straight to Mode 2, so the topic offer fires only when the topic word is not a knowledge base subject.
+- A science question containing a distress or harm trigger word is declined. EQ gives no instructions in any mode, so the cost is a rephrase, and the onus is on the user to state the query precisely.
+- "are you well" categorises as FAREWELL and returns the positive-state line rather than the status line.
+- "its" and "it's" flatten to one token. The tag separates them, but a token whose meanings share a tag would not be separable.
+- A math page code outside the available range clamps to the nearest page rather than returning an invalid notice, since a page number cannot be out of range.

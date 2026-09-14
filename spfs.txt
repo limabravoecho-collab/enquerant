@@ -1,0 +1,53 @@
+=============================================================================
+SUBSTRATE PRIMITIVES FORMULA SYSTEM (SPFS)
+=============================================================================
+
+SPFS is EQ's own logic layer. It does one thing: it places a subject in a structure and measures that placement.
+
+*Type `!help` for the codes. Type `!about` for the screen labels.*
+
+---
+
+### WHAT IT DOES FOR YOU
+
+Established science tells you what is true. SPFS tells you where it sits.
+
+* **Which nest** a subject belongs to, and how settled that ground is.
+* **What it connects to** — real term overlaps with other fields, so a method from physics can be found from a physiology query.
+* **What a correction would cost elsewhere** — which neighbouring systems carry load if this one is changed.
+
+That is the whole purpose. Not a second opinion on the science, but a map of its structural position and its dependencies.
+
+---
+
+### THE OPERATORS
+
+Master Formula:  F_0 = ∮ [ R · ( N_s(L_f) ⊕ ΔP ) ] dt
+Component:       N_s(L_f) = Σ [ ω_i · ψ(s_i, f) ]
+
+* **N_s** — structural nesting. Infinite containers, finite logic inside them.
+* **L_f** — logic depth, bounded so computation always terminates.
+* **ΔP** — polarity rebalancing, held within bounds the way a system at equilibrium resists a disturbance.
+* **R** — recurrence, binding each cycle back to the static baseline.
+* **Ξ** — entropic debt: the disorder a nest carries.
+
+---
+
+### THE TEST IT HAS TO PASS
+
+Every SPFS reading is a conservation reading. A quantity is divided and the parts sum back to the whole: shares total 100%, carried debt totals the nest's
+debt, the energy ledger balances at zero every turn.
+
+If a reading cannot close, it is not shown. That is the standard the system is held to, and it is visible on screen.
+
+---
+
+### THE BOUNDARY
+
+SPFS is built on established principles — conservation of energy, the second law, negentropy (Schrödinger), dissipative structures (Prigogine), Le
+Chatelier, Poincaré recurrence, hierarchy in systems ecology, Shannon entropy.
+
+The formulas above are EQ's design. They are not themselves established laws, and every line carrying them is marked [SPFS Proprietary] so you can tell the
+two apart at a glance.
+
+The SPFS logic is intended for publication once EQ has been tested and confirmed to function as designed. There is no black box.

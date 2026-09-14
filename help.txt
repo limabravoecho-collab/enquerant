@@ -1,0 +1,54 @@
+# ENQUERANT (EQ) V2.0 — HOW TO USE
+=============================================================================
+
+EQ is a science exploration engine. Ask about a subject and it shows you the records it holds, where that subject sits, and what it connects to.
+
+*Type `!about` for what the screen labels mean. Type `!spfs` for the formula system.*
+
+---
+
+### ASK
+
+Type the subject plainly.
+
+* **Best:** the subject on its own — "histotripsy", "dark energy", "Riemann zeta function"
+* **Fine:** a direct question — "what is dark energy?"
+* **Avoid:** long framing around a short subject. Extra words dilute the match.
+
+If EQ does not hold a subject, it shows the nearest records it has. It will not invent an answer. If a word is misspelled, it offers the closest matches as a
+numbered list.
+
+---
+
+### NAVIGATE
+
+Results come eight at a time.
+
+* `1`–`8` — open that record
+* `000` — next eight
+* `0` — back one step
+* `00` — start over
+
+Extra codes appear when there is something to use them on:
+
+* `a1`–`a10` — a related research avenue
+* `m1`, `m2` — the formulas for the subject you opened, 24 at a time
+
+EQ tells you which codes are available at the bottom of each screen. If a code does nothing, it was not offered.
+
+---
+
+### TWO OTHER LISTS
+
+* **Tier list** — the subject spans several areas. Pick the one you meant.
+* **Topic offer** — you mentioned a subject in passing. Enter `1` or say yes.
+
+---
+
+### THE REST
+
+* `!help` `!about` `!spfs` — these files
+* The **COPY** button copies the whole session, formulas included, ready to paste into your own work.
+* Ask "who are you" for what EQ is. Ask "how are you" and it will tell you it is in equilibrium, because it always is.
+
+EQ has no memory between sessions and nothing is sent anywhere.

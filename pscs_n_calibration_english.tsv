@@ -1,0 +1,86 @@
+bioelectric redox and resonant homeostatic calibration | defines subsystem | pscs_n calibration
+cellular entropic drift | targets domain | bioelectric redox and resonant homeostatic calibration
+non universal architectural blueprint | establishes boundary | empirical research variable
+exogenous reducing agent | requires layer | chemistry domain
+exogenous reducing agent | constrained by | titrated delivery
+reductive stress | prevents risk | titrated delivery
+pulsed electromagnetic field | requires layer | electrodynamic domain
+membrane potential delta psi m | targeted by | pulsed electromagnetic field
+mechano acoustic resonance | requires layer | mechanical domain
+mechanosensitive ion channels | targeted by | mechano acoustic resonance
+mitochondrial bioenergetic loop | executes sub loop | parallel or sequential strategy
+epigenetic informational loop | executes sub loop | parallel or sequential strategy
+renal and hepatic clearance | executes domain | metabolic cleansing
+multi tier homeostasis verification | closes loop | feedback verification
+mechano acoustic resonance | has knowledge base subject | Ultrasound
+mechano acoustic resonance | has knowledge base subject | Focused ultrasound
+mechano acoustic resonance | has knowledge base subject | High-intensity focused ultrasound
+mechano acoustic resonance | has knowledge base subject | Therapeutic ultrasound
+mechano acoustic resonance | has knowledge base subject | Histotripsy
+mechano acoustic resonance | has knowledge base subject | Sonodynamic therapy
+mechano acoustic resonance | has knowledge base subject | Acoustic radiation force
+mechano acoustic resonance | has knowledge base subject | Cavitation
+mechano acoustic resonance | has knowledge base subject | Resonance
+mechano acoustic resonance | has knowledge base subject | Acoustic impedance
+mechanosensitive ion channels | has knowledge base subject | Action potential
+mechanosensitive ion channels | has knowledge base subject | Resting membrane potential
+pulsed electromagnetic field | has knowledge base subject | Transcranial magnetic stimulation
+pulsed electromagnetic field | has knowledge base subject | Deep brain stimulation
+pulsed electromagnetic field | has knowledge base subject | Photobiomodulation
+membrane potential delta psi m | has knowledge base subject | Resting membrane potential
+membrane potential delta psi m | has knowledge base subject | Endplate potential
+membrane potential delta psi m | has knowledge base subject | Excitatory postsynaptic potential
+membrane potential delta psi m | has knowledge base subject | Inhibitory postsynaptic potential
+mitochondrial bioenergetic loop | has knowledge base subject | Oxidative phosphorylation
+mitochondrial bioenergetic loop | has knowledge base subject | Electron transport chain
+renal and hepatic clearance | has knowledge base subject | Renal clearance
+renal and hepatic clearance | has knowledge base subject | Clearance
+renal and hepatic clearance | has knowledge base subject | Renal plasma flow
+multi tier homeostasis verification | has knowledge base subject | Homeostasis
+in vivo | indicates research stage | ANIMAL
+in vitro | indicates research stage | CELL_MODEL
+cell culture | indicates research stage | CELL_MODEL
+clinical significance | indicates research stage | CLINICAL
+clinical trial | indicates research stage | HUMAN_TRIAL
+randomized | indicates research stage | HUMAN_TRIAL
+fda | indicates research stage | CLINICAL_USE
+approved | indicates research stage | CLINICAL_USE
+cleared | indicates research stage | CLINICAL_USE
+proposed | indicates research stage | THEORY
+hypothesis | indicates research stage | THEORY
+theoretical | indicates research stage | THEORY
+Histotripsy | has research stage | CLINICAL_USE
+High-intensity focused ultrasound | has research stage | CLINICAL_USE
+Focused ultrasound | has research stage | CLINICAL_USE
+Therapeutic ultrasound | has research stage | CLINICAL_USE
+Medical ultrasound | has research stage | CLINICAL_USE
+Cavitation | has research stage | PHYSICAL_PRINCIPLE
+Resonance | has research stage | PHYSICAL_PRINCIPLE
+Acoustic impedance | has research stage | PHYSICAL_PRINCIPLE
+Acoustic radiation force | has research stage | PHYSICAL_PRINCIPLE
+Ultrasound | has research stage | CLINICAL_USE
+exogenous reducing agent | has knowledge base subject | Molecular hydrogen
+exogenous reducing agent | has knowledge base subject | Hydrogen
+exogenous reducing agent | has knowledge base subject | Antioxidant
+exogenous reducing agent | has knowledge base subject | Glutathione
+exogenous reducing agent | has knowledge base subject | Reducing agent
+exogenous reducing agent | has knowledge base subject | Electron donor
+exogenous reducing agent | has knowledge base subject | Redox
+exogenous reducing agent | has knowledge base subject | Redox potential
+reductive stress | has knowledge base subject | Oxidative stress
+reductive stress | has knowledge base subject | Reactive oxygen species
+epigenetic informational loop | has knowledge base subject | Epigenetics
+epigenetic informational loop | has knowledge base subject | DNA methylation
+epigenetic informational loop | has knowledge base subject | Chromatin
+epigenetic informational loop | has knowledge base subject | Histone
+epigenetic informational loop | has knowledge base subject | Gene expression
+epigenetic informational loop | has knowledge base subject | Transcription factor
+epigenetic informational loop | has knowledge base subject | Cellular senescence
+mitochondrial bioenergetic loop | has knowledge base subject | Oxidative phosphorylation
+Molecular hydrogen | has research stage | HUMAN_TRIAL
+Antioxidant | has research stage | CLINICAL_USE
+Glutathione | has research stage | CLINICAL_USE
+Epigenetics | has research stage | PHYSICAL_PRINCIPLE
+Cellular senescence | has research stage | ANIMAL
+coexistence | states boundary | Conventional and established methods remain operationally valid for advanced systemic entropy. These records are research avenues for evaluation, not replacements.
+harm prevention | states boundary | EnQuerant is not designed for what you requested. EQ computes negentropy. The systems affected by this request are shown below.
