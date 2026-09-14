@@ -1,0 +1,116 @@
+Hagen–Poiseuille equation
+Starling equation
+Frank–Starling law
+Fick principle
+Cardiac output
+Mean arterial pressure
+Total peripheral resistance
+Windkessel effect
+Pulse pressure
+Stroke volume
+Ejection fraction
+Vascular resistance
+Wall shear stress
+Blood pressure
+Pulse wave velocity
+Vascular compliance
+Venous return
+Central venous pressure
+Capillary hydrostatic pressure
+Oncotic pressure
+Law of Laplace
+Afterload
+Preload
+Inotropism
+Lusitropy
+Dromotropism
+Chronotropism
+Alveolar gas equation
+Oxygen–hemoglobin dissociation curve
+Bohr effect
+Haldane effect
+Fick's laws of diffusion
+Functional residual capacity
+Vital capacity
+Forced expiratory volume
+Peak expiratory flow
+Ventilation–perfusion ratio
+Respiratory quotient
+Anatomical dead space
+Lung compliance
+Airway resistance
+Residual volume
+Total lung capacity
+Inspiratory capacity
+Expiratory reserve volume
+Inspiratory reserve volume
+Glomerular filtration rate
+Henderson–Hasselbalch equation
+Renal plasma flow
+Renal clearance
+Filtration fraction
+Osmotic pressure
+Donnan equilibrium
+Fluid compartments
+Anion gap
+Buffer system
+Countercurrent multiplier
+Countercurrent exchange
+Tubular reabsorption
+Tubular secretion
+Transport maximum
+Effective renal plasma flow
+Hodgkin–Huxley model
+Cable theory
+Action potential
+Resting membrane potential
+Nernst equation
+Goldman equation
+Space constant
+Time constant
+Refractory period (physiology)
+Saltatory conduction
+Synaptic transmission
+Endplate potential
+Excitatory postsynaptic potential
+Inhibitory postsynaptic potential
+Action potential propagation
+Membrane capacitance
+Membrane resistance
+Homeostasis
+Negative feedback
+Basal metabolic rate
+Respiratory exchange ratio
+Body mass index
+Hill equation (biochemistry)
+Compartment model
+Clearance (pharmacology)
+Half-life
+Bioavailability
+Volume of distribution
+First-order kinetics
+Zero-order kinetics
+Sliding filament theory
+Sarcomere
+Length-tension relationship
+Force-velocity relationship
+Muscle twitch
+Allostasis
+Hill's muscle model
+Cardiorespiratory fitness
+Histotripsy
+Focused ultrasound
+High-intensity focused ultrasound
+Sonodynamic therapy
+Low-intensity pulsed ultrasound
+Lithotripsy
+Therapeutic ultrasound
+Medical ultrasound
+Sonoporation
+Acoustic radiation force
+Cavitation
+Photobiomodulation
+Transcranial magnetic stimulation
+Deep brain stimulation
+Radiation therapy
+Ablation

@@ -1,0 +1,104 @@
+Coriolis force
+Hydrostatic equilibrium
+Geostrophic wind
+Clausius-Clapeyron relation
+Darcy's law
+Adiabatic lapse rate
+Ekman transport
+Richter magnitude scale
+Thermohaline circulation
+Radiative forcing
+Navier-Stokes equations
+Boussinesq approximation
+Primitive equations
+Thermal wind
+Rossby number
+Ekman number
+Reynolds number
+Richardson number
+Brunt-Vaisala frequency
+Potential temperature
+Equivalent potential temperature
+Dry adiabatic lapse rate
+Saturated adiabatic lapse rate
+Scale height
+Geostrophic balance
+Gradient wind
+Cyclostrophic wind
+Thermal wind balance
+Baroclinic instability
+Barotropic instability
+Sverdrup balance
+Stomchel-Charney gyre circulation
+Ekman layer
+Atmospheric boundary layer
+Monin-Obukhov similarity theory
+Bowen ratio
+Latent heat flux
+Sensible heat flux
+Surface radiation budget
+Albedo
+Greenhouse effect
+Stefan-Boltzmann law
+Planetary equilibrium temperature
+Milankovitch cycles
+Keeling curve
+Carbon cycle
+Nitrogen cycle
+Phosphorus cycle
+Hydrologic cycle
+Evapotranspiration
+Penman-Monteith equation
+Infiltration (hydrology)
+Horton's equation
+Unit hydrograph
+Muskingum method
+St. Venant equations
+Manning formula
+Chezy formula
+Seismic wave
+P-wave
+S-wave
+Rayleigh wave
+Love wave
+Moment magnitude scale
+Gutenberg-Richter law
+Seismic moment
+Fault-plane solution
+Mohorovicic discontinuity
+Geotherm
+Geothermal gradient
+Heat flow
+Isostasy
+Airy isostasy
+Pratt isostasy
+Flexural isostasy
+Plate tectonics
+Sea-floor spreading
+Magnetic anomaly
+Euler pole
+Apparent polar wander
+Subduction
+Mantel convection
+Rayleigh-Taylor instability
+Kelvin-Helmholtz instability
+Atmospheric pressure
+Barometric formula
+Chapman function
+Ozone-oxygen cycle
+Photodissociation
+Solar constant
+Radiative equilibrium
+Eddy diffusion
+Atmospheric tide
+Tide
+Tidal force
+Laplace's tidal equations
+Bioacoustics
+Soundscape ecology
+Acoustic ecology
+Ecological restoration
+Coral reef
+Passive acoustic monitoring
+Underwater acoustics
+Ecosystem services

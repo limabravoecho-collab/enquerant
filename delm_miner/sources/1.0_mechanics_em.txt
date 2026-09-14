@@ -1,0 +1,57 @@
+The net force on a body equals the rate of change of the body's momentum. For a
+body of constant mass this relation reduces to F = ma, where a is the
+acceleration of the body.
+
+The acceleration of a body is parallel to the net force acting on it and
+inversely proportional to the mass of the body.
+
+The total momentum of a closed system remains constant. A collision between
+bodies within such a system redistributes momentum among them without altering
+the total.
+
+The momentum of a body is the product of its mass and its velocity, written
+p = mv.
+
+The kinetic energy of a body moving slowly compared with light is KE = mv^2/2,
+proportional to the square of the speed of the body.
+
+The gravitational force between two masses is proportional to the product of the
+masses and inversely proportional to the square of the distance separating their
+centres. Its magnitude is F = G m1 m2 / r^2, where G is the gravitational
+constant.
+
+The electrostatic force between two point charges has magnitude
+F = k q1 q2 / r^2 and acts along the line joining the charges. Like charges repel
+and unlike charges attract.
+
+The electric flux through a closed surface depends only on the charge enclosed
+by that surface. Gauss's law expresses this as flux = Q/e0, where e0 is the
+permittivity of free space.
+
+A changing magnetic flux through a circuit induces an electromotive force in
+that circuit. The induced electromotive force is EMF = -dPhi/dt, and the
+negative sign indicates that the induced current opposes the change producing
+it.
+
+The Lorentz force on a charge q travelling with velocity v through electric and
+magnetic fields is F = q(E + v x B). The magnetic contribution is perpendicular
+to both the velocity of the charge and the magnetic field.
+
+The speed of an electromagnetic wave in vacuum is c = 1/sqrt(mu0 e0), fixed by
+the permeability and permittivity of free space and independent of the motion of
+the source.
+
+The energy of a photon is proportional to its frequency, written E = hf, where h
+is the Planck constant.
+
+The wavelength associated with a particle of momentum p is lambda = h/p. De
+Broglie proposed this relation, which predicts the diffraction of electrons
+through a crystal lattice.
+
+The product of the uncertainties in the position and the momentum of a particle
+satisfies dx dp >= hbar/2, where hbar is the reduced Planck constant.
+
+The electrical resistance of a conductor relates the voltage across it to the
+current through it. Ohm's law states this as V = IR.
+
+The power dissipated by a resistor carrying current I at voltage V is P = IV.

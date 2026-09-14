@@ -1,0 +1,79 @@
+No-cloning theorem
+Bell's theorem
+Shor's algorithm
+Grover's algorithm
+Holevo's theorem
+Lyapunov exponent
+Feigenbaum constants
+Kolmogorov complexity
+Bak–Tang–Wiesenfeld model
+Smith–Waterman algorithm
+Quantum error correction
+Surface code
+Stabilizer code
+Quantum teleportation
+Quantum key distribution
+Entanglement measure
+Concurrence (quantum information)
+Quantum discord
+Quantum channel
+Density matrix
+Partial trace
+Schmidt decomposition
+Quantum Fourier transform
+Quantum phase estimation algorithm
+Deutsch–Jozsa algorithm
+Bernstein–Vazirani algorithm
+Simon's problem
+HHL algorithm
+Quantum supremacy
+Quantum circuit
+Strange attractor
+Lorenz system
+Rössler attractor
+Bifurcation diagram
+Pitchfork bifurcation
+Hopf bifurcation
+Saddle-node bifurcation
+Period-doubling bifurcation
+Logistic map
+Henon map
+Chirikov standard map
+Baker's map
+Fractal dimension
+Hausdorff dimension
+Correlation dimension
+Self-organized criticality
+Sandpile model
+Power law
+Zipf's law
+Scale-free network
+Small-world network
+Preferential attachment
+Watts–Strogatz model
+Barabási–Albert model
+Modularity (networks)
+PageRank
+Betweenness centrality
+Closeness centrality
+Degree distribution
+Cellular automaton
+Conway's Game of Life
+Elementary cellular automaton
+Wolfram's classification
+Langton's ant
+Glider (Conway's Game of Life)
+Needleman–Wunsch algorithm
+Basic Local Alignment Search Tool
+Hidden Markov model
+Viterbi algorithm
+Baum–Welch algorithm
+Expectation–maximization algorithm
+Phylogenetic tree
+Maximum likelihood estimation
+Neighbor joining
+Unweighted Pair Group Method with Arithmetic Mean
+Jukes–Cantor model
+Felsenstein's tree
+Information entropy
+Mutual information

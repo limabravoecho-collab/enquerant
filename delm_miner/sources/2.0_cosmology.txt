@@ -1,0 +1,44 @@
+The rest energy of a body is proportional to its mass, written E = mc^2, where c
+is the speed of light in vacuum.
+
+The Lorentz factor for a relative speed v is gamma = 1/sqrt(1 - v^2/c^2). It
+approaches unity at low speed and diverges as the speed approaches that of
+light.
+
+A clock moving relative to an observer runs slow by the Lorentz factor as
+measured in the frame the clock moves through.
+
+The recession speed of a distant galaxy is proportional to its distance from the
+observer. Hubble's law expresses this as v = H0 d, where H0 is the Hubble
+constant and d the proper distance.
+
+The Schwarzschild radius of a body of mass M is rs = 2GM/c^2. A body compressed
+within this radius forms a black hole from which no signal escapes.
+
+The expansion rate of a flat homogeneous universe is set by its total energy
+density. The Friedmann equation gives this as H^2 = 8 pi G rho / 3, where rho is
+the total density.
+
+The critical density of the universe is rho_c = 3H^2/(8 pi G). A universe at
+exactly this density is spatially flat.
+
+The equation of state parameter of a component is the ratio of its pressure to
+its energy density, written w = P/rho. A cosmological constant has w = -1.
+
+The cosmic microwave background has the spectrum of a black body at
+T = 2.725 K. This radiation is uniform across the sky to within one part in a
+hundred thousand.
+
+The power radiated per unit area by a black body depends only on its absolute
+temperature. Stefan and Boltzmann expressed this as P = sigma T^4, where sigma
+is the Stefan-Boltzmann constant.
+
+The wavelength at which a black body radiates most strongly is inversely
+proportional to its absolute temperature. Wien's displacement law states this as
+lambda_max T = b.
+
+The escape velocity from a spherical body of mass M at radius r is
+v = sqrt(2GM/r). A projectile launched at this speed does not return.
+
+The orbital period of a planet is related to the semi-major axis of its orbit.
+Kepler's third law states that T^2 is proportional to a^3.

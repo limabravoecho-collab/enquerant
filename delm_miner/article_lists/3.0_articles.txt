@@ -1,0 +1,113 @@
+Michaelis-Menten kinetics
+Hill equation (biochemistry)
+Lineweaver-Burk plot
+Eadie-Hofstee diagram
+Henderson-Hasselbalch equation
+Monod equation
+Monod-Wyman-Changeux model
+Competitive inhibition
+Noncompetitive inhibition
+Uncompetitive inhibition
+Allosteric regulation
+Turnover number
+Catalytic efficiency
+Adenosine triphosphate
+Chemiosmosis
+Proton-motive force
+Oxidative phosphorylation
+Photophosphorylation
+Citric acid cycle
+Glycolysis
+Gluconeogenesis
+Pentose phosphate pathway
+Calvin cycle
+Beta-oxidation
+Urea cycle
+Cori cycle
+Electron transport chain
+Goldman-Hodgkin-Katz equation
+Nernst equation
+Donnan equilibrium
+Osmotic pressure
+Facilitated diffusion
+Active transport
+Membrane transport
+Central dogma of molecular biology
+Genetic code
+DNA replication
+Transcription (biology)
+Translation (biology)
+Ribosome
+Messenger RNA
+Transfer RNA
+Operon
+Lac operon
+Trp operon
+Codon
+Mutation rate
+Hardy-Weinberg principle
+Genetic drift
+Effective population size
+Selection coefficient
+Fitness (biology)
+Linkage disequilibrium
+Inbreeding depression
+Fisher's fundamental theorem of natural selection
+Price equation
+Wright-Fisher model
+Moran process
+Coalescent theory
+Neutral theory of molecular evolution
+Molecular clock
+Mutation-selection balance
+Heterozygosity
+Lotka-Volterra equations
+Logistic function
+Exponential growth
+Carrying capacity
+R/K selection theory
+Compartmental models in epidemiology
+SIR model
+SEIR model
+Competitive exclusion principle
+Island biogeography
+Metapopulation
+Trophic level
+Ecological efficiency
+Net primary productivity
+Gross primary productivity
+Shannon index
+Simpson index
+Species-area curve
+Source-sink dynamics
+Allee effect
+Functional response
+Leslie matrix
+Matrix population model
+Maximum sustainable yield
+Metabolic theory of ecology
+Gompertz function
+Bioenergetics
+Photosynthesis
+Cellular respiration
+Anabolism
+Catabolism
+Glycogenesis
+Glycogenolysis
+Photosynthetic reaction center
+Standard Gibbs free energy
+Enzyme catalysis
+Fick's laws of diffusion
+Antioxidant
+Reactive oxygen species
+Oxidative stress
+Redox
+Glutathione
+Reducing agent
+Epigenetics
+Chromatin
+DNA methylation
+Histone
+Gene expression
+Transcription factor
+Cellular senescence

@@ -1,0 +1,80 @@
+Nash equilibrium
+Gini coefficient
+Pareto distribution
+Zipf's law
+Cobb–Douglas production function
+Prisoner's dilemma
+Lotka's law
+Malthusian growth model
+Phillips curve
+Metcalfe's law
+Arrow's impossibility theorem
+Solow–Swan model
+Black–Scholes model
+Quantity theory of money
+IS–LM model
+Modigliani–Miller theorem
+Lucas critique
+Ricardian equivalence
+Heckscher–Ohlin model
+Comparative advantage
+Supply and demand
+Walrasian auction
+General equilibrium theory
+Core (game theory)
+Shapley value
+Evolutionarily stable strategy
+Hawk-dove game
+Tragedy of the commons
+Auction theory
+Vickrey auction
+Mechanism design
+Optimal tax
+Pigovian tax
+Ramsey problem
+Baumol's cost disease
+Okun's law
+Keynesian multiplier
+Accelerator effect
+Permanent income hypothesis
+Life-cycle hypothesis
+Tobin's q
+Balassa–Samuelson effect
+Purchasing power parity
+Interest rate parity
+Mundell–Fleming model
+Taylor rule
+Goodhart's law
+Campbell's law
+Benford's law
+Pareto principle
+Power law
+Log-normal distribution
+Gibrat's law
+Preferential attachment
+Small-world network
+Scale-free network
+Clustering coefficient
+Betweenness centrality
+PageRank
+Diffusion of innovations
+Bass diffusion model
+Granovetter's strength of weak ties
+Hotelling's law
+Median voter theorem
+Condorcet paradox
+Downsian model of democracy
+Borda count
+Instant-runoff voting
+Herfindahl–Hirschman index
+Palma ratio
+Atkinson index
+Theil index
+Demographic transition
+Lotka-Volterra equations
+Matrix population model
+Stable population model
+Net reproduction rate
+Total fertility rate
+Gross domestic product
+Consumer price index

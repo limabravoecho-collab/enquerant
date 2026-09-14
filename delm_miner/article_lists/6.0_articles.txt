@@ -1,0 +1,70 @@
+Euler–Bernoulli beam theory
+Timoshenko–Ehrenfest beam theory
+Mohr–Coulomb theory
+Terzaghi's principle
+Buckling
+Von Mises yield criterion
+Moment distribution method
+Darcy–Weisbach equation
+Greenshields model
+Bearing capacity
+Tresca yield criterion
+Mohr's circle
+Castigliano's method
+Principle of virtual work
+Direct stiffness method
+Finite element method
+Slope deflection method
+Euler's critical load
+Effective length factor
+Plastic hinge
+Stress concentration
+Stress intensity factor
+Fracture mechanics
+Poisson's ratio
+Young's modulus
+Shear modulus
+Bulk modulus
+Lamé constants
+Effective stress
+Rankine's earth pressure theory
+Coulomb's earth pressure theory
+Consolidation (geotechnics)
+Liquid limit
+Plastic limit
+Shear strength (soil)
+Bishop's method
+Standard penetration test
+California bearing ratio
+Soil liquefaction
+Manning formula
+Chézy formula
+Open-channel flow
+Specific energy (fluid mechanics)
+Hydraulic jump
+Froude number
+Reynolds number
+Hazen–Williams equation
+Bernoulli's principle
+Fundamental diagram of traffic flow
+Least squares adjustment
+Photogrammetry
+Triangulation (surveying)
+Map projection
+Geodesy
+Dynamic amplification factor
+Damping ratio
+Logarithmic decrement
+Peak ground acceleration
+Response spectrum
+Griffith's criterion
+Wöhler curve
+Saint-Venant's principle
+Maxwell's reciprocal theorem
+Influence line
+Shear center
+Second moment of area
+Bending moment
+Shear force
+Deflection (engineering)
+Statically indeterminate

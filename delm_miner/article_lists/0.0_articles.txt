@@ -1,0 +1,81 @@
+Law of excluded middle
+Modus ponens
+De Morgan's laws
+Zermelo–Fraenkel set theory
+Peano axioms
+Gödel's completeness theorem
+Compactness theorem
+Löwenheim–Skolem theorem
+Curry–Howard correspondence
+Church–Turing thesis
+Law of identity
+Law of non-contradiction
+Principle of explosion
+Modus tollens
+Hypothetical syllogism
+Disjunctive syllogism
+Constructive dilemma
+Simplification (logic)
+Conjunction introduction
+Addition (logic)
+Resolution (logic)
+Double negation
+Material implication (logic)
+Exportation (logic)
+Tautology (logic)
+Contradiction
+Contingency (logic)
+Propositional calculus
+First-order logic
+Second-order logic
+Higher-order logic
+Many-valued logic
+Fuzzy logic
+Intuitionistic logic
+Modal logic
+Temporal logic
+Deontic logic
+Epistemic logic
+Relevant logic
+Linear logic
+Combinatory logic
+Lambda calculus
+Typed lambda calculus
+Simply typed lambda calculus
+System F
+Hindley–Milner type system
+Type theory
+Dependent type
+Axiom of choice
+Axiom of extensionality
+Axiom of regularity
+Axiom of specification
+Axiom of pairing
+Axiom of union
+Axiom of replacement
+Axiom of infinity
+Axiom of power set
+Von Neumann–Bernays–Gödel set theory
+Morse–Kelley set theory
+New Foundations
+Zorn's lemma
+Well-ordering theorem
+Continuum hypothesis
+Russell's paradox
+Burali-Forti paradox
+Cantor's paradox
+Gödel's incompleteness theorems
+Tarski's undefinability theorem
+Löbs theorem
+Craig's theorem
+Cut-elimination theorem
+Normalization theorem
+Recursion theorem
+Rice's theorem
+Halting problem
+Turing machine
+Universal Turing machine
+Model theory
+Proof theory
+Computability theory
+Category theory

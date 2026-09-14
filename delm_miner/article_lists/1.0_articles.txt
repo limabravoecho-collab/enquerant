@@ -1,0 +1,130 @@
+First law of thermodynamics
+Maxwell's equations
+Coulomb's law
+Ideal gas law
+Boltzmann constant
+Gibbs free energy
+Schrodinger equation
+Planck constant
+Carnot cycle
+Ohm's law
+Newton's laws of motion
+Universal gravitational constant
+Speed of light
+Avogadro constant
+Faraday constant
+Bohr radius
+Classical electron radius
+Electron mass
+Proton mass
+Neutron mass
+Fine-structure constant
+Permittivity of free space
+Permeability of free space
+Elementary charge
+Stefan-Boltzmann constant
+Wien's displacement law
+Planck's law
+Rayleigh-Jeans law
+Stefan-Boltzmann law
+Kepler's laws of planetary motion
+Boyle's law
+Charles's law
+Gay-Lussac's law
+Dalton's law
+Graham's law
+Amagat's law
+Henry's law
+Raoult's law
+Nernst equation
+Arrhenius equation
+Clausius-Clapeyron relation
+Van der Waals equation
+Redlich-Kwong equation
+Virial equation of state
+Helmholtz free energy
+Enthalpy
+Entropy
+Chemical potential
+Second law of thermodynamics
+Third law of thermodynamics
+Zeroth law of thermodynamics
+Joule-Thomson effect
+Equipartition theorem
+Maxwell-Boltzmann distribution
+Partition function
+Phase rule
+Beer-Lambert law
+Fick's laws of diffusion
+Fourier's law
+Navier-Stokes equations
+Euler equations (fluid dynamics)
+Bernoulli's principle
+Pascal's law
+Archimedes' principle
+Hooke's law
+Young's modulus
+Shear modulus
+Bulk modulus
+Poisson's ratio
+Speed of sound
+Lorentz force
+Ampere's circuital law
+Biot-Savart law
+Gauss's law
+Gauss's law for magnetism
+Faraday's law of induction
+Lenz's law
+Poynting vector
+Larmor formula
+Bremsstrahlung
+Compton scattering
+Photoelectric effect
+De Broglie wavelength
+Heisenberg uncertainty principle
+Pauli exclusion principle
+Hund's rules
+Aufbau principle
+Born-Oppenheimer approximation
+Perturbation theory (quantum mechanics)
+Variational method (quantum mechanics)
+Virial theorem
+Hamiltonian (quantum mechanics)
+Wave function
+Operators in quantum mechanics
+Commutation relation
+Clebsch-Gordan coefficients
+Wigner-Eckart theorem
+Bragg's law
+Curie's law
+Curie-Weiss law
+Piezoelectricity
+Seebeck effect
+Peltier effect
+Thomson effect
+Hall effect
+Quantum Hall effect
+Josephson effect
+Meissner effect
+London equations
+Plasma oscillation
+Debye length
+Debye model
+Einstein solid
+Fermi-Dirac statistics
+Bose-Einstein statistics
+Planck particle
+Atomic mass unit
+Rydberg constant
+Compton wavelength
+Acoustics
+Sound
+Resonance
+Standing wave
+Ultrasound
+Acoustic impedance
+Harmonic oscillator
+Molecular hydrogen
+Hydrogen
+Redox potential
+Electron donor

@@ -1,0 +1,40 @@
+The internal energy of a closed system changes by the heat added to the system
+minus the work the system performs on its surroundings. This relation is written
+dU = Q - W and is known as the first law of thermodynamics.
+
+The total energy of an isolated system remains constant. No process occurring
+within the boundary of an isolated system creates or destroys energy.
+
+The entropy of an isolated system never decreases. For any spontaneous process
+occurring within it, the entropy change satisfies dS >= 0.
+
+The entropy change of a reversible process equals the heat transferred divided
+by the absolute temperature at which the transfer occurs, written dS = dQ/T.
+
+The entropy of a macrostate depends on the number of microscopic arrangements
+consistent with it. Boltzmann expressed this as S = k ln W, where W counts those
+arrangements and k is the Boltzmann constant.
+
+The maximum efficiency of a heat engine operating between two thermal reservoirs
+is eta = 1 - Tc/Th, where Th is the absolute temperature of the hot reservoir and
+Tc that of the cold reservoir.
+
+The pressure, volume, amount and absolute temperature of an ideal gas are
+related by PV = nRT, where R is the universal gas constant.
+
+The Gibbs free energy of a system is defined as G = H - TS, combining enthalpy,
+absolute temperature and entropy.
+
+A process occurring at constant temperature and pressure proceeds spontaneously
+when the change in Gibbs free energy is negative.
+
+Thermal equilibrium is transitive. Two systems each in thermal equilibrium with
+a third system are in thermal equilibrium with one another.
+
+The erasure of one bit of information in a system at absolute temperature T
+dissipates at least dQ = k T ln 2 of heat. Landauer derived this lower bound,
+which links information processing to thermodynamic cost.
+
+The heat capacity of a substance is the heat required to raise its temperature
+by one degree. For a substance of mass m and specific heat capacity c, the heat
+absorbed is Q = m c dT.

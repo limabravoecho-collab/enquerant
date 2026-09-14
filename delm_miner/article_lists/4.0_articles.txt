@@ -1,0 +1,86 @@
+Hebbian theory
+Weber–Fechner law
+Stevens's power law
+Rescorla–Wagner model
+Fitts's law
+Signal detection theory
+Spike-timing-dependent plasticity
+Hopfield network
+FitzHugh–Nagumo model
+Wilson–Cowan model
+Oja's rule
+Boltzmann machine
+Restricted Boltzmann machine
+Perceptron
+Backpropagation
+Predictive coding
+Free energy principle
+Bayesian brain hypothesis
+Hick's law
+Hyman's law
+Power law of practice
+Ebbinghaus forgetting curve
+Temporal difference learning
+Q-learning
+Actor-critic
+Bush–Mosteller model
+Ideal observer analysis
+Transfer entropy
+Mutual information
+Population vector
+Receptive field
+Rate coding
+Temporal coding
+Neural coding
+Fano factor
+Coefficient of variation
+Interspike interval
+Spike-triggered average
+Generalized linear model
+Short-term plasticity
+Tsodyks–Markram model
+Bienenstock–Cooper–Munro theory
+Spike-frequency adaptation
+Hindmarsh–Rose model
+Izhikevich neuron model
+Hodgkin–Huxley model
+Cable theory
+Alpha function
+Synaptic tagging and capture
+Long-term potentiation
+Long-term depression
+Hebbian learning
+Generalized Hebbian algorithm
+Attractor network
+Recurrent neural network
+Convolutional neural network
+Deep belief network
+Self-organizing map
+Sparse coding
+Independent component analysis
+Principal component analysis
+Multidimensional scaling
+Psychophysics
+Weber's law
+Fechner's law
+Contrast sensitivity function
+Psychometric function
+Speed-accuracy tradeoff
+Optimal feedback control
+Reinforcement learning
+Classical conditioning
+Operant conditioning
+Law of effect
+Hull's drive reduction theory
+Premack's principle
+Binocular rivalry
+Flash-lag illusion
+Motion aftereffect
+Retinotopy
+Active inference
+Binaural beats
+Auditory system
+Psychoacoustics
+Music therapy
+Neuroplasticity
+Cochlea
