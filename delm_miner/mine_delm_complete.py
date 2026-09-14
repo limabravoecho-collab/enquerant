@@ -69,6 +69,7 @@ import time
 import struct
 import hashlib
 import argparse
+from concurrent.futures import ProcessPoolExecutor
 from typing import Dict, List, Any, Optional, Tuple, Set
 
 # ==============================================================================
@@ -196,14 +197,18 @@ _RE_SQRT = re.compile(r"\\sqrt\s*\{([^{}]*)\}")
 _RE_SUPSUB = re.compile(r"([_^])\s*\{([^{}]*)\}")
 
 _TEX_SYMBOLS = [
-    (r"\\times", "*"), (r"\\cdot", "*"), (r"\\div", "/"),
+    # The ellipsis runs first and \cdot carries a word boundary. Without both,
+    # \cdot matched the first four characters of \cdots and every ellipsis in
+    # the corpus was written as "*s".
+    (r"\\cdots|\\dots|\\ldots", "..."),
+    (r"\\times", "*"), (r"\\cdot\b", "*"), (r"\\div", "/"),
     (r"\\approx", " ~= "), (r"\\propto", " ~ "), (r"\\equiv", " = "),
     (r"\\leq\b|\\le\b", " <= "), (r"\\geq\b|\\ge\b", " >= "),
     (r"\\neq\b|\\ne\b", " != "), (r"\\pm", " +/- "),
     (r"\\to\b|\\rightarrow|\\Rightarrow", " -> "),
     (r"\\leftarrow|\\Leftarrow", " <- "),
     (r"\\partial", "d"), (r"\\nabla", "grad"),
-    (r"\\infty", "infinity"), (r"\\cdots|\\dots|\\ldots", "..."),
+    (r"\\infty", "infinity"),
 ]
 _RE_SYMBOLS = [(re.compile(a), b) for a, b in _TEX_SYMBOLS]
 
@@ -845,6 +850,31 @@ _RE_QUANTITY = re.compile(
     r"([a-zA-Zµ°Ω]+(?:[·⋅/^-][a-zA-Z0-9−-]+)*)")
 
 
+def _extract_one(job: Tuple[str, str, str]) -> Tuple[str, List[Dict[str, str]]]:
+    """
+    One article, start to finish, in a worker process. Extraction is a pure
+    function of the text, so articles are independent and the work parallelises
+    exactly. Everything after this — validation, dedup, volume writing — stays
+    sequential and in order, because dedup must see every record in the order
+    the operator's lists state them.
+    """
+    kind, coord, ident = job
+    if kind == "txt":
+        title = os.path.splitext(os.path.basename(ident))[0]
+        title = re.sub(r"^\d\.\d[_\-]", "", title).replace("_", " ")
+        try:
+            with open(ident, "r", encoding="utf-8") as f:
+                text = clean_wikitext(f.read())
+        except Exception:
+            return coord, []
+    else:
+        title = ident
+        text = read_cached(coord, ident) or ""
+        if len(text) < MIN_ARTICLE_CHARS:
+            return coord, []
+    return coord, extract_records(title, text)
+
+
 def split_sections(text: str) -> List[Tuple[str, str]]:
     """
     Splits cleaned text into (heading, body) pairs.
@@ -1094,6 +1124,43 @@ def main() -> None:
     start = time.time()
 
     print(f"[PLAN] {len(units)} source unit(s).")
+
+    # Extraction runs across every core when the cache covers the work. It is a
+    # pure function of the text, so articles are independent. Results come back
+    # in submission order, which matters: record order is source order, and the
+    # order-of-operations sequence depends on it.
+    # The work is split rather than tested all-or-nothing: 84 of the operator's
+    # titles do not exist in Wikipedia and were skipped at cache time, so
+    # requiring every unit to be cached meant the parallel path never ran.
+    parallel = [u for u in units if u[0] == "txt" or read_cached(u[1], u[2])]
+    units = [u for u in units if u not in parallel]
+    if len(parallel) > 8:
+        workers = min(os.cpu_count() or 1, 12)
+        print(f"[MINE] cache complete; extracting across {workers} workers.")
+        with ProcessPoolExecutor(max_workers=workers) as pool:
+            for i, (coord, recs) in enumerate(pool.map(_extract_one, parallel, chunksize=8), start=1):
+                if not recs:
+                    skipped += 1
+                for rec in recs:
+                    ok, _why = validator.check(rec)
+                    if not ok:
+                        rejected += 1
+                        continue
+                    if not dedup.is_new(rec):
+                        duped += 1
+                        continue
+                    by_relation[rec["relation"]] = by_relation.get(rec["relation"], 0) + 1
+                    accepted += 1
+                    if packer and packer.write_record(coord, rec):
+                        vols_sealed += 1
+                if i % 40 == 0 or i == len(parallel):
+                    el = time.time() - start
+                    sys.stdout.write(
+                        f"\r[MINE] {i}/{len(parallel)}  accepted {accepted:,}"
+                        f"  rejected {rejected:,}  duped {duped:,}"
+                        f"  {el:.0f}s   ")
+                    sys.stdout.flush()
+        print()
 
     for i, (kind, coord, ident) in enumerate(units, start=1):
         # -- obtain the text --------------------------------------------------
