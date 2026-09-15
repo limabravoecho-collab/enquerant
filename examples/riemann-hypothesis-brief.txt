@@ -3,8 +3,8 @@ STRUCTURAL BRIEF — RIEMANN ZETA FUNCTION
 ==============================================================================
 
 Nest       : 0.1  (Tier 0.1: Quantitative Dimensions & Finites)
-Generated  : 2026-09-15 00:22 UTC
-Engine     : *REDACTED*.AI / DEIE — deterministic, CPU, no language model
+Generated  : 2026-09-15 00:48 UTC
+Engine     : NiiChii.AI / DEIE — deterministic, CPU, no language model
 
 Every figure below is computed and every formula copied from a source
 record. Nothing here is generated and nothing is argued. Section 5 states
@@ -538,6 +538,39 @@ Terms
         never guessed: CLINICAL_USE, HUMAN_TRIAL, CLINICAL, ANIMAL,
         CELL_MODEL, PHYSICAL_PRINCIPLE, THEORY. PHYSICAL_PRINCIPLE is settled
         physics, not an unproven theory.
+
+The SPFS operators
+    Shown so the second column can be checked by hand. These are the Maker's
+    own design. The constants were set by judgement, not derived.
+
+        Entropic debt of a nest
+            Xi(s) = (s * 0.42) * (1 + |s - 1.0| * 0.5)
+            Scales with depth and with distance from the reference tier 1.0.
+
+        Logic attenuation at step i
+            L_f(i) = 1 / min(i, k)        with k = 32
+            Finite: past step k every step attenuates identically. That bound
+            is why a long sequence flattens.
+
+        Nest attenuation
+            N_s(s, f) = f * (1 / (1 + s))
+            A deeper nest attenuates more.
+
+        Share of the nest's debt carried by step i
+            w_i    = N_s(s, L_f(i))
+            share  = w_i / sum of all w
+            Xi_i   = Xi(s) * share
+
+    Worked example, first step of a sequence at nest 0.1:
+        Xi(0.1)  = (0.1 * 0.42) * (1 + 0.9 * 0.5) = 0.06090
+        L_f(1)   = 1/1 = 1
+        N_s      = 1 * (1 / 1.1) = 0.9091
+        The remaining weights are computed the same way; each share is that
+        step's weight over their sum, and the shares total 1.
+
+    The shares sum to 100% and the carried debt sums to Xi(s). That is the
+    closure reported at the end of each sequence. If it does not close, the
+    sequence is not shown.
 
 Order of operations
     Column 1 is the subject's formulas in the order the source states them,
