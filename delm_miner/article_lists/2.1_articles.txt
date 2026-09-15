@@ -8,7 +8,6 @@ Ekman transport
 Richter magnitude scale
 Thermohaline circulation
 Radiative forcing
-Navier-Stokes equations
 Boussinesq approximation
 Primitive equations
 Thermal wind
