@@ -47,7 +47,12 @@ that is incidental. It is not a companion and gives no support content.
 
 ### Example output
 
-Two structural briefs generated from this engine, deliberately different:
+Out of the box, EQ does not generate the sample briefs listed below. The version
+I built is a hybrid where standard EQ outputs appear on screen instantly while
+the AI/LLM trails along below it, and I added a feature to my AI/LLM to trigger
+and download a text link that generates these examples. You can build this same
+hybrid feature into your own AI setup. Two structural briefs generated via this
+setup:
 
 - `examples/riemann-hypothesis-brief.txt` — a settled subject in a
   dimensionless nest, where entropic debt reads as incompleteness in the
