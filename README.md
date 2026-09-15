@@ -66,8 +66,8 @@ formula copied from a source record.
 
 The brief generator is part of a proprietary bridge between EQ and my own
 AI/LLM system, and is not included here. The engine, the ontology and the
-miners are — building your own bridge is straightforward, and any capable AI
-tool will help you do it.
+miners are — building your own bridge is straightforward, and any capable
+programmer or AI tool will help you do it.
 
 ---
 
