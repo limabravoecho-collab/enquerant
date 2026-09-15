@@ -101,3 +101,9 @@ Student's t-test
 Analysis of variance
 Pearson correlation coefficient
 Spearman's rank correlation coefficient
+Hodge conjecture
+Birch and Swinnerton-Dyer conjecture
+Yang–Mills existence and mass gap
+Poincaré conjecture
+P versus NP problem
+Navier–Stokes existence and smoothness
