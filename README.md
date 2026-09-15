@@ -73,6 +73,9 @@ programmer or AI tool will help you do it.
 
 ## Building the knowledge base
 
+Maker Note: On my setup the mining process takes around 30+ seconds. Your speed
+results will vary.
+
 EQ needs its DELM volumes before it can do anything. They are not shipped: the
 content comes from Wikipedia, and it is better that each installation pulls it
 from the source rather than receiving a binary.
