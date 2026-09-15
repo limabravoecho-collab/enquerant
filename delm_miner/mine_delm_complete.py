@@ -62,6 +62,7 @@ LAYOUT:
 
 import os
 import re
+import html
 import sys
 import bz2
 import json
@@ -149,7 +150,12 @@ _ONTOLOGY_LABELS: Set[str] = {n.lower() for n in FISSN_COORDS.values()}
 _RE_COMMENT = re.compile(r"<!--.*?-->", re.S)
 _RE_REF_PAIR = re.compile(r"<ref[^>/]*>.*?</ref>", re.S | re.I)
 _RE_REF_SELF = re.compile(r"<ref[^>]*/\s*>", re.I)
-_RE_MATH = re.compile(r"<math[^>]*>(.*?)</math>", re.S | re.I)
+# The body cannot cross a heading or a blank line. A <math> opener whose
+# closer is lost — the article markup is not always well formed — otherwise
+# reaches forward to the next </math> in the article, swallowing headings and
+# prose into the formula. 38 records carried fused prose before this bound.
+_RE_MATH = re.compile(r"<math[^>]*>((?:(?!</?math|==)[\s\S])*?)</math>",
+                      re.S | re.I)
 _RE_TAGGED = re.compile(r"<[^>]+>")
 _RE_TABLE = re.compile(r"\{\|.*?\|\}", re.S)
 _RE_HEADING = re.compile(r"^={2,}\s*(.*?)\s*={2,}\s*$", re.M)
@@ -343,7 +349,26 @@ def clean_wikitext(text: str) -> str:
     brackets, and unescaping last meant the converters ran against text that
     contained no tags.
     """
-    t = text.replace("&lt;", "<").replace("&gt;", ">")
+    # Math is lifted out FIRST, while the text is still escaped. A formula may
+    # contain a less-than sign — "|A| &lt; |P(A)|" — and unescaping before the
+    # math pattern runs turns that into a literal "<", which the pattern reads
+    # as the start of a tag. The body then breaks mid-formula and the match
+    # runs forward into the prose and headings after it. 38 records carried
+    # fused prose because of this one ordering.
+    def _eq(mm):
+        # A formula may contain a comparison — "|A| < |P(A)|". Left as angle
+        # brackets, the tag stripper later reads from that "<" to the next ">"
+        # anywhere in the article and swallows the prose and headings between.
+        # They are written as words here, inside the markers, where nothing
+        # downstream can mistake them for markup.
+        body = latex_to_plain(html.unescape(mm.group(1)))
+        body = body.replace("<=", " le ").replace(">=", " ge ")
+        body = body.replace("<", " lt ").replace(">", " gt ")
+        return f" {EQ_OPEN}{' '.join(body.split())}{EQ_CLOSE} "
+
+    t = re.sub(r"&lt;math[^&]*&gt;(.*?)&lt;/math&gt;", _eq, text, flags=re.S | re.I)
+
+    t = t.replace("&lt;", "<").replace("&gt;", ">")
     t = t.replace("&quot;", '"').replace("&nbsp;", " ").replace("&amp;", "&")
     t = _RE_COMMENT.sub(" ", t)
     t = _RE_REF_PAIR.sub(" ", t)
@@ -389,6 +414,13 @@ def clean_wikitext(text: str) -> str:
     t = _RE_LINK_PLAIN.sub(r"\1", t)
     t = _RE_EXT_LINK.sub(r"\1", t)
     t = _RE_TAGGED.sub(" ", t)
+    # The comparisons written as words above are restored now that nothing
+    # downstream reads angle brackets as markup. A researcher checking a
+    # formula should see "x < 2", not a token they have to translate first.
+    t = re.sub(r"(" + re.escape(EQ_OPEN) + r".*?" + re.escape(EQ_CLOSE) + r")",
+               lambda mm: mm.group(1).replace(" le ", " <= ").replace(" ge ", " >= ")
+                                     .replace(" lt ", " < ").replace(" gt ", " > "),
+               t, flags=re.S)
     t = _RE_BOLD_IT.sub("", t)
     t = _RE_LIST_MARK.sub("", t)
 
