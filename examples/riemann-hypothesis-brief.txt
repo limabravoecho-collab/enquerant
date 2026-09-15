@@ -4,7 +4,7 @@ STRUCTURAL BRIEF — RIEMANN ZETA FUNCTION
 
 Nest       : 0.1  (Tier 0.1: Quantitative Dimensions & Finites)
 Generated  : 2026-09-15 00:48 UTC
-Engine     : NiiChii.AI / DEIE — deterministic, CPU, no language model
+Engine     : *REDACTED*.AI / DEIE — deterministic, CPU, no language model
 
 Every figure below is computed and every formula copied from a source
 record. Nothing here is generated and nothing is argued. Section 5 states
