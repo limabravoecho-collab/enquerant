@@ -6,6 +6,10 @@ what it holds, where each subject sits, and what it connects to.
 
 The same input always gives the same output.
 
+Maker Note: EQ DELM's are intentionally built to 4 MB so it can be used for
+legacy/obsolete systems. You can tinker with the py files as you see fit. EQ
+requires no internet connection to function.
+
 ---
 
 ## What it is
