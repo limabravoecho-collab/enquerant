@@ -43,9 +43,17 @@ that is incidental. It is not a companion and gives no support content.
 
 ### Example output
 
-`examples/riemann-hypothesis-brief.txt` is a structural brief generated from
-this engine. Every figure in it is computed and every formula copied from a
-source record.
+Two structural briefs generated from this engine, deliberately different:
+
+- `examples/riemann-hypothesis-brief.txt` — a settled subject in a
+  dimensionless nest, where entropic debt reads as incompleteness in the
+  record. No bridged nest rests on firmer ground.
+- `examples/navier-stokes-brief.txt` — an unsettled subject in a dimensional
+  nest, where the same figure reads as disorder in the system. Two bridged
+  nests rest on firmer ground than its own.
+
+Same arithmetic, different reading. Every figure in both is computed and every
+formula copied from a source record.
 
 The brief generator is part of a proprietary bridge between EQ and my own
 AI/LLM system, and is not included here. The engine, the ontology and the
