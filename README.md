@@ -41,6 +41,19 @@ that is incidental. It is not a companion and gives no support content.
 
 ---
 
+### Example output
+
+`examples/riemann-hypothesis-brief.txt` is a structural brief generated from
+this engine. Every figure in it is computed and every formula copied from a
+source record.
+
+The brief generator is part of a proprietary bridge between EQ and my own
+AI/LLM system, and is not included here. The engine, the ontology and the
+miners are — building your own bridge is straightforward, and any capable AI
+tool will help you do it.
+
+---
+
 ## Building the knowledge base
 
 EQ needs its DELM volumes before it can do anything. They are not shipped: the
