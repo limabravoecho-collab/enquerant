@@ -1,0 +1,563 @@
+==============================================================================
+STRUCTURAL BRIEF — RIEMANN ZETA FUNCTION
+==============================================================================
+
+Nest       : 0.1  (Tier 0.1: Quantitative Dimensions & Finites)
+Generated  : 2026-09-15 00:22 UTC
+Engine     : *REDACTED*.AI / DEIE — deterministic, CPU, no language model
+
+Every figure below is computed and every formula copied from a source
+record. Nothing here is generated and nothing is argued. Section 5 states
+the method and the limits.
+
+==============================================================================
+1. THE READING
+==============================================================================
+
+Riemann zeta function is filed at nest 0.1. That nest is settled to 0.70: 70%
+of its records rest on ground the source literature does not mark as
+provisional. It carries an entropic debt of 0.06090. It shares terms with 4
+other nests — 6.1 via transform, fourier, information; 1.0 via inequality,
+elementary, induction; 6.2 via transform, fourier, algorithm; 2.0 via limit,
+spectral, riemann. The best-grounded of its neighbours is nest 6.1, settled to
+0.57. The source states 106 formulas for it, in the order given below. It
+marks no dependency between them.
+
+==============================================================================
+2. OBSERVATIONS
+==============================================================================
+
+Measurements and comparisons only. Each states what is the case; none
+proposes what it means.
+
+- Nest 0.1 is settled to 0.70 against a mean of 0.52 across 12 nests: rank 2 of 12.
+- 1 bridged nests rest on firmer ground than this one: 0.0 (0.91).
+- 3 bridges reach three tiers or further: 6.1 via transform, fourier, 6.2 via transform, fourier, 5.0 via distributions, product.
+- 106 steps are stated; 75 fall at or past the finite logic ceiling (k = 32) and carry an identical share of the nest's debt.
+- The first step carries 15.70% of the nest's debt; the last carries 0.49%.
+- The formulas are drawn from 24 distinct sections of the source.
+
+==============================================================================
+3. STRUCTURAL POSITION
+==============================================================================
+
+• 1. Master Formula (F_0): F_0 = ∮ [ R · ( N_s(L_f) ⊕ Δ P ) ] dt [SPFS Proprietary]
+• 2. Component Operator (N_s): N_s(L_f) = Σ [ ω_i · ψ(s_i, f) ] [SPFS Proprietary]
+• 3. Empirical Formula (DELM): 1989, Conrey
+• 4. FISSN Ontological Coordinate & Telemetry: Tier: Tier 0.1: Quantitative Dimensions & Finites (tier 0.1) | F_0: 19.457061
+  - [Nest Exchange / Dependent Load]: 0.1 (100%, Xi 0.061)
+  - [Cross-Tier Bridges / SMAC]: 6.1 via transform, fourier, information | 1.0 via inequality, elementary, induction | 6.2 via transform, fourier, algorithm | 2.0 via limit, spectral, riemann
+  - [Source Nests / Correction Draw]: 6.1 (settled 0.57) | 1.0 (settled 0.54) | 0.0 (settled 0.91) | 6.2 (settled 0.56)
+  - [Negentropic Reading]: target nest 0.1 settled 0.70 | local entropic debt Xi 0.061 | debt carried to dependent nests 0.061 | coupled nests 1
+  - [Structural Notice / Dislocation]: [Potential Placeholder / Ontological Shift] — Topological Rupture & Cross-Nest Propagation: Unclosed derivation or phenomenological container detected at FISSN coordinate 0.1. Cascading entropic stress tensor Xi = 0.061 indicates broken dependency bridges across adjacent ontological cells.
+  - [Epistemic Re-indexing]: Human Consensus Anchor (Tier 0.1) -> True SPFS Crystalline Anchor (Tier 0.1) prognostic alignment verified.
+
+• 5. Structural Integration: T[{Empirical}] <=> N_s(L_f) ⊕ Δ P [SPFS Proprietary]
+
+==============================================================================
+4. ORDER OF OPERATIONS — Riemann zeta function
+==============================================================================
+
+[1] zeta (s) = sum_(n=1)^infinity (1)/(n^s) = (1)/(1^s) + (1)/(2^s) + (1)/(3^s) + ...
+      L_f 1 | N_s 0.1 | share 15.70% | Xi 0.00956 | cumulative 15.70%
+
+[2] (Definition)
+      zeta (s) = sum_(n=1)^infinity(1)/(n^s) = (1)/(Gamma (s)) int_0^infinity (x^(s-1))/(e^ x - 1) dx,
+      L_f 2 | N_s 0.1 | share 7.85% | Xi 0.00478 | cumulative 23.54%
+
+[3] (Definition)
+      Gamma (s) = int_0^infinity x^(s-1) e^(-x) dx
+      L_f 3 | N_s 0.1 | share 5.23% | Xi 0.00319 | cumulative 28.78%
+
+[4] (Definition)
+      lim_(s -> 1) (s - 1) zeta (s) = 1.
+      L_f 4 | N_s 0.1 | share 3.92% | Xi 0.00239 | cumulative 32.70%
+
+[5] (Euler's product formula)
+      sum_(n=1)^infinity(1)/(n^s) = prod_(p prime) (1)/(1-p^(-s)),
+      L_f 5 | N_s 0.1 | share 3.14% | Xi 0.00191 | cumulative 35.84%
+
+[6] (Euler's product formula)
+      prod_(p prime) (1)/(1-p^(-s)) = (1)/(1-2^(-s))*(1)/(1-3^(-s))*(1)/(1-5^(-s))*(1)/(1-7^(-s))*(1)/(1-11^(-s)) ... (1)/(1-p^(-s)) ...
+      L_f 6 | N_s 0.1 | share 2.62% | Xi 0.00159 | cumulative 38.46%
+
+[7] (Euler's product formula)
+      prod_(p prime) (1-(1)/(p^s)) = (prod_(p prime) (1)/(1-p^(-s)))^(-1) = (1)/(zeta (s)).
+      L_f 7 | N_s 0.1 | share 2.24% | Xi 0.00137 | cumulative 40.70%
+
+[8] (Riemann's functional equation)
+      zeta (s) = 2^s pi^(s-1) sin ((pi s)/(2)) Gamma (1-s) zeta (1-s),
+      L_f 8 | N_s 0.1 | share 1.96% | Xi 0.00119 | cumulative 42.66%
+
+[9] (Riemann's functional equation)
+      int_0^infinity x^((1)/(2) s - 1) e^(-n^2 pi x) mathrm dx = (Gamma ((s)/(2)))/(n^s pi^((s)/(2))) ~.
+      L_f 9 | N_s 0.1 | share 1.74% | Xi 0.00106 | cumulative 44.40%
+
+[10] (Riemann's functional equation)
+      (Gamma ((s)/(2)) zeta (s))/(pi^((s)/(2))) = sum_(n=1)^infinity int_0^infinity x^ s over 2 -1 e^(-n^2 pi x) mathrm dx = int_0^infinity x^ s over 2 -1 sum_(n=1)^infinity e^(-n^2 pi x) mathrm dx,
+      L_f 10 | N_s 0.1 | share 1.57% | Xi 0.00096 | cumulative 45.97%
+
+[11] (Riemann's functional equation)
+      psi (x) := sum_(n=1)^infinity e^(-n^2 pi x),
+      L_f 11 | N_s 0.1 | share 1.43% | Xi 0.00087 | cumulative 47.40%
+
+[12] (Riemann's functional equation)
+      sum_(n=-infinity)^infinity e^(- n^2 pi x) = (1)/(sqrt(x)) sum_(n=-infinity)^infinity e^(-(n^2 pi)/(x)),
+      L_f 12 | N_s 0.1 | share 1.31% | Xi 0.00080 | cumulative 48.71%
+
+[13] (Riemann's functional equation)
+      2 psi (x) + 1 = (1)/(sqrt(x)) (2 psi ((1)/(x)) + 1) ~.
+      L_f 13 | N_s 0.1 | share 1.21% | Xi 0.00074 | cumulative 49.92%
+
+[14] (Riemann's functional equation)
+      pi^(-(s)/(2)) Gamma ((s)/(2)) zeta (s) = int_0^1 x^((s)/(2) - 1) psi (x) mathrm dx + int_1^infinity x^((s)/(2) - 1) psi (x) mathrm dx ~.
+      L_f 14 | N_s 0.1 | share 1.12% | Xi 0.00068 | cumulative 51.04%
+
+[15] (Riemann's functional equation)
+      pi^(-(s)/(2)) Gamma ((s)/(2)) zeta (s) = (1)/(s (s - 1)) + int_1^infinity (x^(-(s)/(2) - (1)/(2)) + x^((s)/(2) - 1)) psi (x) mathrm dx
+      L_f 15 | N_s 0.1 | share 1.05% | Xi 0.00064 | cumulative 52.08%
+
+[16] (Riemann's functional equation)
+      (Gamma ((s)/(2)) zeta (s))/(pi^((s)/(2))) = (Gamma ((1)/(2) - (s)/(2)) zeta (1 - s))/(pi^((1)/(2) - (s)/(2)))
+      L_f 16 | N_s 0.1 | share 0.98% | Xi 0.00060 | cumulative 53.06%
+
+[17] (Riemann's functional equation)
+      Gamma ((s)/(2)) zeta (s) = Gamma ((1)/(2) - (s)/(2)) zeta (1 - s) pi^(s-(1)/(2))
+      L_f 17 | N_s 0.1 | share 0.92% | Xi 0.00056 | cumulative 53.99%
+
+[18] (Riemann's functional equation)
+      Gamma (1- frac s2) Gamma ((s)/(2)) zeta (s) = Gamma (1- frac s2) Gamma ((1)/(2) - (s)/(2)) zeta (1 - s) pi^(s-(1)/(2))
+      L_f 18 | N_s 0.1 | share 0.87% | Xi 0.00053 | cumulative 54.86%
+
+[19] (Riemann's functional equation)
+      zeta (s) = sin (frac pi s 2) Gamma (1- frac s2) Gamma ((1)/(2) - (s)/(2)) zeta (1 - s) pi^(s-(3)/(2))
+      L_f 19 | N_s 0.1 | share 0.83% | Xi 0.00050 | cumulative 55.69%
+
+[20] (Riemann's functional equation)
+      zeta (s) = sin (frac pi s 2)2^(1-1+s)sqrt(pi) Gamma (1-s) zeta (1 - s) pi^(s-(3)/(2))
+      L_f 20 | N_s 0.1 | share 0.78% | Xi 0.00048 | cumulative 56.47%
+
+[21] (Riemann's functional equation)
+      zeta (s) = sin (frac pi s 2)2^s Gamma (1-s) zeta (1 - s) pi^(s-1)
+      L_f 21 | N_s 0.1 | share 0.75% | Xi 0.00046 | cumulative 57.22%
+
+[22] (Riemann's xi function)
+      xi (s) =(s(s-1))/(2) pi^(-(s)/(2)) Gamma ((s)/(2)) zeta (s) = (s-1) pi^(-(s)/(2)) Gamma ((s)/(2)+1) zeta (s)
+      L_f 22 | N_s 0.1 | share 0.71% | Xi 0.00043 | cumulative 57.93%
+
+[23] (Riemann's xi function)
+      xi (s) = xi (1 - s) ~.
+      L_f 23 | N_s 0.1 | share 0.68% | Xi 0.00042 | cumulative 58.61%
+
+[24] (Riemann's xi function)
+      xi (s) = frac 12 + (s(s-1))/(2) int_1^infinity (x^(-(s)/(2)-(1)/(2)) + x^((s)/(2)-1)) psi (x) dx,
+      L_f 24 | N_s 0.1 | share 0.65% | Xi 0.00040 | cumulative 59.27%
+
+[25] (Riemann's xi function)
+      psi (x)= sum_(n=1)^(infinity)e^(- pi n^(2)x).
+      L_f 25 | N_s 0.1 | share 0.63% | Xi 0.00038 | cumulative 59.90%
+
+[26] (Riemann's xi function)
+      xi (s) = frac 12 - [(sx^((1-s)/(2)) + (1-s)x^((s)/(2))) psi (x)]_1^infinity + int_1^infinity (sx^((1-s)/(2)) + (1-s)x^((s)/(2))) psi '(x) dx
+      L_f 26 | N_s 0.1 | share 0.60% | Xi 0.00037 | cumulative 60.50%
+
+[27] (Riemann's xi function)
+      xi (s) = frac 12 + psi (1) + int_1^infinity (sx^((1-s)/(2)) + (1-s)x^((s)/(2))) psi '(x) dx
+      L_f 27 | N_s 0.1 | share 0.58% | Xi 0.00035 | cumulative 61.08%
+
+[28] (Riemann's xi function)
+      xi (s) = frac 12 + psi (1) - 2 [x^(frac 32) psi '(x) (x^((s-1)/(2)) + x^(-(s)/(2)))]_1^infinity + 2 int_1^infinity (x^((s-1)/(2)) + x^(-(s)/(2)))(d)/(dx) [x^(frac 32) psi '(x)] dx
+      L_f 28 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 61.64%
+
+[29] (Riemann's xi function)
+      xi (s) = frac 12 + psi (1) + 4 psi '(1) + 2 int_1^infinity (d)/(dx) [x^(frac 32) psi '(x)] (x^((s-1)/(2)) + x^(-(s)/(2))) dx
+      L_f 29 | N_s 0.1 | share 0.54% | Xi 0.00033 | cumulative 62.18%
+
+[30] (Riemann's xi function)
+      frac 12 + psi (1) + 4 psi '(1)=0
+      L_f 30 | N_s 0.1 | share 0.52% | Xi 0.00032 | cumulative 62.71%
+
+[31] (Riemann's xi function)
+      xi (s) = 2 int_1^infinity (d)/(dx) [x^(frac 32) psi '(x)] (x^((s-1)/(2)) + x^(-(s)/(2))) dx
+      L_f 31 | N_s 0.1 | share 0.51% | Xi 0.00031 | cumulative 63.21%
+
+[32] (Riemann's xi function)
+      xi (s) = 2 int_1^infinity (d)/(dx) [x^(frac 32) psi '(x)]x^(- frac 14) (x^((s-1/2)/(2)) + x^((1/2-s)/(2))) dx
+      L_f 32 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 63.70%
+      [finite logic ceiling: L_f = k = 32; each remaining step carries 0.49%]
+
+[33] (Riemann's xi function)
+      xi (s) = 4 int_1^infinity (d)/(dx) [x^(frac 32) psi '(x)]x^(- frac 14) cos (frac t 2 log x) dx
+      L_f 33 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 64.19%
+
+[34] (Riemann's xi function)
+      xi (s) = sum_(n=0)^infinity a_(2n)t^(2n)
+      L_f 34 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 64.68%
+
+[35] (Number of zeros in the critical strip)
+      |N(T) - (T)/(2 pi) log (T)/(2 pi e) | <= 0.112 log T + 0.278 log log T + 3.385 + (0.2)/(T)
+      L_f 35 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 65.17%
+
+[36] (Zero-free region)
+      sigma >= 1 - (c)/((log |t|)^(2/3 + varepsilon))
+      L_f 36 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 65.66%
+
+[37] (Zero-free region)
+      sigma >= 1 - (1)/(5.558691 log |t|)
+      L_f 37 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 66.16%
+
+[38] (Zero-free region)
+      sigma >= 1 - (log log |t|)/(21.233 log |t|)
+      L_f 38 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 66.65%
+
+[39] (Zero-free region)
+      sigma >= 1 - (1)/(53.989(log |t|)^(2/3)(log log |t|)^(1/3))
+      L_f 39 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 67.14%
+
+[40] (Zero-free region)
+      sigma >= 1 - (1)/(48.0718(log |t|)^(2/3)(log log |t|)^(1/3)).
+      L_f 40 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 67.63%
+
+[41] (Other results)
+      lim_(n arrowinfinity) (gamma_(n+1)- gamma_n)=0.
+      L_f 41 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 68.12%
+
+[42] (Other results)
+      zeta (s)= zeta (s)
+      L_f 42 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 68.61%
+
+[43] (Specific values)
+      zeta (2n) = frac | B_(2n) |(2 pi)^(2n) 2(2n)!,
+      L_f 43 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 69.10%
+
+[44] (Specific values)
+      zeta (2) = 1 + (1)/(2^2) + (1)/(3^2) + ... = (pi^2)/(6)
+      L_f 44 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 69.59%
+
+[45] (Specific values)
+      zeta (3) = 1 + (1)/(2^3) + (1)/(3^3) + ... = 1.202056903159594285399...
+      L_f 45 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 70.08%
+
+[46] (Specific values)
+      zeta (-n)= -(B_(n+1))/(n+1)
+      L_f 46 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 70.57%
+
+[47] (Specific values)
+      zeta (-1) = - tfrac 1 12
+      L_f 47 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 71.06%
+
+[48] (Specific values)
+      zeta (0) = - tfrac 1 2
+      L_f 48 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 71.55%
+
+[49] (Specific values)
+      zeta (tfrac 12) = -1.46035450880958681288...
+      L_f 49 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 72.04%
+
+[50] (Specific values)
+      zeta (1) = 1 + tfrac 1 2 + tfrac 1 3 + ...
+      L_f 50 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 72.53%
+
+[51] (Specific values)
+      lim_(varepsilon -> 0) (zeta (1+ varepsilon)+ zeta (1- varepsilon))/(2)
+      L_f 51 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 73.02%
+
+[52] (Reciprocal)
+      (1)/(zeta (s)) = sum_(n=1)^infinity (mu (n))/(n^s)
+      L_f 52 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 73.51%
+
+[53] (Estimates of the maximum of the modulus of the zeta function)
+      F(T;H) = max_(|t-T| <= H) | zeta (tfrac 1 2 +it) |, G(s_(0); Delta) = max_(|s-s_(0)| <= Delta)| zeta (s)|.
+      L_f 53 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 74.00%
+
+[54] (Estimates of the maximum of the modulus of the zeta function)
+      F(T;H) >= T^(- c_1), G(s_0; Delta) >= T^(-c_2),
+      L_f 54 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 74.49%
+
+[55] (Argument of the Riemann zeta function)
+      S(t) = (1)/(pi) arg zeta (tfrac 12+it)
+      L_f 55 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 74.98%
+
+[56] (Argument of the Riemann zeta function)
+      S_1(t) = int_0^t S(u) du
+      L_f 56 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 75.47%
+
+[57] (Argument of the Riemann zeta function)
+      H >= T^((27)/(82)+ varepsilon)
+      L_f 57 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 75.97%
+
+[58] (Argument of the Riemann zeta function)
+      H >= T^(frac 12+ varepsilon).
+      L_f 58 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 76.46%
+
+[59] (Dirichlet series)
+      zeta (s)=(1)/(s-1) sum_(n=1)^infinity ((n)/((n+1)^s)-(n-s)/(n^s))
+      L_f 59 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 76.95%
+
+[60] (Dirichlet series)
+      zeta (s) =(1)/(s-1) sum_(n=1)^infinity(n(n+1))/(2) ((2n+3+s)/((n+1)^(s+2))-(2n-1-s)/(n^(s+2)))
+      L_f 60 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 77.44%
+
+[61] (Dirichlet series)
+      zeta (s)= 1+(1)/(s-1)-(s)/(2 !)[zeta (s+1)-1] - (s(s+1))/(3 !)[zeta (s+2)-1] -(s(s+1)(s+2))/(3 !) sum_(n=1)^(infinity) int_0^1 (t^3 d t)/((n+t)^(s+3)).
+      L_f 61 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 77.93%
+
+[62] (Dirichlet series)
+      zeta (s) = (s)/(s-1) - sum_(n=1)^infinity (zeta (s+n)-1)(s(s+1)...(s+n-1))/((n+1)!).
+      L_f 62 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 78.42%
+
+[63] (Mellin-type integrals)
+      Gamma (s) zeta (s) = int_0^infinity(x^(s-1))/(e^x-1) dx
+      L_f 63 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 78.91%
+
+[64] (Mellin-type integrals)
+      Gamma (s) zeta (s) = frac 1 2s int_0^infinity(x^(s))/(cosh (x)-1) dx,
+      L_f 64 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 79.40%
+
+[65] (Mellin-type integrals)
+      2 sin (pi s) Gamma (s) zeta (s) =i oint_H ((-x)^(s-1))/(e^x-1) dx
+      L_f 65 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 79.89%
+
+[66] (Mellin-type integrals)
+      ln zeta (s) = s int_0^infinity (pi (x))/(x(x^s-1)) dx,
+      L_f 66 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 80.38%
+
+[67] (Mellin-type integrals)
+      J(x) = sum (pi (x^(1)/(n)))/(n).
+      L_f 67 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 80.87%
+
+[68] (Mellin-type integrals)
+      ln zeta (s) = s int_0^infinity J(x)x^(-s-1) dx.
+      L_f 68 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 81.36%
+
+[69] (Theta functions)
+      2 pi^(-(s)/(2)) Gamma ((s)/(2)) zeta (s) = int_0^infinity (theta (it)-1)t^((s)/(2)-1) dt,
+      L_f 69 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 81.85%
+
+[70] (Theta functions)
+      theta (tau)= sum_(n=-infinity)^infinity e^(pi i n^2 tau).
+      L_f 70 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 82.34%
+
+[71] (Theta functions)
+      pi^(-(s)/(2)) Gamma ((s)/(2)) zeta (s) = (1)/(s-1)-(1)/(s) +(1)/(2) int_0^1 (theta (it)-t^(- frac 12))t^((s)/(2)-1) dt + (1)/(2) int_1^infinity (theta (it)-1)t^((s)/(2)-1) dt.
+      L_f 71 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 82.83%
+
+[72] (Laurent series)
+      zeta (s)=(1)/(s-1)+ sum_(n=0)^infinity (gamma_n)/(n!)(1-s)^n.
+      L_f 72 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 83.32%
+
+[73] (Laurent series)
+      gamma_n = lim_(m arrow infinity) ((sum_(k = 1)^m ((ln k)^n)/(k)) - ((ln m)^(n+1))/(n+1)) .
+      L_f 73 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 83.81%
+
+[74] (Integral)
+      zeta (s) = (1)/(s - 1) + (1)/(2) + 2 int_0^(infinity) (sin (s arctan t))/((1 + t^2)^(s/2) (e^(2 pi t) - 1)) dt
+      L_f 74 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 84.30%
+
+[75] (Hadamard product)
+      zeta (s) = (e^((log (2 pi)-1-(gamma)/(2))s))/(2(s-1) Gamma (1+(s)/(2))) prod_ rho (1 - (s)/(rho)) e^(s)/(rho),
+      L_f 75 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 84.79%
+
+[76] (Hadamard product)
+      zeta (s) = pi^(s)/(2) (prod_ rho (1 - (s)/(rho)))/(2(s-1) Gamma (1+(s)/(2))).
+      L_f 76 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 85.28%
+
+[77] (Globally convergent series)
+      zeta (s)=(1)/(1-2^(1-s)) sum_(n=0)^infinity (1)/(2^(n+1)) sum_(k=0)^n binom n k ((-1)^k)/((k+1)^(s)).
+      L_f 77 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 85.78%
+
+[78] (Globally convergent series)
+      zeta (s)= frac 1 s-1 sum_(n=0)^infinity frac 1 n+1 sum_(k=0)^n binom n k ((-1)^k)/((k+1)^(s-1))
+      L_f 78 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 86.27%
+
+[79] (Globally convergent series)
+      zeta (s)=(1)/(s-1) sum_(k=0)^infinity (prod_(i=1)^(k) (i-(s)/(2))) (A_(k))/(k!)= (1)/(s-1) sum_(k=0)^infinity (1-(s)/(2))_(k) (A_(k))/(k!)
+      L_f 79 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 86.76%
+
+[80] (Globally convergent series)
+      A_k= sum_(j=0)^(k)(-1)^(j) binom k j (2j+1) zeta (2j+2)= sum_(j=0)^(k) binom k j (B_(2j+2) pi^(2j+2))/((2)_(j) ((1)/(2))_(j))
+      L_f 80 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 87.25%
+
+[81] (Globally convergent series)
+      kappa := sqrt [3] pi^(2)k
+      L_f 81 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 87.74%
+
+[82] (Globally convergent series)
+      c_(k):= sum_(j=0)^(k)(-1)^(j) binom k j (1)/(zeta (2j+2))
+      L_f 82 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 88.23%
+
+[83] (Globally convergent series)
+      c_(k)=O (k^(-3/4+ varepsilon)) (forall varepsilon > 0)
+      L_f 83 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 88.72%
+
+[84] (Series representation at positive integers via the primorial)
+      zeta (k)=(2^k)/(2^k-1)+ sum_(r=2)^infinity((p_(r-1)\#)^k)/(J_k(p_r\#)) k=2,3,....
+      L_f 84 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 89.21%
+
+[85] (Series representation by the incomplete poly-Bernoulli numbers)
+      zeta (s)= sum_(n=0)^infinity B_(n, >= 2)^((s))((W_k(-1))^n)/(n!),
+      L_f 85 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 89.70%
+
+[86] (Mellin transform of the Engel map)
+      int_0^1 g (x) x^(s - 1) dx = sum_(n = 1)^infinity int_((1)/(n + 1))^((1)/(n)) (x (n + 1) - 1) x^(s - 1) d x [6pt] = sum_(n = 1)^infinity (n^(- s) (s - 1) + (n + 1)^(- s - 1) (n^2 + 2 n + 1) + n^(- s - 1) s - n^(1 - s))/((s + 1) s (n + 1)) [6pt] = (zeta (s + 1))/(s + 1) - (1)/(s (s + 1))
+      L_f 86 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 90.19%
+
+[87] (Numerical algorithms)
+      zeta (s) = sum_(j=1)^(n-1)j^(-s) + tfrac 12 n^(-s) + (n^(1-s))/(s-1) + sum_(k=1)^m T_(k,n)(s) + E_(m,n)(s)
+      L_f 87 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 90.68%
+
+[88] (Numerical algorithms)
+      T_(k,n)(s) = (B_(2k))/((2k)!) n^(1-s-2k) prod_(j=0)^(2k-2)(s+j)
+      L_f 88 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 91.17%
+
+[89] (Numerical algorithms)
+      |E_(m,n)(s)| < |(s+2m+1)/(sigma + 2m + 1)T_(m+1,n)(s) |,
+      L_f 89 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 91.66%
+
+[90] (Infinite series)
+      sum_(n=2)^infinity (zeta (n)-1) = 1
+      L_f 90 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 92.15%
+
+[91] (Infinite series)
+      sum_(n=1)^infinity (zeta (2n)-1)=(3)/(4)
+      L_f 91 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 92.64%
+
+[92] (Infinite series)
+      sum_(n=1)^infinity (zeta (2n+1)-1)=(1)/(4)
+      L_f 92 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 93.13%
+
+[93] (Infinite series)
+      sum_(n=1)^infinity(zeta (2n)-1) t^(2n) = (t^2)/(t^2-1) + (1)/(2) (1- pi t cot (pi t))
+      L_f 93 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 93.62%
+
+[94] (Infinite series)
+      sum_(n=1)^infinity(zeta (2n+1)-1) t^(2n) = (t^2)/(t^2-1) -(1)/(2) (psi^0(t)+ psi^0(-t)) - gamma
+      L_f 94 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 94.11%
+
+[95] (Infinite series)
+      sum_(n=1)^infinity (zeta (2n)-1)/(n) t^(2n) = log ((1-t^2)/(sinc(pi t)))
+      L_f 95 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 94.60%
+
+[96] (Infinite series)
+      t=1
+      L_f 96 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 95.09%
+
+[97] (Infinite series)
+      sum_(n=2)^infinity(zeta (n)-1)/(n) = 1- gamma
+      L_f 97 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 95.59%
+
+[98] (Infinite series)
+      sum_(n=1)^infinity(zeta (2n)-1)/(n) = ln 2
+      L_f 98 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 96.08%
+
+[99] (Infinite series)
+      sum_(n=2)^infinity(zeta (n)-1)/(n) ((tfrac 3 2)^(n-1)-1) = (1)/(3) ln pi
+      L_f 99 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 96.57%
+
+[100] (Infinite series)
+      sum_(n=1)^infinity (zeta (4n)-1) = frac 78-(pi)/(4) ((e^(2 pi)+1)/(e^(2 pi)-1))
+      L_f 100 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 97.06%
+
+[101] (Infinite series)
+      sum_(n=2)^infinity(zeta (n)-1)/(n) Im ((1+i)^n-1-i^n) = (pi)/(4)
+      L_f 101 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 97.55%
+
+[102] (Infinite series)
+      sum_(n=2)^infinity [(2(-1)^n zeta (n))/(4^n n)-((-1)^n zeta (n))/(2^n n)]= ln ((varpi)/(2 sqrt 2))
+      L_f 102 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 98.04%
+
+[103] (Generalizations)
+      zeta (s,q) = sum_(k=0)^infinity (1)/((k+q)^s)
+      L_f 103 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 98.53%
+
+[104] (Generalizations)
+      Li_s(z) = sum_(k=1)^infinity (z^k)/(k^s)
+      L_f 104 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 99.02%
+
+[105] (Generalizations)
+      Phi (z, s, q) = sum_(k=0)^infinity(z^k)/((k+q)^s)
+      L_f 105 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 99.51%
+
+[106] (Generalizations)
+      zeta (s_1,s_2,...,s_n) = sum_(k_1 > k_2 > ... > k_n > 0) k_1^(-s_1) k_2^(-s_2)... k_n^(-s_n).
+      L_f 106 | N_s 0.1 | share 0.49% | Xi 0.00030 | cumulative 100.00%
+
+CLOSURE: cumulative 100.00% | carried 0.06090 | nest entropic debt Xi 0.06090
+
+==============================================================================
+5. HOW THIS DOCUMENT WAS BUILT
+==============================================================================
+
+Engine
+    EnQuerant (EQ) V2.0 / Deterministic Empirical Interactive Engine.
+    Pure CPU. No language model, no GPU, no randomness. The same subject
+    always produces the same document.
+
+Provenance
+    Every scientific word, formula and value is copied verbatim from a source
+    record mined from encyclopedic sources. Every figure is computed from those
+    records. No sentence in this document was generated, and none argues
+    anything: it reports where a subject sits and what the source states.
+
+    Lines marked [SPFS Proprietary] are the Maker's own design rather than
+    established science. The SPFS operators are built on established principles
+    — conservation of energy, the second law, negentropy, dissipative
+    structures, Le Chatelier, Poincare recurrence, hierarchy in systems
+    ecology, Shannon entropy — but the formulas themselves are not established
+    law.
+
+Terms
+    Nest
+        One FISSN tier: one scale of reality, from 0.0 (axiomatic and
+        deductive) to 6.2 (high-order convergence). Where a fact is filed, not
+        whether it is right.
+
+    Settled share
+        The proportion of a nest's records whose subject is not flagged, 0.00
+        to 1.00. Logic sits near 0.91, physiology near 0.35.
+
+    Flagged record
+        An ontological dislocation: the subject rests on a placeholder or an
+        unresolved definition in the source literature. "31 records, 29
+        flagged" means 29 rest on unresolved ground and 2 do not. A flag marks
+        ground to inspect. It does not mean the science is wrong.
+
+    Entropic debt (Xi)
+        What a nest carries that is not settled. Above nest 1.0 the nests are
+        dimensional — matter, energy, time — and the figure reads as disorder
+        in the system itself. At nests 0.0 and 0.1 nothing dissipates, so the
+        same figure reads as incompleteness in the record of it. The arithmetic
+        is identical; the reading is not.
+
+    Bridge
+        A term genuinely shared between two nests in the knowledge base. A real
+        overlap, never an analogy.
+
+    Research stage
+        How far a subject has been taken, read from the corpus or declared,
+        never guessed: CLINICAL_USE, HUMAN_TRIAL, CLINICAL, ANIMAL,
+        CELL_MODEL, PHYSICAL_PRINCIPLE, THEORY. PHYSICAL_PRINCIPLE is settled
+        physics, not an unproven theory.
+
+Order of operations
+    Column 1 is the subject's formulas in the order the source states them,
+    copied verbatim, each labelled with the section it was drawn from. Column 2
+    reads the same sequence through SPFS: the nest is constant and the step
+    index is the logic depth, so each step carries a share of the nest's
+    entropic debt. The shares sum to 100% and the carried debt sums to the nest
+    debt. The sequence closes.
+
+    The corpus does not mark logical dependency between formulas, so column 1
+    is a faithful source sequence, not a derived order. Domain conditions
+    ("x >= 2", "T > 0") are held in the corpus but excluded from the sequence:
+    a condition is stated, but it is not a step.
+
+Limits
+    The document reports what the knowledge base holds. A subject absent from
+    the corpus is absent here. It restates records; it does not verify them.
+    Nothing it displays is medical, legal or professional advice, and nothing
+    in it is a proof.
+
+==============================================================================
+END OF BRIEF
+==============================================================================
