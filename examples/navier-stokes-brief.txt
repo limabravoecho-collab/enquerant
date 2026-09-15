@@ -4,7 +4,7 @@ STRUCTURAL BRIEF — NAVIER-STOKES EQUATIONS
 
 Nest       : 1.0  (Tier I.0: Fundamental Forces & Chemical Dynamics)
 Generated  : 2026-09-15 01:09 UTC
-Engine     : NiiChii.AI / DEIE — deterministic, CPU, no language model
+Engine     : *REDACTED*.AI / DEIE — deterministic, CPU, no language model
 
 Every figure below is computed and every formula copied from a source
 record. Nothing here is generated and nothing is argued. Section 5 states
