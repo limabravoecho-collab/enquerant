@@ -4,6 +4,8 @@ FILE NAME: 02 EQ V2.0 FULL SYSTEM ARCHITECTURE.txt
 
 EQ V2.0 FULL SYSTEM ARCHITECTURE
 
+Maker Note: EQ DELM's are intentionally built to 4 MB so it can be used for legacy/obsolete systems. You can tinker with the py files as you see fit. EQ requires no internet connection to function.
+
 ==================================================
 1. SYSTEM IDENTITY & BRAND
 ==================================================
