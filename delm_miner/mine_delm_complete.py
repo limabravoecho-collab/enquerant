@@ -195,8 +195,9 @@ _RE_ALIGN_MARK = re.compile(r"&|\\\\")
 
 _RE_STRUCTURAL = re.compile(
     r"\\(?:left|right|bigg?l?r?|Bigg?l?r?|langle|rangle|lvert|rvert|"
-    r"lVert|rVert|quad|qquad|hspace|vspace|nonumber|label|limits|"
-    r",|;|!|:|\s)")
+    r"lVert|rVert|quad|qquad|hspace|vspace|nonumber|label|nolimits|limits|mathbin|mathrel|mathop)"
+    r"(?![A-Za-z])"
+    r"|\\(?:,|;|!|:|\s)")
 
 _RE_FRAC = re.compile(r"\\d?frac\s*\{([^{}]*)\}\s*\{([^{}]*)\}")
 _RE_SQRT = re.compile(r"\\sqrt\s*\{([^{}]*)\}")
@@ -207,11 +208,11 @@ _TEX_SYMBOLS = [
     # \cdot matched the first four characters of \cdots and every ellipsis in
     # the corpus was written as "*s".
     (r"\\cdots|\\dots|\\ldots", "..."),
-    (r"\\times", "*"), (r"\\cdot\b", "*"), (r"\\div", "/"),
+    (r"\\times", "*"), (r"\\cdot(?![A-Za-z])", "*"), (r"\\div", "/"),
     (r"\\approx", " ~= "), (r"\\propto", " ~ "), (r"\\equiv", " = "),
-    (r"\\leq\b|\\le\b", " <= "), (r"\\geq\b|\\ge\b", " >= "),
-    (r"\\neq\b|\\ne\b", " != "), (r"\\pm", " +/- "),
-    (r"\\to\b|\\rightarrow|\\Rightarrow", " -> "),
+    (r"\\leq?(?![A-Za-z])", " <= "), (r"\\geq?(?![A-Za-z])", " >= "),
+    (r"\\neq?(?![A-Za-z])", " != "), (r"\\pm", " +/- "),
+    (r"\\to(?![A-Za-z])|\\rightarrow|\\Rightarrow", " -> "),
     (r"\\leftarrow|\\Leftarrow", " <- "),
     (r"\\partial", "d"), (r"\\nabla", "grad"),
     (r"\\infty", "infinity"),
@@ -234,7 +235,8 @@ def latex_to_plain(s: str) -> str:
     neither a formula nor recoverable. Unrecognised commands keep their word,
     since dropping them turned "S = k_B ln Omega" into "S = k_B".
     """
-    out = _RE_ENVIRONMENT.sub(" ", s)
+    out = s.replace("\\#", "#").replace("\\{", "{").replace("\\}", "}")
+    out = _RE_ENVIRONMENT.sub(" ", out)
     out = _RE_ALIGN_MARK.sub(" ", out)
     for _ in range(8):
         before = out
@@ -244,6 +246,9 @@ def latex_to_plain(s: str) -> str:
         out = _RE_SUPSUB.sub(r"\1(\2)", out)
         if out == before:
             break
+    out = re.sub(r"\\(?:mathrm|textrm|text|mathbf|mathit|boldsymbol|operatorname|mbox|"
+                 r"displaystyle|textstyle|mathcal|mathbb|mathsf|rm|bf|it)"
+                 r"\s+(?=[A-Za-z0-9])", " ", out)
     out = _RE_STRUCTURAL.sub(" ", out)
     for pat, rep in _RE_SYMBOLS:
         out = pat.sub(rep, out)
@@ -362,6 +367,8 @@ def clean_wikitext(text: str) -> str:
         # They are written as words here, inside the markers, where nothing
         # downstream can mistake them for markup.
         body = latex_to_plain(html.unescape(mm.group(1)))
+        body = re.sub(r"(?<![<>=-])->", " RARR ", body)
+        body = re.sub(r"<-(?![\d.])", " LARR ", body)
         body = body.replace("<=", " le ").replace(">=", " ge ")
         body = body.replace("<", " lt ").replace(">", " gt ")
         return f" {EQ_OPEN}{' '.join(body.split())}{EQ_CLOSE} "
@@ -418,7 +425,8 @@ def clean_wikitext(text: str) -> str:
     # downstream reads angle brackets as markup. A researcher checking a
     # formula should see "x < 2", not a token they have to translate first.
     t = re.sub(r"(" + re.escape(EQ_OPEN) + r".*?" + re.escape(EQ_CLOSE) + r")",
-               lambda mm: mm.group(1).replace(" le ", " <= ").replace(" ge ", " >= ")
+               lambda mm: mm.group(1).replace(" RARR ", " -> ").replace(" LARR ", " <- ")
+                                     .replace(" le ", " <= ").replace(" ge ", " >= ")
                                      .replace(" lt ", " < ").replace(" gt ", " > "),
                t, flags=re.S)
     t = _RE_BOLD_IT.sub("", t)
@@ -755,8 +763,6 @@ class DELMVolumePacker:
         if pad:
             if len(data) < CHUNK_SIZE_BYTES:
                 data.extend(b"\x00" * (CHUNK_SIZE_BYTES - len(data)))
-            else:
-                data = data[:CHUNK_SIZE_BYTES]
 
         sha = hashlib.sha256(data).hexdigest()
         final_bin = os.path.join(self.output_dir, self.current_vol_filename)
