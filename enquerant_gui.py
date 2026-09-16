@@ -255,6 +255,9 @@ class EnquerantGUI:
 
         action_frame = tk.Frame(sidebar, bg=self.colors["panel_dark"])
         action_frame.pack(fill=tk.X, padx=12, pady=(4, 12))
+        
+        brief_btn = tk.Button(action_frame, text="SAVE BRIEF  (!brief)", font=("DejaVu Sans", 10, "bold"), bg=self.colors["button_send"], fg=self.colors["btn_text"], relief=tk.FLAT, pady=8, cursor="hand2", command=self.save_brief)
+        brief_btn.pack(fill=tk.X, pady=(0, 10))
 
         reboot_btn = tk.Button(action_frame, text="Reboot Crystal", font=("DejaVu Sans", 8, "bold"), bg=self.colors["border"], fg=self.colors["text_main"], relief=tk.FLAT, pady=4, cursor="hand2", command=self.confirm_and_reboot)
         reboot_btn.pack(fill=tk.X, pady=(0, 4))
@@ -518,6 +521,14 @@ class EnquerantGUI:
         self.is_streaming = False
         self.send_btn.config(state=tk.NORMAL)
         self.input_entry.focus_set()
+    
+    def save_brief(self):
+        """Same as typing !brief: writes the last reading to briefs/."""
+        if not self.bot or self.is_streaming:
+            return
+        self._append_text("Seeker > !brief\n\n", tag="seeker")
+        self._append_text("EnQuerant >\n", tag="guide")
+        self._append_text(self.bot._write_brief() + "\n\n", tag="body")
 
     def confirm_and_reboot(self):
         if messagebox.askyesno("Reboot Crystal", "Hot-reload substrate modules from disk and clear chat?"):
