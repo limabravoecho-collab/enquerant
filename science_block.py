@@ -47,7 +47,7 @@ _TERM = r"\|?\s*[A-Za-z_][A-Za-z0-9_]{0,12}(?:\s*\(\s*[A-Za-z_][A-Za-z0-9_]{0,12
 # A term here is a variable, a simple fraction, or one function call — short
 # enough that a derived expression cannot match. "0 < Re(s) < 1" is a stripe;
 # "x - (4)/(pi) sqrt x log x < p <= x" is a theorem and stays.
-_ST = r"\|?\s*-?[A-Za-z0-9_.]{1,10}(?:\s*/\s*[A-Za-z0-9_.]{1,6})?" \
+_ST = r"\|?\s*(?:\(\s*[A-Za-z0-9_.]{1,6}\s*\)\s*/\s*\(\s*[A-Za-z0-9_.]{1,6}\s*\)|-?[A-Za-z0-9_.]{1,10}(?:\s*/\s*[A-Za-z0-9_.]{1,6})?)" \
       r"(?:\s*\(\s*[A-Za-z0-9_.]{1,10}\s*\))?\s*\|?"
 _DOMAIN_STRIPE = re.compile(
     r"^\s*" + _ST + r"\s*(?:<=|>=|<|>)\s*" + _ST +
@@ -55,11 +55,16 @@ _DOMAIN_STRIPE = re.compile(
 
 # A simple fraction: "3/2", "(n)/(2)".
 _FR = r"\(?\s*-?[A-Za-z0-9_.]{1,6}\s*\)?\s*/\s*\(?\s*[A-Za-z0-9_.]{1,6}\s*\)?"
-_COND = r"\s*" + _TERM + r"\s*(?:>=|<=|>|<)\s*(?:" + _FR + r"|-?[\d. ]+|" + _TERM + r")\s*"
+_RHS2 = (r"-?[\d.]+\s*\*\s*10\^\(\s*-?\d+\s*\)"
+         r"|exp\s*\(\s*[\d.]+\s*\)"
+         r"|[A-Za-z]\^\([^()=]{1,24}\)")
+_COND = r"\s*" + _TERM + r"\s*(?:>=|<=|!=|>|<)\s*(?:" + _RHS2 + r"|" + _FR + r"|-?[\d. ]+|" + _TERM + r")\s*"
 _DOMAIN_BOUND = re.compile(
     r"^" + _COND + r"(?:,\s*" + _COND + r")*[.,]?\s*$")
 # Inequalities that are the result itself, not a condition. Kept by exact text.
-_KEEP_INEQ = {"var(T)>=(1)/(I)", "B<f_s/2"}
+_KEEP_INEQ = {"var(T)>=(1)/(I)", "B<f_s/2", "BQP!=BPP", "L_xL_y!=L_yL_x",
+              "Superman!=Clark", "x!=x", "varnothing!=varnothing",
+              "E(AD)!=E(CD)", "T_(E)!=T_(D)", "U_u!=U_d"}
 
 # A formula whose first or last side holds no letter or digit is a fragment
 # of the source, not a relation: "#Sha(E)=#". Kept in the corpus, skipped
