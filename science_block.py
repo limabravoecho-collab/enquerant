@@ -311,7 +311,11 @@ class ScienceBlock:
         nest_desc = f"{info.get('tier', nest)}: {info.get('name', '')}".strip(': ')
 
         batch = records[batch_index * 8:(batch_index + 1) * 8]
-        primary = batch[0] if batch else {}
+        # Lead sentence first, then a formula, then whatever leads the batch.
+        # A bare 'has value' record names no subject.
+        primary = (next((r for r in batch if r.get('relation') == 'states'), None)
+                   or next((r for r in batch if r.get('relation') == 'is expressed by'), None)
+                   or (batch[0] if batch else {}))
         p_subj = primary.get("subject", query)
         p_obj = primary.get("object", "")
 
