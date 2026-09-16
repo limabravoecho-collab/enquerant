@@ -58,7 +58,7 @@ runtime. Two example briefs:
   dimensionless nest, where entropic debt reads as incompleteness in the
   record. One bridged nest, 0.0, rests on firmer ground.
 - `examples/navier-stokes-brief.txt` — an unsettled subject in a dimensional
-  nest, where the same figure reads as disorder in the system. Two bridged
+  nest, where the same figure reads as disorder in the system. Three bridged
   nests rest on firmer ground than its own.
 
 Same arithmetic, different reading. Every figure in both is computed and every
@@ -119,6 +119,7 @@ effect until the cache is rebuilt.
    ones.
 
    ```
+   mkdir -p ../volumes_old && mv ../niichii_v*.bin ../volumes_old/ 2>/dev/null
    cp delm_volumes/niichii_v*.bin ..
    ```
 
@@ -162,19 +163,17 @@ A re-mined bin will produce a different system: different chat, different
 cross-tier bridges, different structural lines. Configure it for your own model
 if you want to explore. The shipped bin is the one described here.
 
----
-
 ## Running it
 
-```
 The GUI needs a few packages:
+
+```
 pip install matplotlib pillow psutil
 sudo apt install python3-tk
 python3 enquerant_gui.py
-
 ```
 
-Boot is about 10 seconds with the full article lists (about 174,000
+Boot is about 10 seconds with the full article lists (about 181,000
 records, about 600 MB of memory).
 
 The knowledge base, the glyph grammar and the
