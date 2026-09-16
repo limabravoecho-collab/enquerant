@@ -3,7 +3,7 @@ STRUCTURAL BRIEF — RIEMANN HYPOTHESIS
 ==============================================================================
 
 Nest       : 0.1  (Tier 0.1: Quantitative Dimensions & Finites)
-Generated  : 2026-09-16 03:18 UTC
+Generated  : 2026-09-16 04:05 UTC
 Engine     : EnQuerant (EQ) V2.0 / DEIE — deterministic, CPU, no language model
 Note       : F_0 here is fixed per subject. The on-screen F_0 also
              varies with the query text and the session tick.
@@ -22,7 +22,7 @@ It carries an entropic debt of 0.06090. It shares terms with 4 other nests —
 6.1 via transform, fourier, filter; 1.0 via particle, newtons, hilbert; 0.0
 via algebra, calculus, conditional; 2.0 via ring, uniform, sequence. The
 best-grounded of its neighbours is nest 0.0, settled to 0.93. The source
-states 85 formulas for it, in the order given below. It marks no dependency
+states 81 formulas for it, in the order given below. It marks no dependency
 between them.
 
 ==============================================================================
@@ -35,8 +35,8 @@ proposes what it means.
 - Nest 0.1 is settled to 0.67 against a mean of 0.36 across 14 nests: rank 2 of 14.
 - 1 bridged nest rests on firmer ground than this one: 0.0 (0.93).
 - 1 bridge reaches three tiers or further: 6.1 via transform, fourier.
-- 85 steps are stated; 54 fall at or past the finite logic ceiling (k = 32) and carry an identical share of the nest's debt.
-- The first step carries 17.50% of the nest's debt; the last carries 0.55%.
+- 81 steps are stated; 50 fall at or past the finite logic ceiling (k = 32) and carry an identical share of the nest's debt.
+- The first step carries 17.89% of the nest's debt; the last carries 0.56%.
 - The formulas are drawn from 19 distinct sections of the source.
 
 ==============================================================================
@@ -61,344 +61,328 @@ proposes what it means.
 ==============================================================================
 
 [1] zeta (s)=0
-      L_f 1 | N_s 0.1 | share 17.50% | Xi 0.01066 | cumulative 17.50%
+      L_f 1 | N_s 0.1 | share 17.89% | Xi 0.01089 | cumulative 17.89%
 
 [2] (Riemann zeta function)
       zeta (s) = sum_(n=1)^infinity (1)/(n^s) = (1)/(1^s) + (1)/(2^s) + (1)/(3^s) + ...
-      L_f 2 | N_s 0.1 | share 8.75% | Xi 0.00533 | cumulative 26.25%
+      L_f 2 | N_s 0.1 | share 8.94% | Xi 0.00545 | cumulative 26.83%
 
 [3] (Riemann zeta function)
       zeta (s) = prod_(p prime) (1)/(1-p^(-s))= (1)/(1-2^(-s))*(1)/(1-3^(-s))*(1)/(1-5^(-s))*(1)/(1-7^(-s)) ...
-      L_f 3 | N_s 0.1 | share 5.83% | Xi 0.00355 | cumulative 32.08%
+      L_f 3 | N_s 0.1 | share 5.96% | Xi 0.00363 | cumulative 32.80%
 
 [4] (Riemann zeta function)
       (1-(2)/(2^s)) zeta (s) = eta (s) = sum_(n=1)^infinity ((-1)^(n+1))/(n^s) = (1)/(1^s) - (1)/(2^s) + (1)/(3^s) - ...,
-      L_f 4 | N_s 0.1 | share 4.37% | Xi 0.00266 | cumulative 36.46%
+      L_f 4 | N_s 0.1 | share 4.47% | Xi 0.00272 | cumulative 37.27%
 
 [5] (Riemann zeta function)
       s = 1 + 2 pi in/ log 2
-      L_f 5 | N_s 0.1 | share 3.50% | Xi 0.00213 | cumulative 39.96%
+      L_f 5 | N_s 0.1 | share 3.58% | Xi 0.00218 | cumulative 40.85%
 
 [6] (Riemann zeta function)
       s = 1
-      L_f 6 | N_s 0.1 | share 2.92% | Xi 0.00178 | cumulative 42.87%
+      L_f 6 | N_s 0.1 | share 2.98% | Xi 0.00182 | cumulative 43.83%
 
 [7] (Riemann zeta function)
       zeta (s) = 2^s pi^(s-1) sin ((pi s)/(2)) Gamma (1-s) zeta (1-s).
-      L_f 7 | N_s 0.1 | share 2.50% | Xi 0.00152 | cumulative 45.37%
+      L_f 7 | N_s 0.1 | share 2.56% | Xi 0.00156 | cumulative 46.39%
 
 [8] (Riemann zeta function)
-      s != 0
-      L_f 8 | N_s 0.1 | share 2.19% | Xi 0.00133 | cumulative 47.56%
+      Re (s)=1/2
+      L_f 8 | N_s 0.1 | share 2.24% | Xi 0.00136 | cumulative 48.62%
 
-[9] (Riemann zeta function)
-      Re(s)=1/2
-      L_f 9 | N_s 0.1 | share 1.94% | Xi 0.00118 | cumulative 49.50%
+[9] (Origin)
+      Pi (x) = pi (x) + (pi (x^(1/2)))/(2) +(pi (x^(1/3)))/(3) + (pi (x^(1/4)))/(4) + (pi (x^(1/5)))/(5) +(pi (x^(1/6)))/(6) +...
+      L_f 9 | N_s 0.1 | share 1.99% | Xi 0.00121 | cumulative 50.61%
 
 [10] (Origin)
-      Pi (x) = pi (x) + (pi (x^(1/2)))/(2) +(pi (x^(1/3)))/(3) + (pi (x^(1/4)))/(4) + (pi (x^(1/5)))/(5) +(pi (x^(1/6)))/(6) +...
-      L_f 10 | N_s 0.1 | share 1.75% | Xi 0.00107 | cumulative 51.25%
+      pi (x) = sum_(n=1)^infinity (mu (n))/(n) Pi (x^(1/n)) = Pi (x) -(1)/(2) Pi (x^(1/2)) - (1)/(3) Pi (x^(1/3)) - (1)/(5) Pi (x^(1/5)) + (1)/(6) Pi (x^(1/6)) -...,
+      L_f 10 | N_s 0.1 | share 1.79% | Xi 0.00109 | cumulative 52.40%
 
 [11] (Origin)
-      pi (x) = sum_(n=1)^infinity frac mu (n) n Pi (x^(1/n)) = Pi (x) -(1)/(2) Pi (x^(1/2)) - (1)/(3) Pi (x^(1/3)) - (1)/(5) Pi (x^(1/5)) + (1)/(6) Pi (x^(1/6)) -...,
-      L_f 11 | N_s 0.1 | share 1.59% | Xi 0.00097 | cumulative 52.84%
+      Pi_0(x) = li (x) - sum_rho li (x^rho) - log 2 + int_x^infinity(dt)/(t(t^2-1) log t)
+      L_f 11 | N_s 0.1 | share 1.63% | Xi 0.00099 | cumulative 54.03%
 
 [12] (Origin)
-      Pi_0(x) = li(x) - sum_ rho li(x^ rho) - log 2 + int_x^infinity(dt)/(t(t^2-1) log t)
-      L_f 12 | N_s 0.1 | share 1.46% | Xi 0.00089 | cumulative 54.30%
+      Pi_0(x) = lim_(varepsilon -> 0)(Pi (x- varepsilon) + Pi (x+ varepsilon))/(2).
+      L_f 12 | N_s 0.1 | share 1.49% | Xi 0.00091 | cumulative 55.52%
 
 [13] (Origin)
-      Pi_0(x) = lim_(varepsilon -> 0) frac Pi (x- varepsilon) + Pi (x+ varepsilon) 2.
-      L_f 13 | N_s 0.1 | share 1.35% | Xi 0.00082 | cumulative 55.65%
+      li (x) = int_0^x (dt)/(log t).
+      L_f 13 | N_s 0.1 | share 1.38% | Xi 0.00084 | cumulative 56.89%
 
 [14] (Origin)
-      li(x) = int_0^x (dt)/(log t).
-      L_f 14 | N_s 0.1 | share 1.25% | Xi 0.00076 | cumulative 56.90%
-
-[15] (Origin)
       s = 1/2 + it
-      L_f 15 | N_s 0.1 | share 1.17% | Xi 0.00071 | cumulative 58.06%
+      L_f 14 | N_s 0.1 | share 1.28% | Xi 0.00078 | cumulative 58.17%
+
+[15] (Distribution of prime numbers)
+      pi (x) - li (x) = O (x^beta log x)
+      L_f 15 | N_s 0.1 | share 1.19% | Xi 0.00073 | cumulative 59.36%
 
 [16] (Distribution of prime numbers)
-      pi (x) - li(x) = O (x^ beta log x)
-      L_f 16 | N_s 0.1 | share 1.09% | Xi 0.00067 | cumulative 59.16%
+      | pi (x) - li (x)| < (1)/(8 pi) sqrt(x) log (x)
+      L_f 16 | N_s 0.1 | share 1.12% | Xi 0.00068 | cumulative 60.48%
 
 [17] (Distribution of prime numbers)
-      | pi (x) - li(x)| < (1)/(8 pi) sqrt(x) log (x)
-      L_f 17 | N_s 0.1 | share 1.03% | Xi 0.00063 | cumulative 60.19%
+      | psi (x) - x| < (1)/(8 pi) sqrt(x) log^2 x
+      L_f 17 | N_s 0.1 | share 1.05% | Xi 0.00064 | cumulative 61.53%
 
 [18] (Distribution of prime numbers)
-      | psi (x) - x| < (1)/(8 pi) sqrt(x) log^2 x
-      L_f 18 | N_s 0.1 | share 0.97% | Xi 0.00059 | cumulative 61.16%
-
-[19] (Distribution of prime numbers)
       x - (4)/(pi) sqrt x log x < p <= x
-      L_f 19 | N_s 0.1 | share 0.92% | Xi 0.00056 | cumulative 62.08%
+      L_f 18 | N_s 0.1 | share 0.99% | Xi 0.00061 | cumulative 62.53%
+
+[19] (Growth of arithmetic functions)
+      (1)/(zeta (s)) = sum_(n=1)^infinity (mu (n))/(n^s)
+      L_f 19 | N_s 0.1 | share 0.94% | Xi 0.00057 | cumulative 63.47%
 
 [20] (Growth of arithmetic functions)
-      (1)/(zeta (s)) = sum_(n=1)^infinity (mu (n))/(n^s)
-      L_f 20 | N_s 0.1 | share 0.87% | Xi 0.00053 | cumulative 62.96%
+      M(x) = sum_(n <= x) mu (n)
+      L_f 20 | N_s 0.1 | share 0.89% | Xi 0.00054 | cumulative 64.36%
 
 [21] (Growth of arithmetic functions)
-      M(x) = sum_(n <= x) mu (n)
-      L_f 21 | N_s 0.1 | share 0.83% | Xi 0.00051 | cumulative 63.79%
+      M(x) = O (x^((1)/(2)+ varepsilon))
+      L_f 21 | N_s 0.1 | share 0.85% | Xi 0.00052 | cumulative 65.22%
 
 [22] (Growth of arithmetic functions)
-      M(x) = O (x^((1)/(2)+ varepsilon))
-      L_f 22 | N_s 0.1 | share 0.80% | Xi 0.00048 | cumulative 64.58%
+      M(x) = O (x^(1/2) exp ((log x)^(1/2)(log log x)^(14))).
+      L_f 22 | N_s 0.1 | share 0.81% | Xi 0.00050 | cumulative 66.03%
 
 [23] (Growth of arithmetic functions)
-      M(x) = O (x^(1/2) exp ((log x)^(1/2)(log log x)^(14))).
-      L_f 23 | N_s 0.1 | share 0.76% | Xi 0.00046 | cumulative 65.34%
+      |M(x)| <= sqrt x.
+      L_f 23 | N_s 0.1 | share 0.78% | Xi 0.00047 | cumulative 66.81%
 
 [24] (Growth of arithmetic functions)
-      |M(x)| <= sqrt x.
-      L_f 24 | N_s 0.1 | share 0.73% | Xi 0.00044 | cumulative 66.07%
+      sigma (n) = sum_(d mid n) d
+      L_f 24 | N_s 0.1 | share 0.75% | Xi 0.00045 | cumulative 67.55%
 
 [25] (Growth of arithmetic functions)
-      sigma (n) = sum_(d mid n) d
-      L_f 25 | N_s 0.1 | share 0.70% | Xi 0.00043 | cumulative 66.77%
+      sigma (n) < e^gamma n log log n
+      L_f 25 | N_s 0.1 | share 0.72% | Xi 0.00044 | cumulative 68.27%
 
 [26] (Growth of arithmetic functions)
-      sigma (n) < e^ gamma n log log n
-      L_f 26 | N_s 0.1 | share 0.67% | Xi 0.00041 | cumulative 67.45%
+      sigma (n) < H_n + log (H_n)e^(H_n)
+      L_f 26 | N_s 0.1 | share 0.69% | Xi 0.00042 | cumulative 68.96%
 
 [27] (Growth of arithmetic functions)
-      sigma (n) < H_n + log (H_n)e^(H_n)
-      L_f 27 | N_s 0.1 | share 0.65% | Xi 0.00039 | cumulative 68.10%
+      (n)/(varphi (n)) < e^gamma log log n+(e^gamma (4+ gamma - log 4 pi))/(sqrt(log n))
+      L_f 27 | N_s 0.1 | share 0.66% | Xi 0.00040 | cumulative 69.62%
 
 [28] (Growth of arithmetic functions)
-      (n)/(varphi (n)) < e^ gamma log log n+(e^ gamma (4+ gamma - log 4 pi))/(sqrt(log n))
-      L_f 28 | N_s 0.1 | share 0.62% | Xi 0.00038 | cumulative 68.72%
+      sum_(i=1)^m|F_n(i) - (i)/(m)| = O (n^((1)/(2)+ epsilon))
+      L_f 28 | N_s 0.1 | share 0.64% | Xi 0.00039 | cumulative 70.26%
 
 [29] (Growth of arithmetic functions)
-      sum_(i=1)^m|F_n(i) - (i)/(m)| = O (n^((1)/(2)+ epsilon))
-      L_f 29 | N_s 0.1 | share 0.60% | Xi 0.00037 | cumulative 69.32%
+      m = sum_(i=1)^n varphi (i)
+      L_f 29 | N_s 0.1 | share 0.62% | Xi 0.00038 | cumulative 70.87%
 
 [30] (Growth of arithmetic functions)
-      m = sum_(i=1)^n varphi (i)
-      L_f 30 | N_s 0.1 | share 0.58% | Xi 0.00036 | cumulative 69.91%
-
-[31] (Growth of arithmetic functions)
       log g(n) < sqrt(Li^(-1)(n))
-      L_f 31 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 70.47%
+      L_f 30 | N_s 0.1 | share 0.60% | Xi 0.00036 | cumulative 71.47%
+
+[31] (Lindelöf hypothesis and growth of the zeta function)
+      zeta ((1)/(2) + it) = O(t^varepsilon),
+      L_f 31 | N_s 0.1 | share 0.58% | Xi 0.00035 | cumulative 72.05%
 
 [32] (Lindelöf hypothesis and growth of the zeta function)
-      zeta ((1)/(2) + it) = O(t^ varepsilon),
-      L_f 32 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 71.02%
-      [finite logic ceiling: L_f = k = 32; each remaining step carries 0.55%]
+      e^gamma <= limsup_(t -> +infinity)(| zeta (1+it)|)/(log log t) <= 2e^gamma
+      L_f 32 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 72.61%
+      [finite logic ceiling: L_f = k = 32; each remaining step carries 0.56%]
 
 [33] (Lindelöf hypothesis and growth of the zeta function)
-      e^ gamma <= limsup_(t -> +infinity)(| zeta (1+it)|)/(log log t) <= 2e^ gamma
-      L_f 33 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 71.56%
+      (6)/(pi^2)e^gamma <= limsup_(t -> +infinity)(1/| zeta (1+it)|)/(log log t) <= (12)/(pi^2)e^gamma
+      L_f 33 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 73.17%
 
-[34] (Lindelöf hypothesis and growth of the zeta function)
-      (6)/(pi^2)e^ gamma <= limsup_(t -> +infinity)(1/| zeta (1+it)|)/(log log t) <= (12)/(pi^2)e^ gamma
-      L_f 34 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 72.11%
+[34] (Analytic criteria equivalent to the Riemann hypothesis)
+      - sum_(k=1)^infinity ((-x)^k)/((k-1)! zeta (2k))= O (x^((1)/(4)+ epsilon))
+      L_f 34 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 73.72%
 
 [35] (Analytic criteria equivalent to the Riemann hypothesis)
-      - sum_(k=1)^infinity ((-x)^k)/((k-1)! zeta (2k))= O (x^((1)/(4)+ epsilon))
-      L_f 35 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 72.66%
+      f(x) = sum_(nu =1)^nc_nu rho ((theta_nu)/(x))
+      L_f 35 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 74.28%
 
 [36] (Analytic criteria equivalent to the Riemann hypothesis)
-      f(x) = sum_(nu =1)^nc_ nu rho ((theta_ nu)/(x))
-      L_f 36 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 73.21%
+      sum_(nu =1)^nc_nu theta_nu =0,
+      L_f 36 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 74.84%
 
 [37] (Analytic criteria equivalent to the Riemann hypothesis)
-      sum_(nu =1)^nc_ nu theta_ nu =0,
-      L_f 37 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 73.75%
+      theta_nu in 1/k_(k >= 1)
+      L_f 37 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 75.40%
 
 [38] (Analytic criteria equivalent to the Riemann hypothesis)
-      theta_ nu in 1/k_(k >= 1)
-      L_f 38 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 74.30%
+      int_0^infinity(z^(- sigma -1) varphi (z))/(e^(x/z) +1) dz=0
+      L_f 38 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 75.96%
 
 [39] (Analytic criteria equivalent to the Riemann hypothesis)
-      int_0^infinity frac z^(- sigma -1) varphi (z) e^(x/z) +1 dz=0
-      L_f 39 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 74.85%
+      H(lambda, z):= int_(0)^(infinity) e^(lambda u^(2)) Phi (u) cos (z u) d u
+      L_f 39 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 76.52%
 
 [40] (Analytic criteria equivalent to the Riemann hypothesis)
-      0 < Re (s) < (1)/(2).
-      L_f 40 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 75.39%
-
-[41] (Analytic criteria equivalent to the Riemann hypothesis)
-      H(lambda, z):= int_(0)^(infinity) e^(lambda u^(2)) Phi (u) cos (z u) d u
-      L_f 41 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 75.94%
-
-[42] (Analytic criteria equivalent to the Riemann hypothesis)
       Phi (u) = sum_(n=1)^(infinity) (2 pi^2n^4e^(9u) - 3 pi n^2 e^(5u)) e^(- pi n^2 e^(4u))
-      L_f 42 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 76.49%
+      L_f 40 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 77.08%
 
-[43] (Consequences of the generalized Riemann hypothesis)
+[41] (Consequences of the generalized Riemann hypothesis)
       lim_(x -> 1^-) sum_(p > 2)(-1)^((p+1)/2) x^p=+infinity,
-      L_f 43 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 77.03%
+      L_f 41 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 77.64%
 
-[44] (Littlewood's theorem)
-      pi (x) > li(x) +(1)/(3)(sqrt x)/(log x) log log log x,
-      L_f 44 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 77.58%
+[42] (Littlewood's theorem)
+      pi (x) > li (x) +(1)/(3)(sqrt x)/(log x) log log log x,
+      L_f 42 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 78.20%
 
-[45] (Littlewood's theorem)
-      pi (x) < li(x) -(1)/(3)(sqrt x)/(log x) log log log x.
-      L_f 45 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 78.13%
+[43] (Littlewood's theorem)
+      pi (x) < li (x) -(1)/(3)(sqrt x)/(log x) log log log x.
+      L_f 43 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 78.76%
 
-[46] (Growth of Euler's totient)
+[44] (Growth of Euler's totient)
       varphi (n) < e^(- gamma)(n)/(log log n)
-      L_f 46 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 78.67%
+      L_f 44 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 79.31%
 
-[47] (Arithmetic zeta functions of arithmetic schemes and their L-factors)
+[45] (Arithmetic zeta functions of arithmetic schemes and their L-factors)
       Re (s)=1/2,3/2,...,n-1/2
-      L_f 47 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 79.22%
+      L_f 45 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 79.87%
 
-[48] (Arithmetic zeta functions of arithmetic schemes and their L-factors)
+[46] (Arithmetic zeta functions of arithmetic schemes and their L-factors)
       Re (s)=1, 2, ...,n-1
-      L_f 48 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 79.77%
+      L_f 46 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 80.43%
+
+[47] (Operator theory)
+      zeta (1/2+i hat H) = 0
+      L_f 47 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 80.99%
+
+[48] (Operator theory)
+      sigma_x sigma_p >= (hbar)/(2)
+      L_f 48 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 81.55%
 
 [49] (Operator theory)
-      zeta (1/2+i hat H) = 0
-      L_f 49 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 80.31%
+      N(s)= (1)/(pi) Arg xi (1/2+i sqrt s)
+      L_f 49 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 82.11%
 
 [50] (Operator theory)
-      sigma_x sigma_p >= (hbar)/(2)
-      L_f 50 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 80.86%
+      V^(-1)(x) = sqrt(4 pi) (d^(1/2)N(x))/(dx^(1/2)).
+      L_f 50 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 82.67%
 
 [51] (Operator theory)
-      N(s)= (1)/(pi)Arg xi (1/2+i sqrt s)
-      L_f 51 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 81.41%
-
-[52] (Operator theory)
-      V^(-1)(x) = sqrt(4 pi) (d^(1/2)N(x))/(dx^(1/2)).
-      L_f 52 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 81.95%
-
-[53] (Operator theory)
       (xi (s))/(xi (0))=(det (H+s(s-1)+1/4))/(det (H+1/4)).
-      L_f 53 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 82.50%
+      L_f 51 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 83.23%
 
-[54] (Turán's result)
+[52] (Turán's result)
       sum_(n=1)^N n^(-s)
-      L_f 54 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 83.05%
+      L_f 52 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 83.79%
 
-[55] (Turán's result)
+[53] (Turán's result)
       T(x) = sum_(n <= x)(lambda (n))/(n) >= 0 for x > 0,
-      L_f 55 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 83.60%
+      L_f 53 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 84.35%
+
+[54] (Number of zeros)
+      N(T)=(1)/(pi) Arg (xi (s)) = (1)/(pi) Arg (Gamma ((s)/(2)) pi^(-(s)/(2)) zeta (s)s(s-1)/2)
+      L_f 54 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 84.91%
+
+[55] (Number of zeros)
+      (1)/(pi) Arg (Gamma ((s)/(2)) pi^(-s/2)s(s-1)/2) = (T)/(2 pi) log (T)/(2 pi)-(T)/(2 pi) +7/8+O(1/T)
+      L_f 55 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 85.46%
 
 [56] (Number of zeros)
-      N(T)=(1)/(pi) Arg (xi (s)) = (1)/(pi) Arg (Gamma ((s)/(2)) pi^(-(s)/(2)) zeta (s)s(s-1)/2)
-      L_f 56 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 84.14%
+      S(T) = (1)/(pi) Arg (zeta (1/2+iT)) =O(log T).
+      L_f 56 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 86.02%
 
 [57] (Number of zeros)
-      (1)/(pi) Arg (Gamma ((s)/(2)) pi^(-s/2)s(s-1)/2) = (T)/(2 pi) log (T)/(2 pi)-(T)/(2 pi) +7/8+O(1/T)
-      L_f 57 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 84.69%
+      |N(T) - (T)/(2 pi) log (T)/(2 pi e) | <= 0.112 log T + 0.278 log log T + 3.385 + (0.2)/(T)
+      L_f 57 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 86.58%
 
 [58] (Number of zeros)
-      S(T) = (1)/(pi) Arg (zeta (1/2+iT)) =O(log T).
-      L_f 58 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 85.24%
+      H >= T^((27)/(82)+ varepsilon)
+      L_f 58 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 87.14%
 
 [59] (Number of zeros)
-      |N(T) - (T)/(2 pi) log (T)/(2 pi e) | <= 0.112 log T + 0.278 log log T + 3.385 + (0.2)/(T)
-      L_f 59 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 85.78%
+      int_0^T|S(t)|^(2k)dt = ((2k)!)/(k!(2 pi)^(2k))T(log log T)^k + O(T(log log T)^(k-1/2)).
+      L_f 59 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 87.70%
 
 [60] (Number of zeros)
-      H >= T^((27)/(82)+ varepsilon)
-      L_f 60 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 86.33%
+      | zeta (sigma +it)| = exp Re sum_(p^n)(p^(-n(sigma +it)))/(n)= exp sum_(p^n)(p^(-n sigma) cos (t log p^n))/(n),
+      L_f 60 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 88.26%
 
 [61] (Number of zeros)
-      int_0^T|S(t)|^(2k)dt = ((2k)!)/(k!(2 pi)^(2k))T(log log T)^k + O(T(log log T)^(k-1/2)).
-      L_f 61 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 86.88%
+      | zeta (sigma)^3 zeta (sigma +it)^4 zeta (sigma +2it)| = exp sum_(p^n)p^(-n sigma)(3+4 cos (t log p^n)+ cos (2t log p^n))/(n)
+      L_f 61 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 88.82%
 
 [62] (Number of zeros)
-      | zeta (sigma +it)| = exp Re sum_(p^n)(p^(-n(sigma +it)))/(n)= exp sum_(p^n)(p^(-n sigma) cos (t log p^n))/(n),
-      L_f 62 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 87.42%
-
-[63] (Number of zeros)
-      | zeta (sigma)^3 zeta (sigma +it)^4 zeta (sigma +2it)| = exp sum_(p^n)p^(-n sigma)(3+4 cos (t log p^n)+ cos (2t log p^n))/(n)
-      L_f 63 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 87.97%
-
-[64] (Number of zeros)
       3+4 cos (theta)+ cos (2 theta) = 2 (1+ cos (theta))^2 >= 0.
-      L_f 64 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 88.52%
+      L_f 62 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 89.38%
+
+[63] (Zero-free regions)
+      sigma >= 1 - (1)/(5.558691 log |t|)
+      L_f 63 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 89.94%
+
+[64] (Zero-free regions)
+      sigma >= 1-(1)/(55.241(log |t|)^(2/3)(log log |t|)^(1/3))
+      L_f 64 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 90.50%
 
 [65] (Zero-free regions)
-      sigma >= 1 - (1)/(5.558691 log |t|)
-      L_f 65 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 89.06%
+      3.0001753328 * 10^(12) <= |t| <= exp (64.1) ~= 6.89 * 10^(27)
+      L_f 65 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 91.06%
 
 [66] (Zero-free regions)
-      sigma >= 1- frac 1 55.241(log |t|)^(2/3)(log log |t|)^(1/3)
-      L_f 66 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 89.61%
+      sigma >= 1 - (0.04962 - (0.0196)/(1.15 + log 3 + (1)/(6) log t + log log t))/(0.685 + log 3 + (1)/(6) log t + 1.155 * log log t)
+      L_f 66 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 91.61%
 
 [67] (Zero-free regions)
-      3.0001753328 * 10^(12) <= |t| <= exp (64.1) ~= 6.89 * 10^(27)
-      L_f 67 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 90.16%
+      exp (64.1) <= |t| <= exp (1000) ~= 1.97 * 10^(434)
+      L_f 67 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 92.17%
 
 [68] (Zero-free regions)
-      sigma >= 1 - (0.04962 - (0.0196)/(1.15 + log 3 + (1)/(6) log t + log log t))/(0.685 + log 3 + (1)/(6) log t + 1.155 * log log t)
-      L_f 68 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 90.70%
+      sigma >= 1-(0.05035)/((27)/(164)(log |t|)+7.096)+(0.0349)/(((27)/(164)(log |t|)+7.096)^2)
+      L_f 68 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 92.73%
 
 [69] (Zero-free regions)
-      |t| >= 1.88 * 10^(14)
-      L_f 69 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 91.25%
+      sigma >= 1-(1)/(48.1588(log |t|)^(2/3)(log log |t|)^(1/3))
+      L_f 69 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 93.29%
 
-[70] (Zero-free regions)
-      exp (64.1) <= |t| <= exp (1000) ~= 1.97 * 10^(434)
-      L_f 70 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 91.80%
+[70] (Zeros on the critical line)
+      (3)/(2) - (1)/(sqrt(2)) cot ((1)/(sqrt(2))) ~= 67.25%
+      L_f 70 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 93.85%
 
-[71] (Zero-free regions)
-      sigma >= 1- frac 0.05035 (27)/(164)(log |t|)+7.096 + frac 0.0349 ((27)/(164)(log |t|)+7.096)^2
-      L_f 71 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 92.34%
+[71] (Hardy–Littlewood conjectures)
+      H = T^(a + varepsilon)
+      L_f 71 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 94.41%
 
-[72] (Zero-free regions)
-      |t| >= exp (1000)
-      L_f 72 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 92.89%
+[72] (Hardy–Littlewood conjectures)
+      T_0 = T_0(varepsilon) > 0
+      L_f 72 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 94.97%
 
-[73] (Zero-free regions)
-      sigma >= 1- frac 1 48.1588(log |t|)^(2/3)(log log |t|)^(1/3)
-      L_f 73 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 93.44%
+[73] (Hardy–Littlewood conjectures)
+      H=T^((1)/(4)+ varepsilon)
+      L_f 73 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 95.53%
 
-[74] (Zeros on the critical line)
-      (3)/(2) - (1)/(sqrt(2)) cot ((1)/(sqrt(2))) ~= 67.25\%
-      L_f 74 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 93.98%
+[74] (Hardy–Littlewood conjectures)
+      c = c(varepsilon) > 0
+      L_f 74 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 96.09%
 
 [75] (Hardy–Littlewood conjectures)
-      H = T^(a + varepsilon)
-      L_f 75 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 94.53%
+      H=T^((1)/(2)+ varepsilon)
+      L_f 75 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 96.65%
 
 [76] (Hardy–Littlewood conjectures)
-      T_0 = T_0(varepsilon) > 0
-      L_f 76 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 95.08%
-
-[77] (Hardy–Littlewood conjectures)
-      H=T^((1)/(4)+ varepsilon)
-      L_f 77 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 95.63%
-
-[78] (Hardy–Littlewood conjectures)
-      c = c(varepsilon) > 0
-      L_f 78 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 96.17%
-
-[79] (Hardy–Littlewood conjectures)
-      H=T^((1)/(2)+ varepsilon)
-      L_f 79 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 96.72%
-
-[80] (Hardy–Littlewood conjectures)
       N_0(T+H)-N_0(T) >= c H
-      L_f 80 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 97.27%
+      L_f 76 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 97.20%
 
-[81] (Selberg's zeta function conjecture)
+[77] (Selberg's zeta function conjecture)
       H=T^(0.5+ varepsilon)
-      L_f 81 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 97.81%
+      L_f 77 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 97.76%
 
-[82] (Selberg's zeta function conjecture)
+[78] (Selberg's zeta function conjecture)
       N(T+H)-N(T) >= cH log T
-      L_f 82 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 98.36%
+      L_f 78 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 98.32%
 
-[83] (Selberg's zeta function conjecture)
+[79] (Selberg's zeta function conjecture)
       H=T^(0.5)
-      L_f 83 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 98.91%
+      L_f 79 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 98.88%
 
-[84] (Random matrix theory and quantum chaos)
+[80] (Random matrix theory and quantum chaos)
       T -> infinity
-      L_f 84 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 99.45%
+      L_f 80 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 99.44%
 
-[85] (Arguments for and against the Riemann hypothesis)
+[81] (Arguments for and against the Riemann hypothesis)
       M(x) = O(x^(1/2+ varepsilon))
-      L_f 85 | N_s 0.1 | share 0.55% | Xi 0.00033 | cumulative 100.00%
+      L_f 81 | N_s 0.1 | share 0.56% | Xi 0.00034 | cumulative 100.00%
 
 CLOSURE: cumulative 100.00% | carried 0.06090 | nest entropic debt Xi 0.06090
 
