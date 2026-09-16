@@ -194,13 +194,15 @@ _RE_ENVIRONMENT = re.compile(
 _RE_ALIGN_MARK = re.compile(r"&|\\\\")
 
 _RE_STRUCTURAL = re.compile(
-    r"\\(?:left|right|bigg?l?r?|Bigg?l?r?|langle|rangle|lvert|rvert|"
+    r"\\(?:left|right|bigg?l?r?|Bigg?l?r?|lvert|rvert|"
     r"lVert|rVert|quad|qquad|hspace|vspace|nonumber|label|nolimits|limits|mathbin|mathrel|mathop)"
     r"(?![A-Za-z])"
     r"|\\(?:,|;|!|:|\s)")
 
-_RE_FRAC = re.compile(r"\\d?frac\s*\{([^{}]*)\}\s*\{([^{}]*)\}")
-_RE_SQRT = re.compile(r"\\sqrt\s*\{([^{}]*)\}")
+_RE_FRAC = re.compile(r"\\[dt]?frac\s*\{([^{}]*)\}\s*\{([^{}]*)\}")
+_RE_FRAC_BARE = re.compile(r"\\[dt]?frac\s*([A-Za-z0-9])\s*([A-Za-z0-9])")
+_RE_OVER = re.compile(r"\{([^{}]*)\\over(?![A-Za-z])([^{}]*)\}")
+_RE_SQRT = re.compile(r"\\sqrt\s*(?:\[([^\]]*)\])?\s*\{([^{}]*)\}")
 _RE_SUPSUB = re.compile(r"([_^])\s*\{([^{}]*)\}")
 
 _TEX_SYMBOLS = [
@@ -226,6 +228,14 @@ EQ_OPEN = "@@EQ@@"
 EQ_CLOSE = "@@/EQ@@"
 
 
+_RE_MATRIX = re.compile(r"\\begin\s*\{([pbvBV]?matrix|smallmatrix)\}(.*?)\\end\s*\{\1\}", re.S)
+
+
+def _matrix(mm):
+    rows = [r.strip() for r in re.split(r"\\\\", mm.group(2)) if r.strip()]
+    return " [" + "; ".join(", ".join(c.strip() for c in r.split("&")) for r in rows) + "] "
+
+
 def latex_to_plain(s: str) -> str:
     """
     Reduces a LaTeX fragment to copyable ASCII.
@@ -236,19 +246,24 @@ def latex_to_plain(s: str) -> str:
     since dropping them turned "S = k_B ln Omega" into "S = k_B".
     """
     out = s.replace("\\#", "#").replace("\\{", "{").replace("\\}", "}")
+    out = out.replace("\\langle", " ⟨").replace("\\rangle", "⟩ ").replace("~", " ")
+    out = _RE_MATRIX.sub(_matrix, out)
     out = _RE_ENVIRONMENT.sub(" ", out)
     out = _RE_ALIGN_MARK.sub(" ", out)
     for _ in range(8):
         before = out
         out = _RE_WRAPPER.sub(r"\1", out)
+        out = _RE_OVER.sub(r"((\1)/(\2))", out)
         out = _RE_FRAC.sub(r"(\1)/(\2)", out)
-        out = _RE_SQRT.sub(r"sqrt(\1)", out)
+        out = _RE_FRAC_BARE.sub(r"(\1)/(\2)", out)
+        out = _RE_SQRT.sub(lambda q: f" sqrt[{q.group(1)}]({q.group(2)})" if q.group(1) else f" sqrt({q.group(2)})", out)
         out = _RE_SUPSUB.sub(r"\1(\2)", out)
         if out == before:
             break
+    out = re.sub(r"\\(?:rm|mathrm|textrm|text)\s*_\(([^()]*)\)", r"\1", out)
     out = re.sub(r"\\(?:mathrm|textrm|text|mathbf|mathit|boldsymbol|operatorname|mbox|"
                  r"displaystyle|textstyle|mathcal|mathbb|mathsf|rm|bf|it)"
-                 r"\s+(?=[A-Za-z0-9])", " ", out)
+                 r"(?![A-Za-z])\s*(?=[A-Za-z0-9_])", " ", out)
     out = _RE_STRUCTURAL.sub(" ", out)
     for pat, rep in _RE_SYMBOLS:
         out = pat.sub(rep, out)
@@ -373,7 +388,7 @@ def clean_wikitext(text: str) -> str:
         body = body.replace("<", " lt ").replace(">", " gt ")
         return f" {EQ_OPEN}{' '.join(body.split())}{EQ_CLOSE} "
 
-    t = re.sub(r"&lt;math[^&]*&gt;(.*?)&lt;/math&gt;", _eq, text, flags=re.S | re.I)
+    t = re.sub(r"&lt;math(?:[^&]|&quot;)*&gt;(.*?)&lt;/math&gt;", _eq, text, flags=re.S | re.I)
 
     t = t.replace("&lt;", "<").replace("&gt;", ">")
     t = t.replace("&quot;", '"').replace("&nbsp;", " ").replace("&amp;", "&")
@@ -384,8 +399,7 @@ def clean_wikitext(text: str) -> str:
     # Math is converted rather than dropped: the equations are the point. The
     # markers survive the rest of cleaning so the formula can be lifted out as
     # its own record afterwards.
-    t = _RE_MATH.sub(
-        lambda m: f" {EQ_OPEN}{latex_to_plain(m.group(1))}{EQ_CLOSE} ", t)
+    t = _RE_MATH.sub(_eq, t)
 
     # Inline templates carrying content rather than formatting. These must be
     # unwrapped before strip_templates, which removes braces wholesale.
