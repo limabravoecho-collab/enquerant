@@ -34,7 +34,7 @@ that is incidental. It is not a companion and gives no support content.
 
 **Included**
 
-- The runtime: 9 Python files.
+- The runtime: 11 Python files.
 - Maker-written data: FISSN taxonomy, PSCS-N calibration, SLC nature,
   structural patterns, query fillers, state directions.
 - `gis_english.bin` — the language data. Ships with the system; see below.
@@ -50,12 +50,9 @@ that is incidental. It is not a companion and gives no support content.
 
 ### Example output
 
-Out of the box, EQ does not generate the sample briefs listed below. The version
-I built is a hybrid where standard EQ outputs appear on screen instantly while
-the AI/LLM trails along below it, and I added a feature to my AI/LLM to trigger
-and download a text link that generates these examples. You can build this same
-hybrid feature into your own AI setup. Two structural briefs generated via this
-setup:
+EQ writes a structural brief for the last subject you asked about. Type
+`!brief` and the brief is saved as a plain text file in `briefs/` beside the
+runtime. Two example briefs:
 
 - `examples/riemann-hypothesis-brief.txt` — a settled subject in a
   dimensionless nest, where entropic debt reads as incompleteness in the
@@ -67,10 +64,13 @@ setup:
 Same arithmetic, different reading. Every figure in both is computed and every
 formula copied from a source record.
 
-The brief generator is part of a proprietary bridge between EQ and my own
-AI/LLM system, and is not included here. The engine, the ontology and the
-miners are — building your own bridge is straightforward, and any capable
-programmer or AI tool will help you do it.
+The brief's F_0 is fixed per subject. The on-screen F_0 also varies with the
+query text and the session tick, so the two can differ.
+
+The version I run is a hybrid where standard EQ outputs appear on screen
+instantly while an AI/LLM trails along below it. That bridge is proprietary and
+not included. Building your own is straightforward, and any capable programmer
+or AI tool will help you do it.
 
 ---
 
@@ -167,7 +167,11 @@ if you want to explore. The shipped bin is the one described here.
 ## Running it
 
 ```
+The GUI needs a few packages:
+pip install matplotlib pillow psutil
+sudo apt install python3-tk
 python3 enquerant_gui.py
+
 ```
 
 Boot is about 10 seconds with the full article lists (about 174,000
@@ -180,8 +184,9 @@ to disk, because the same records always produce the same matrix.
 EQ will not start until the knowledge base is built. Complete the mining steps
 above first; the volumes must sit beside the runtime files.
 
-Type `!help` for the codes, `!about` for what the screen labels mean, and
-`!spfs` for the formula system.
+Type `!help` for the codes, `!about` for what the screen labels mean,
+`!spfs` for the formula system, and `!brief` to save the last reading as a
+structural brief.
 
 ---
 
