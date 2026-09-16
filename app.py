@@ -583,14 +583,16 @@ class EnquerantOrchestrator:
 
         else:
             # Mode 2: Exploration & Problem Solving with Pedagogical Sequence
-            self.last_science_query = clean_query
+            # Remembered only when the screen shows records, so !brief
+            # never reports a subject the screen did not.
+            self.last_science_query = clean_query if matched_records else None
             response_lines.append("### SPFS Exploration & Problem Solving (Mode 2)")
             # PSCS-N 1.4.2: Mode 1 chat line above the Mode 2 sequence, built
             # from the RESEARCH_ACKNOWLEDGMENT pool via units_override. No reply
             # pair is added, so chat_cats is unchanged and routing is unaffected.
             ack_units = [u for u, cs in zip(self.grammar.chat_units, self.grammar.chat_cat)
                          if "RESEARCH_ACKNOWLEDGMENT" in cs and u[2] is not None]
-            if ack_units:
+            if ack_units and matched_records:
                 m2_constraints = [(r["subject"], r["object"]) for r in self.parser.nature_records
                                   if r["relation"] == "violates slc nature"]
                 m2_allowed = {"MEMORY"} if len(self.whiteboard.get_recent_history(2)) >= 2 else set()
@@ -884,7 +886,7 @@ class EnquerantOrchestrator:
     def _write_brief(self) -> str:
         """Writes the structural brief for the last science reading."""
         q = self.last_science_query
-        if not q:
+        if not q or not self.science.holds(q):
             return "[STATUS]: No reading to report. Ask about a subject first."
         out = self.science.render(q, self.science.retrieve(q))
         subject = out.get("math_subject")
