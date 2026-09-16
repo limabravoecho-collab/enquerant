@@ -38,8 +38,8 @@ Three record kinds, all from one article:
 
 DOWNLOAD (one time, then offline forever):
     https://dumps.wikimedia.org/enwiki/latest/
-        enwiki-latest-pages-articles-multistream.xml.bz2        (~25 GB)
-        enwiki-latest-pages-articles-multistream-index.txt.bz2  (~270 MB)
+        enwiki-latest-pages-articles-multistream.xml.bz2        (~22 GB)
+        enwiki-latest-pages-articles-multistream-index.txt.bz2  (~250 MB)
 
 RUN:
     python3 mine_delm_complete.py --build-index    (once)
@@ -181,7 +181,7 @@ _STOP_SECTIONS = {
 HEADING_MARK = "@@H@@ "
 
 _TEX_WRAPPERS = ("mathrm|text|textrm|mathbf|mathit|boldsymbol|operatorname|"
-                 "hat|vec|bar|tilde|dot|ddot|overline|underline|mbox|"
+                 "mbox|"
                  "displaystyle|textstyle|mathcal|mathbb|mathsf|rm|bf|it")
 _RE_WRAPPER = re.compile(r"\\(?:" + _TEX_WRAPPERS + r")\s*\{([^{}]*)\}")
 
@@ -236,6 +236,63 @@ def _matrix(mm):
     return " [" + "; ".join(", ".join(c.strip() for c in r.split("&")) for r in rows) + "] "
 
 
+def _grab(s, i):
+    while i < len(s) and s[i] == " ":
+        i += 1
+    if i >= len(s):
+        return None
+    if s[i] == "{":
+        d = 0
+        for j in range(i, len(s)):
+            if s[j] == "{":
+                d += 1
+            elif s[j] == "}":
+                d -= 1
+                if d == 0:
+                    return s[i + 1:j], j + 1
+        return None
+    if s[i] == "\\":
+        m = re.match(r"\\[A-Za-z]+", s[i:])
+        return (s[i:i + m.end()], i + m.end()) if m else None
+    return s[i], i + 1
+
+
+_RE_FRAC_ANY = re.compile(r"\\[dt]?frac(?![A-Za-z])")
+
+
+def _frac_any(s):
+    """\\frac with any mix of braced and bare arguments."""
+    out, i = [], 0
+    while True:
+        m = _RE_FRAC_ANY.search(s, i)
+        if not m:
+            out.append(s[i:])
+            return "".join(out)
+        a = _grab(s, m.end())
+        b = _grab(s, a[1]) if a else None
+        if not b:
+            out.append(s[i:m.end()])
+            i = m.end()
+            continue
+        out.append(s[i:m.start()])
+        out.append(f"({a[0]})/({b[0]})")
+        i = b[1]
+
+
+_RE_PHANTOM = re.compile(r"\\[vh]?phantom(?![A-Za-z])")
+
+
+def _drop_phantom(s):
+    """Removes \\phantom{...} with its whole argument, nested braces included."""
+    while True:
+        m = _RE_PHANTOM.search(s)
+        if not m:
+            return s
+        g = _grab(s, m.end())
+        end = g[1] if g else m.end()
+        s = s[:m.start()] + " " + s[end:]
+
+
 def latex_to_plain(s: str) -> str:
     """
     Reduces a LaTeX fragment to copyable ASCII.
@@ -247,12 +304,17 @@ def latex_to_plain(s: str) -> str:
     """
     out = s.replace("\\#", "#").replace("\\{", "{").replace("\\}", "}")
     out = out.replace("\\langle", " ⟨").replace("\\rangle", "⟩ ").replace("~", " ")
+    out = re.sub(r"\\\\\s*\[[^\]]*\]", " ", out)
+    out = out.replace("\\%", "%").replace("\\|", "||")
+    out = _drop_phantom(out)
+    out = re.sub(r"\\boldsymbol(?![A-Za-z])", " ", out)
     out = _RE_MATRIX.sub(_matrix, out)
     out = _RE_ENVIRONMENT.sub(" ", out)
     out = _RE_ALIGN_MARK.sub(" ", out)
     for _ in range(8):
         before = out
-        out = _RE_WRAPPER.sub(r"\1", out)
+        out = _frac_any(out)
+        out = _RE_WRAPPER.sub(r" \1 ", out)
         out = _RE_OVER.sub(r"((\1)/(\2))", out)
         out = _RE_FRAC.sub(r"(\1)/(\2)", out)
         out = _RE_FRAC_BARE.sub(r"(\1)/(\2)", out)
@@ -271,6 +333,7 @@ def latex_to_plain(s: str) -> str:
     out = out.replace("{", " ").replace("}", " ")
     out = re.sub(r"\s+([\^_\)\],])", r"\1", out)
     out = re.sub(r"([\(\[])\s+", r"\1", out)
+    out = re.sub(r"([_^])\s+", r"\1", out)
     return re.sub(r"\s+", " ", out).strip()
 
 
