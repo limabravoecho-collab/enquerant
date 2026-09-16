@@ -48,6 +48,8 @@ EQ tells you which codes are available at the bottom of each screen. If a code d
 ### THE REST
 
 * `!help` `!about` `!spfs` — these files
+* `!brief` — saves the last subject you asked about as a plain text structural brief, in the `briefs/` folder beside EQ. Ask about a subject first.
+  The brief's F_0 is fixed per subject. The on-screen F_0 also varies with the query text and the session.
 * The **COPY** button copies the whole session, formulas included, ready to paste into your own work.
 * Ask "who are you" for what EQ is. Ask "how are you" and it will tell you it is in equilibrium, because it always is.
 
