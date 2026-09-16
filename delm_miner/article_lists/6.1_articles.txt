@@ -98,3 +98,262 @@ Transmission line
 Magnetic circuit
 Reluctance
 Moore's law
+ACM Computing Classification System
+Applied science
+Coding theory
+Cybernetics
+Discrete mathematics
+Graph theory
+Integer
+Artificial intelligence
+Data structure
+Automated reasoning
+Prolog
+Automated theorem proving
+Computer vision
+Soft computing
+Machine learning
+Evolutionary computation
+Natural language processing
+Robotics
+Computer network
+Error detection and correction
+Computer security
+Cryptanalysis
+Cryptographic protocol
+Computer architecture
+Central processing unit
+Computer memory
+Operating system
+Computer graphics
+Data and information visualization
+Parallel computing
+Concurrency (computer science)
+Distributed computing
+Relational database
+Comparison of structured storage software
+NoSQL
+Data mining
+Information retrieval
+Compiler
+Automata theory
+Programming language
+Programming paradigm
+Object-oriented programming
+Programming language theory
+Semantics (programming languages)
+Scientific modelling
+Numerical analysis
+Root-finding algorithm
+Numerical integration
+Numerical methods for ordinary differential equations
+Special functions
+Computer algebra
+Biological data
+Formal methods
+Computer programming
+Human–computer interaction
+Computational complexity theory
+Computer scientist
+Programmer
+Teacher
+Professor
+Software architect
+Software testing
+Hardware architect
+Data analysis
+Interaction design
+Network administrator
+Data science
+Data type
+Associative array
+Hash table
+Array (data structure)
+List (abstract data type)
+Tree (abstract data type)
+String (computer science)
+Matrix (mathematics)
+Database
+Imperative programming
+Procedural programming
+Functional programming
+Declarative programming
+Event-driven programming
+Class (programming)
+Inheritance (object-oriented programming)
+Object (computer science)
+Abstraction (computer science)
+Closure (computer programming)
+Electronics
+Electrical telegraph
+Control system
+Telecommunications
+Microelectronics
+Radio-frequency engineering
+Radar engineering
+Electro-optics
+Optoelectronics
+Engineering physics
+Electromagnetic spectrum
+Visible spectrum
+Electric potential
+Magnetostatics
+Ampère's circuital law
+Magnetic moment
+Electromotive force
+Displacement current density
+Electrical network
+Antenna (radio)
+Inductance
+Electrical impedance
+Resonator
+Waveguide
+Control theory
+Adaptive control
+Digital control
+Nonlinear control
+Optimal control
+Intelligent control
+Fuzzy control system
+Model predictive control
+Exponential stability
+Marginal stability
+BIBO stability
+Lyapunov stability
+Input-to-state stability
+Positive feedback
+System identification
+State observer
+First principle
+Least squares
+Root locus analysis
+Extended Kalman filter
+Signal-flow graph
+Neural network (machine learning)
+Closed-loop controller
+Programmable logic controller
+Embedded system
+Field-oriented control
+Direct torque control
+Digital signal controller
+Pulse-width modulation
+Industrial control system
+Industrial process control
+Distributed control system
+Motion control
+SCADA
+Y-Δ transform
+Electrical element
+Capacitor
+Inductor
+Resistor
+Hall effect sensor
+Microcontroller
+Operational amplifier
+Diode
+Zener diode
+Light-emitting diode
+PIN diode
+Schottky diode
+Avalanche diode
+Laser diode
+DIAC
+Thyristor
+Transistor
+Bipolar junction transistor
+Field-effect transistor
+Darlington transistor
+Insulated-gate bipolar transistor
+TRIAC
+MOSFET
+Electronic design automation
+Electricity generation
+Electric generator
+Renewable energy
+Hydropower
+Electric power transmission
+Transmission tower
+Transformer
+Electric power distribution
+Alternating current
+Direct current
+Single-phase electric power
+Two-phase electric power
+Three-phase electric power
+Power electronics
+Power inverter
+Static VAR compensator
+Variable-frequency drive
+Ward Leonard control
+Electric vehicle
+Electric motor
+Hybrid electric vehicle
+Plug-in hybrid
+Rechargeable battery
+Vehicle-to-grid
+Smart grid
+Analog signal processing
+Digital signal processing
+Quantization (signal processing)
+Sampling (signal processing)
+Analog-to-digital converter
+Digital-to-analog converter
+Discrete time and continuous time
+Nyquist frequency
+Oversampling
+Sample and hold
+Undersampling
+Upsampling
+Noise reduction
+Speech processing
+Audio equalization
+Euclidean geometry
+Color
+Edge detection
+2D computer graphics
+Image segmentation
+Lossless compression
+Lossy compression
+Analogue filter
+Audio filter
+Digital filter
+Finite impulse response
+Infinite impulse response
+Electronic filter
+Band-pass filter
+Band-stop filter
+Butterworth filter
+Chebyshev filter
+High-pass filter
+Low-pass filter
+Sallen–Key topology
+Advanced z-transform
+Bilinear transform
+Discrete cosine transform
+Discrete sine transform
+Two-sided Laplace transform
+Actuator
+Sensor
+Oscilloscope
+Signal conditioning
+Telephone
+Pulse-code modulation
+Main distribution frame
+Carrier system
+Mobile phone
+Wireless network
+Optical fiber
+Carrier wave
+Digital Audio Broadcasting
+Satellite radio
+Occupations in electrical/electronics engineering
+Electrical technologist
+IEEE Spectrum
+Algorithm
+Computation
+Computer
+Computer science
+Cryptography
+Logic programming
+Quantum computing
+Quantum superposition

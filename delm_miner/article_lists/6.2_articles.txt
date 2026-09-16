@@ -77,3 +77,60 @@ Jukes–Cantor model
 Felsenstein's tree
 Information entropy
 Mutual information
+Rubidium
+Quantum state
+Von Neumann entropy
+Commutative property
+Observable
+State (computer science)
+Qubit
+Classical physics
+Ultraviolet catastrophe
+Operator algebra
+Dynamical pictures
+Magnetic trap (atoms)
+Scanning tunneling microscope
+BB84
+Integrated circuit
+Discrete logarithm
+Error correction code
+Bit
+Conditional quantum entropy
+Bloch sphere
+Einstein–Podolsky–Rosen paradox
+Measurement in quantum mechanics
+No-teleportation theorem
+No-deleting theorem
+No-broadcasting theorem
+No-hiding theorem
+Unitarity
+Linear map
+Unitary transformation (quantum mechanics)
+Unitary operator
+Fault tolerance
+Superdense coding
+Quantum algorithm
+RSA cryptosystem
+Post-quantum cryptography
+Complexity class
+BQP
+Photon
+Linear optical quantum computing
+Trapped-ion quantum computer
+Superconducting quantum computing
+Complex number
+Dimension (vector space)
+Rényi entropy
+Hartley function
+Min-entropy
+Bell state
+Quantum decoherence
+Quantum noise
+Ancilla bit
+Categorical quantum mechanics
+Einstein's thought experiments
+Interpretations of quantum mechanics
+POVM
+Quantum logic clock
+Qutrit
+Typical subspace
