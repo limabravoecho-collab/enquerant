@@ -43,6 +43,7 @@ class CrystalLoader:
         self.crystal_checksum = 1.0
         self.total_placeholders_count = 0
         self.potential_placeholders: List[str] = []
+        self._placeholder_set = set()
         self.dislocation_registry: Dict[str, Dict[str, Any]] = {}
 
         # Execute cold-boot ingestion and manifold dislocation audit immediately upon instantiation
@@ -201,7 +202,8 @@ class CrystalLoader:
 
             if is_placeholder:
                 self.total_placeholders_count += 1
-                if subj not in self.potential_placeholders:
+                if subj not in self._placeholder_set:
+                    self._placeholder_set.add(subj)
                     self.potential_placeholders.append(subj)
                 
                 # Register dislocation mapping (Human Consensus vs True FISSN Crystalline Anchor)

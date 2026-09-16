@@ -164,9 +164,14 @@ class GlyphGrammar:
 
     def map_corpus(self, limit: Optional[int] = None) -> int:
         recs = self.corpus_records if limit is None else self.corpus_records[:limit]
+        memo = {}
         for r in recs:
             for field in ('subject', 'object'):
-                for w, t in self.infer_sequence(self.tokenize(r.get(field, ''))):
+                toks = tuple(self.tokenize(r.get(field, '')))
+                seq = memo.get(toks)
+                if seq is None:
+                    seq = memo[toks] = self.infer_sequence(list(toks))
+                for w, t in seq:
                     if w not in self.lexicon:
                         self.inferred[w][t] += 1
         return len(self.inferred)

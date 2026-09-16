@@ -61,7 +61,8 @@ class SMACEngine:
 
     def bridge_via(self, tier_a: float, tier_b: float, k: int = 5) -> List[str]:
         key = (min(tier_a, tier_b), max(tier_a, tier_b))
-        return [w for w, _ in self.bridge_terms.get(key, Counter()).most_common(k)]
+        items = self.bridge_terms.get(key, Counter()).items()
+        return [w for w, _ in sorted(items, key=lambda x: (-x[1], x[0]))[:k]]
 
     def coupled_nests(self, target_nest: float, k: int = 8) -> List[Dict[str, Any]]:
         out = []

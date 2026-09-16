@@ -35,18 +35,18 @@ class SPFSCoreState:
 FISSN_TAXONOMY_REGISTRY = {
     0.0: {"tier": "Tier 0.0", "name": "Zero Domain (Axiomatic / Deductive)", "domain": "Logic, Model Theory, Formal Axioms"},
     0.1: {"tier": "Tier 0.1", "name": "Quantitative Dimensions & Finites", "domain": "Mathematics, Topology, Statistics"},
-    1.0: {"tier": "Tier I.0", "name": "Fundamental Forces & Chemical Dynamics", "domain": "Quantum Physics, Thermodynamics, Chemistry"},
-    2.0: {"tier": "Tier II.0", "name": "Cosmic Horizon", "domain": "Cosmology, Relativity, Gravitation"},
-    2.1: {"tier": "Tier II.1", "name": "Planetary Enclosure", "domain": "Earth Sciences, Geochemical Cycles"},
-    3.0: {"tier": "Tier III.0", "name": "Autonomous Living Substrate", "domain": "Genetics, Cell Biology, Ecology"},
-    3.1: {"tier": "Tier III.1", "name": "Bio-Somatic Maintenance", "domain": "Anatomy, Physiology, Medicine"},
-    4.0: {"tier": "Tier IV.0", "name": "Individual Mind & Neural Hardware", "domain": "Neuroscience, Cognitive Science"},
-    4.1: {"tier": "Tier IV.1", "name": "Reflexive Epistemics & Cultural Records", "domain": "Philosophy, Ethics, History"},
-    4.2: {"tier": "Tier IV.2", "name": "Semiotic & Aesthetic Projections", "domain": "Literature, Semantics, Arts"},
-    5.0: {"tier": "Tier V.0", "name": "Distributed Collective Systems", "domain": "Sociology, Economics, Law"},
-    6.0: {"tier": "Tier VI.0", "name": "Civilizational Infrastructure", "domain": "Civil Engineering, Architecture"},
-    6.1: {"tier": "Tier VI.1", "name": "Synthetic Systems & Applied Mechanics", "domain": "Computer Science, Electrical Engineering"},
-    6.2: {"tier": "Tier VI.2", "name": "High-Order Multi-Scale Convergence", "domain": "Quantum Information, Complex Systems"}
+    1.0: {"tier": "Tier 1.0", "name": "Fundamental Forces & Chemical Dynamics", "domain": "Quantum Physics, Thermodynamics, Chemistry"},
+    2.0: {"tier": "Tier 2.0", "name": "Cosmic Horizon", "domain": "Cosmology, Relativity, Gravitation"},
+    2.1: {"tier": "Tier 2.1", "name": "Planetary Enclosure", "domain": "Earth Sciences, Geochemical Cycles"},
+    3.0: {"tier": "Tier 3.0", "name": "Autonomous Living Substrate", "domain": "Genetics, Cell Biology, Ecology"},
+    3.1: {"tier": "Tier 3.1", "name": "Bio-Somatic Maintenance", "domain": "Anatomy, Physiology, Medicine"},
+    4.0: {"tier": "Tier 4.0", "name": "Individual Mind & Neural Hardware", "domain": "Neuroscience, Cognitive Science"},
+    4.1: {"tier": "Tier 4.1", "name": "Reflexive Epistemics & Cultural Records", "domain": "Philosophy, Ethics, History"},
+    4.2: {"tier": "Tier 4.2", "name": "Semiotic & Aesthetic Projections", "domain": "Literature, Semantics, Arts"},
+    5.0: {"tier": "Tier 5.0", "name": "Distributed Collective Systems", "domain": "Sociology, Economics, Law"},
+    6.0: {"tier": "Tier 6.0", "name": "Civilizational Infrastructure", "domain": "Civil Engineering, Architecture"},
+    6.1: {"tier": "Tier 6.1", "name": "Synthetic Systems & Applied Mechanics", "domain": "Computer Science, Electrical Engineering"},
+    6.2: {"tier": "Tier 6.2", "name": "High-Order Multi-Scale Convergence", "domain": "Quantum Information, Complex Systems"}
 }
 
 
@@ -229,12 +229,12 @@ class SPFSEngine:
             entropic_debt = self.compute_entropic_debt(nest_depth)
             audit_note = (
                 f"Topological Rupture & Cross-Nest Propagation: Unclosed derivation or phenomenological "
-                f"container detected at FISSN coordinate s = {nest_depth:.1f}. Cascading entropic stress tensor "
+                f"container detected at FISSN coordinate {nest_depth:.1f}. Cascading entropic stress tensor "
                 f"$\\Xi = {entropic_debt:.3f}$ indicates broken dependency bridges across adjacent ontological cells."
             )
         else:
             entropic_debt = 0.01
-            audit_note = f"Closed-loop manifold equilibrium verified across FISSN tier s = {nest_depth:.1f} (Inter-tier dependency network stable)."
+            audit_note = f"Closed-loop manifold equilibrium verified across FISSN tier {nest_depth:.1f} (Inter-tier dependency network stable)."
 
         self.state.is_placeholder = is_placeholder
         self.state.audit_note = audit_note
