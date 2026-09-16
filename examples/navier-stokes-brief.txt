@@ -3,7 +3,7 @@ STRUCTURAL BRIEF — NAVIER-STOKES EQUATIONS
 ==============================================================================
 
 Nest       : 1.0  (Tier 1.0: Fundamental Forces & Chemical Dynamics)
-Generated  : 2026-09-16 03:15 UTC
+Generated  : 2026-09-16 04:05 UTC
 Engine     : EnQuerant (EQ) V2.0 / DEIE — deterministic, CPU, no language model
 Note       : F_0 here is fixed per subject. The on-screen F_0 also
              varies with the query text and the session tick.
@@ -22,7 +22,7 @@ provisional. It carries an entropic debt of 0.42000. It shares terms with 4
 other nests — 2.0 via planetary, orbital, radiation; 0.1 via particle,
 newtons, hilbert; 3.0 via molecular, conservation, electron; 6.1 via
 navierstokes, impedance, momentum. The best-grounded of its neighbours is nest
-0.0, settled to 0.93. The source states 93 formulas for it, in the order given
+0.0, settled to 0.93. The source states 90 formulas for it, in the order given
 below. It marks no dependency between them.
 
 ==============================================================================
@@ -35,8 +35,8 @@ proposes what it means.
 - Nest 1.0 is settled to 0.47 against a mean of 0.36 across 14 nests: rank 4 of 14.
 - 3 bridged nests rest on firmer ground than this one: 0.1 (0.67), 0.0 (0.93), 6.2 (0.55).
 - 1 bridge reaches three tiers or further: 6.1 via navierstokes, impedance.
-- 93 steps are stated; 62 fall at or past the finite logic ceiling (k = 32) and carry an identical share of the nest's debt.
-- The first step carries 16.77% of the nest's debt; the last carries 0.52%.
+- 90 steps are stated; 59 fall at or past the finite logic ceiling (k = 32) and carry an identical share of the nest's debt.
+- The first step carries 17.03% of the nest's debt; the last carries 0.53%.
 - The formulas are drawn from 16 distinct sections of the source.
 
 ==============================================================================
@@ -65,377 +65,365 @@ proposes what it means.
 ==============================================================================
 
 [1] (General continuum equations)
-      (D u)/(D t) = frac 1 rho grad * sigma + a.
-      L_f 1 | N_s 1.0 | share 16.77% | Xi 0.07041 | cumulative 16.77%
+      (D u)/(D t) = (1)/(rho) grad * sigma + a .
+      L_f 1 | N_s 1.0 | share 17.03% | Xi 0.07154 | cumulative 17.03%
 
 [2] (General continuum equations)
-      (Dm)/(Dt) = iiint_V ((D rho)/(Dt) + rho (grad * u)) dV [5pt] (D rho)/(Dt) + rho (grad * u)=(d rho)/(d t) + (grad rho) * u + rho (grad * u)= (d rho)/(d t) + grad*(rho u)= 0
-      L_f 2 | N_s 1.0 | share 8.38% | Xi 0.03521 | cumulative 25.15%
+      (D m)/(Dt) = iiint_V ((D rho)/(Dt) + rho (grad * u)) dV (D rho)/(Dt) + rho (grad * u)=(d rho)/(d t) + (grad rho) * u + rho (grad * u)= (d rho)/(d t) + grad*(rho u)= 0
+      L_f 2 | N_s 1.0 | share 8.52% | Xi 0.03577 | cumulative 25.55%
 
 [3] (General continuum equations)
       u otimes u = u u^(T)
-      L_f 3 | N_s 1.0 | share 5.59% | Xi 0.02347 | cumulative 30.74%
+      L_f 3 | N_s 1.0 | share 5.68% | Xi 0.02385 | cumulative 31.23%
 
 [4] (Compressible flow)
       varepsilon (grad u) = (1)/(2)grad u + (1)/(2) (grad u)^(T)
-      L_f 4 | N_s 1.0 | share 4.19% | Xi 0.01760 | cumulative 34.93%
+      L_f 4 | N_s 1.0 | share 4.26% | Xi 0.01788 | cumulative 35.49%
 
 [5] (Compressible flow)
-      sigma (boldsymbol varepsilon) = -p I + C : boldsymbol varepsilon
-      L_f 5 | N_s 1.0 | share 3.35% | Xi 0.01408 | cumulative 38.28%
+      sigma (varepsilon) = -p I + C : varepsilon
+      L_f 5 | N_s 1.0 | share 3.41% | Xi 0.01431 | cumulative 38.89%
 
 [6] (Compressible flow)
-      boldsymbol sigma = -p I + lambda (grad cdotu) I + mu (gradu + (gradu)^T).
-      L_f 6 | N_s 1.0 | share 2.79% | Xi 0.01174 | cumulative 41.07%
+      sigma = -p I + lambda (grad* u) I + mu (grad u + (grad u)^T).
+      L_f 6 | N_s 1.0 | share 2.84% | Xi 0.01192 | cumulative 41.73%
 
 [7] (Compressible flow)
-      tr (boldsymbol varepsilon) = grad cdotu .
-      L_f 7 | N_s 1.0 | share 2.40% | Xi 0.01006 | cumulative 43.47%
+      tr (varepsilon) = grad* u .
+      L_f 7 | N_s 1.0 | share 2.43% | Xi 0.01022 | cumulative 44.16%
 
 [8] (Compressible flow)
       tr (I) = 3.
-      L_f 8 | N_s 1.0 | share 2.10% | Xi 0.00880 | cumulative 45.57%
+      L_f 8 | N_s 1.0 | share 2.13% | Xi 0.00894 | cumulative 46.29%
 
 [9] (Compressible flow)
-      tr (boldsymbol sigma) = -3p + (3 lambda + 2 mu)grad cdotu .
-      L_f 9 | N_s 1.0 | share 1.86% | Xi 0.00782 | cumulative 47.43%
+      tr (sigma) = -3p + (3 lambda + 2 mu)grad* u .
+      L_f 9 | N_s 1.0 | share 1.89% | Xi 0.00795 | cumulative 48.19%
 
 [10] (Compressible flow)
-      boldsymbol sigma = - [p - (lambda + (2)/(3) mu) (grad cdotu)] I + mu (gradu + (gradu)^T - (2)/(3) (grad cdotu) I)
-      L_f 10 | N_s 1.0 | share 1.68% | Xi 0.00704 | cumulative 49.10%
+      sigma = - [p - (lambda + (2)/(3) mu) (grad* u)] I + mu (grad u + (grad u)^T - (2)/(3) (grad* u) I)
+      L_f 10 | N_s 1.0 | share 1.70% | Xi 0.00715 | cumulative 49.89%
 
 [11] (Compressible flow)
       zeta = lambda + (2)/(3) mu,
-      L_f 11 | N_s 1.0 | share 1.52% | Xi 0.00640 | cumulative 50.63%
+      L_f 11 | N_s 1.0 | share 1.55% | Xi 0.00650 | cumulative 51.44%
 
 [12] (Compressible flow)
-      boldsymbol sigma = -p I + mu (gradu + (gradu)^T) + (zeta - (2)/(3) mu) (grad cdotu) I.
-      L_f 12 | N_s 1.0 | share 1.40% | Xi 0.00587 | cumulative 52.03%
+      sigma = -p I + mu (grad u + (grad u)^T) + (zeta - (2)/(3) mu) (grad* u) I.
+      L_f 12 | N_s 1.0 | share 1.42% | Xi 0.00596 | cumulative 52.86%
 
 [13] (Compressible flow)
-      p = - (1)/(3) tr (boldsymbol sigma) + zeta (grad cdotu)
-      L_f 13 | N_s 1.0 | share 1.29% | Xi 0.00542 | cumulative 53.32%
+      p = - (1)/(3) tr (sigma) + zeta (grad* u)
+      L_f 13 | N_s 1.0 | share 1.31% | Xi 0.00550 | cumulative 54.17%
 
 [14] (Compressible flow)
-      boldsymbol sigma ' = boldsymbol tau = mu [gradu + (gradu)^T - (2)/(3) (grad cdotu) I]
-      L_f 14 | N_s 1.0 | share 1.20% | Xi 0.00503 | cumulative 54.51%
+      sigma ' = tau = mu [grad u + (grad u)^T - (2)/(3) (grad* u) I]
+      L_f 14 | N_s 1.0 | share 1.22% | Xi 0.00511 | cumulative 55.38%
 
 [15] (Compressible flow)
       rho (D u)/(D t) = (d)/(d t) (rho u) + grad * (rho u otimes u)
-      L_f 15 | N_s 1.0 | share 1.12% | Xi 0.00469 | cumulative 55.63%
+      L_f 15 | N_s 1.0 | share 1.14% | Xi 0.00477 | cumulative 56.52%
 
 [16] (Compressible flow)
-      grad*(grad* u) I=grad (grad * u), p = p - zeta grad * u,
-      L_f 16 | N_s 1.0 | share 1.05% | Xi 0.00440 | cumulative 56.68%
+      grad*(grad* u) I=grad (grad * u), bar p = p - zeta grad * u,
+      L_f 16 | N_s 1.0 | share 1.06% | Xi 0.00447 | cumulative 57.58%
 
 [17] (Compressible flow)
       zeta = 0
-      L_f 17 | N_s 1.0 | share 0.99% | Xi 0.00414 | cumulative 57.66%
+      L_f 17 | N_s 1.0 | share 1.00% | Xi 0.00421 | cumulative 58.59%
 
 [18] (Compressible flow)
-      nu = frac mu rho
-      L_f 18 | N_s 1.0 | share 0.93% | Xi 0.00391 | cumulative 58.60%
+      nu =(mu)/(rho)
+      L_f 18 | N_s 1.0 | share 0.95% | Xi 0.00397 | cumulative 59.53%
 
 [19] (Compressible flow)
-      xi = frac zeta rho
-      L_f 19 | N_s 1.0 | share 0.88% | Xi 0.00371 | cumulative 59.48%
+      xi =(zeta)/(rho)
+      L_f 19 | N_s 1.0 | share 0.90% | Xi 0.00377 | cumulative 60.43%
 
 [20] (Compressible flow)
       u*grad u = (grad* u)* u + (1)/(2)grad u^2,
-      L_f 20 | N_s 1.0 | share 0.84% | Xi 0.00352 | cumulative 60.32%
+      L_f 20 | N_s 1.0 | share 0.85% | Xi 0.00358 | cumulative 61.28%
 
 [21] (Compressible flow)
       grad * u = 0
-      L_f 21 | N_s 1.0 | share 0.80% | Xi 0.00335 | cumulative 61.12%
+      L_f 21 | N_s 1.0 | share 0.81% | Xi 0.00341 | cumulative 62.09%
 
 [22] (Incompressible flow)
       varepsilon = (1)/(2) (grad u + grad u^T)
-      L_f 22 | N_s 1.0 | share 0.76% | Xi 0.00320 | cumulative 61.88%
+      L_f 22 | N_s 1.0 | share 0.77% | Xi 0.00325 | cumulative 62.87%
 
 [23] (Incompressible flow)
-      grad * boldsymbol tau = 2 mu grad * boldsymbol varepsilon = mu grad * (gradu + gradu^T) = mu grad^2 u
-      L_f 23 | N_s 1.0 | share 0.73% | Xi 0.00306 | cumulative 62.61%
+      grad * tau = 2 mu grad * varepsilon = mu grad * (grad u + grad u^T) = mu grad^2 u
+      L_f 23 | N_s 1.0 | share 0.74% | Xi 0.00311 | cumulative 63.61%
 
 [24] (Incompressible flow)
-      nu = (mu)/(rho)
-      L_f 24 | N_s 1.0 | share 0.70% | Xi 0.00293 | cumulative 63.30%
+      grad^2 p = - rho (d u_i)/(d x_k)(d u_k)/(d x_i) = - rho (d^2 u_iu_k)/(d x_kx_i),
+      L_f 24 | N_s 1.0 | share 0.71% | Xi 0.00298 | cumulative 64.32%
 
 [25] (Incompressible flow)
-      grad^2 p = - rho (d u_i)/(d x_k)(d u_k)/(d x_i) = - rho (d^2 u_iu_k)/(d x_kx_i),
-      L_f 25 | N_s 1.0 | share 0.67% | Xi 0.00282 | cumulative 63.98%
+      overbrace underbrace (d u)/(d t)_(Variation) + underbrace (u * grad) u_([Convective ; acceleration])^(Inertia (per volume)) = overbrace underbrace -grad w_([Internal ; source]) + underbrace nu grad^2 u_(Diffusion)^(Divergence of stress) + underbrace g_([External ; source]).
+      L_f 25 | N_s 1.0 | share 0.68% | Xi 0.00286 | cumulative 65.00%
 
 [26] (Incompressible flow)
-      overbrace vphantom ()/() underbrace (d u)/(d t)_(Variation) + underbrace vphantom ()/() (u * grad) u_([Convective; acceleration])^(Inertia (per volume)) = overbrace vphantom (d)/(d) underbrace vphantom ()/() -grad w_([Internal; source]) + underbrace vphantom ()/() nu grad^2 u_(Diffusion)^(Divergence of stress) + underbrace vphantom ()/() g_([External; source]).
-      L_f 26 | N_s 1.0 | share 0.64% | Xi 0.00271 | cumulative 64.62%
+      g = - grad varphi
+      L_f 26 | N_s 1.0 | share 0.66% | Xi 0.00275 | cumulative 65.65%
 
 [27] (Incompressible flow)
-      g = - grad varphi
-      L_f 27 | N_s 1.0 | share 0.62% | Xi 0.00261 | cumulative 65.24%
+      h = w + varphi
+      L_f 27 | N_s 1.0 | share 0.63% | Xi 0.00265 | cumulative 66.28%
 
 [28] (Incompressible flow)
-      h = w + varphi
-      L_f 28 | N_s 1.0 | share 0.60% | Xi 0.00251 | cumulative 65.84%
+      (d u)/(d t) + (u * grad) u - nu grad^2 u = - grad h.
+      L_f 28 | N_s 1.0 | share 0.61% | Xi 0.00255 | cumulative 66.89%
 
 [29] (Incompressible flow)
-      (d u)/(d t) + (u * grad) u - nu grad^2 u = - grad h.
-      L_f 29 | N_s 1.0 | share 0.58% | Xi 0.00243 | cumulative 66.42%
+      (d u)/(d t) = Pi^S (-(u *grad) u + nu grad^2 u) + f^S rho^(-1) grad p = Pi^I (-(u *grad) u + nu grad^2 u) + f^I
+      L_f 29 | N_s 1.0 | share 0.59% | Xi 0.00247 | cumulative 67.48%
 
 [30] (Incompressible flow)
-      (du)/(d t) = Pi^S (-(u*grad)u + nu grad^2u) + f^S rho^(-1) grad p = Pi^I (-(u*grad)u + nu grad^2u) + f^I
-      L_f 30 | N_s 1.0 | share 0.56% | Xi 0.00235 | cumulative 66.98%
+      Pi^S + Pi^I = 1
+      L_f 30 | N_s 1.0 | share 0.57% | Xi 0.00238 | cumulative 68.05%
 
 [31] (Incompressible flow)
-      Pi^S + Pi^I = 1
-      L_f 31 | N_s 1.0 | share 0.54% | Xi 0.00227 | cumulative 67.52%
+      Pi^S F (r) = (1)/(4 pi)grad* int (grad^prime * F (r '))/(| r - r '|) d V', Pi^I = 1- Pi^S
+      L_f 31 | N_s 1.0 | share 0.55% | Xi 0.00231 | cumulative 68.60%
 
 [32] (Incompressible flow)
-      Pi^S F(r) = (1)/(4 pi)grad* int (grad^ prime *F(r'))/(|r-r'|) d V', Pi^I = 1- Pi^S
-      L_f 32 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 68.04%
-      [finite logic ceiling: L_f = k = 32; each remaining step carries 0.52%]
+      (w,(d u)/(d t)) = - (w, (u *grad) u) - nu (grad w : grad u) + (w, f^S)
+      L_f 32 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 69.13%
+      [finite logic ceiling: L_f = k = 32; each remaining step carries 0.53%]
 
-[33] (Incompressible flow)
-      (w,(du)/(d t)) = - (w, (u*grad)u) - nu (gradw: gradu) + (w, f^S)
-      L_f 33 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 68.57%
+[33] (Strong form)
+      Omega subset R^d (d=2, 3)
+      L_f 33 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 69.66%
 
 [34] (Strong form)
-      Omega subset R^d (d=2, 3)
-      L_f 34 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 69.09%
+      d Omega = Gamma_D cup Gamma_N,
+      L_f 34 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 70.19%
 
 [35] (Strong form)
-      d Omega = Gamma_D cup Gamma_N,
-      L_f 35 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 69.61%
+      Gamma_D cap Gamma_N = emptyset
+      L_f 35 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 70.72%
 
 [36] (Strong form)
-      Gamma_D cap Gamma_N = emptyset
-      L_f 36 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 70.14%
+      rho (d u)/(d t) + rho (u * grad) u - grad * sigma (u, p) = f in Omega * (0, T) grad * u = 0 in Omega * (0, T) u = g on Gamma_D * (0, T) sigma (u, p) hat n = h on Gamma_N * (0, T) u (0)= u_0 in Omega * 0
+      L_f 36 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 71.26%
 
 [37] (Strong form)
-      rho (d u)/(d t) + rho (u * grad) u - grad * sigma (u, p) = f in Omega * (0, T) grad * u = 0 in Omega * (0, T) u = g on Gamma_D * (0, T) sigma (u, p) n = h on Gamma_N * (0, T) u(0)= u_0 in Omega * 0
-      L_f 37 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 70.66%
+      sigma (u, p) = -p I + 2 mu varepsilon (u).
+      L_f 37 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 71.79%
 
 [38] (Strong form)
-      sigma (u, p) = -p I + 2 mu varepsilon (u).
-      L_f 38 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 71.18%
+      varepsilon (u) = (1)/(2) ((grad u) + (grad u)^T).
+      L_f 38 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 72.32%
 
 [39] (Strong form)
-      varepsilon (u) = (1)/(2) ((grad u) + (grad u)^T).
-      L_f 39 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 71.71%
+      grad * (grad f)^T = grad (grad * f)
+      L_f 39 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 72.85%
 
 [40] (Strong form)
-      grad * (grad f)^T = grad (grad * f)
-      L_f 40 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 72.23%
+      grad * sigma (u, p) = grad * (-p I + 2 mu varepsilon (u)) = - grad p + 2 mu grad * varepsilon (u) = - grad p + 2 mu grad * [(1)/(2) ((grad u) + (grad u)^T)] = -grad p + mu (Delta u + grad * (grad u)^T) = -grad p + mu (Delta u + grad underbrace (grad * u)_(=0)) = -grad p + mu Delta u .
+      L_f 40 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 73.39%
 
 [41] (Strong form)
-      grad * sigma (u, p) = grad * (-p I + 2 mu varepsilon (u)) = - grad p + 2 mu grad * varepsilon (u) = - grad p + 2 mu grad * [(1)/(2) ((grad u) + (grad u)^T)] = -grad p + mu (Delta u + grad * (grad u)^T) = -grad p + mu (Delta u + grad underbrace (grad * u)_(=0)) = -grad p + mu Delta u.
-      L_f 41 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 72.76%
+      sigma (u, p) hat n = (-p I + 2 mu varepsilon (u)) hat n = -p hat n + mu (d u)/(d hat n).
+      L_f 41 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 73.92%
 
-[42] (Strong form)
-      sigma (u, p) n = (-p I + 2 mu varepsilon (u))n = -p n + mu (d u)/(d n).
-      L_f 42 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 73.28%
+[42] (Weak form)
+      rho (d u)/(d t) - mu Delta u + rho (u * grad) u + grad p = f
+      L_f 42 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 74.45%
 
 [43] (Weak form)
-      rho (d u)/(d t) - mu Delta u + rho (u * grad) u + grad p = f
-      L_f 43 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 73.80%
+      int_Omega rho (d u)/(d t)* v - int_Omega mu Delta u * v + int_Omega rho (u * grad) u * v + int_Omega grad p * v = int_Omega f * v
+      L_f 43 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 74.98%
 
 [44] (Weak form)
-      int_ Omega rho (d u)/(d t)* v - int_ Omega mu Delta u * v + int_ Omega rho (u * grad) u * v + int_ Omega grad p * v = int_ Omega f * v
-      L_f 44 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 74.33%
+      - int_Omega mu Delta u * v = int_Omega mu grad u * grad v - int_(d Omega) mu (d u)/(d hat n) * v int_Omega grad p * v = - int_Omega p grad * v + int_(d Omega) p v * hat n
+      L_f 44 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 75.52%
 
 [45] (Weak form)
-      - int_ Omega mu Delta u * v = int_ Omega mu grad u * grad v - int_(d Omega) mu (d u)/(d n) * v int_ Omega grad p * v = - int_ Omega p grad * v + int_(d Omega) p v * n
-      L_f 45 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 74.85%
+      int_Omega rho (d u)/(d t)* v + int_Omega mu grad u * grad v + int_Omega rho (u * grad) u * v - int_Omega p grad * v = int_Omega f * v + int_(d Omega) (mu (d u)/(d hat n) - p hat n) * v forall v in V.
+      L_f 45 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 76.05%
 
 [46] (Weak form)
-      int_ Omega rho (d u)/(d t)* v + int_ Omega mu grad u * grad v + int_ Omega rho (u * grad) u * v - int_ Omega p grad * v = int_ Omega f * v + int_(d Omega) (mu (d u)/(d n) - p n) * v forall v in V.
-      L_f 46 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 75.38%
+      int_Omega q grad * u = 0. forall q in Q.
+      L_f 46 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 76.58%
 
 [47] (Weak form)
-      int_ Omega q grad * u = 0. forall q in Q.
-      L_f 47 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 75.90%
+      V = [H_0^1(Omega)]^d = v in [H^1(Omega)]^d: v = 0 on Gamma_D, Q = L^2(Omega)
+      L_f 47 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 77.11%
 
 [48] (Weak form)
-      V = [H_0^1(Omega)]^d = v in [H^1(Omega)]^d: v = 0 on Gamma_D, Q = L^2(Omega)
-      L_f 48 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 76.42%
+      int_(d Omega) (mu (d u)/(d hat n) - p hat n) * v = underbrace int_(Gamma_D) (mu (d u)/(d hat n) - p hat n) * v_(v = 0 on Gamma_D) + int_(Gamma_N) underbrace (mu (d u)/(d hat n) - p hat n)_(= h on Gamma_N) * v = int_(Gamma_N) h * v .
+      L_f 48 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 77.64%
 
 [49] (Weak form)
-      int_(d Omega) (mu (d u)/(d n) - p n) * v = underbrace int_(Gamma_D) (mu (d u)/(d n) - p n) * v_(v = 0 on Gamma_D) + int_(Gamma_N) underbrace vphantom int_(Gamma_N) (mu (d u)/(d n) - p n)_(= h on Gamma_N) * v = int_(Gamma_N) h * v.
-      L_f 49 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 76.95%
+      find u in L^2 (R^+ [H^1(Omega)]^d) cap C^0 (R^+ [L^2(Omega)]^d) such that: displaystyle int_(Omega) rho (d u)/(d t)* v + int_(Omega) mu grad u * grad v + int_(Omega) rho (u * grad) u * v - int_(Omega) p grad * v = int_(Omega) f * v + int_(Gamma_N) h * v forall v in V, displaystyle int_(Omega) q grad * u = 0 forall q in Q.
+      L_f 49 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 78.18%
 
-[50] (Weak form)
-      find u in L^2 (R^+ [H^1(Omega)]^d) cap C^0 (R^+ [L^2(Omega)]^d) such that: [5pt] displaystyle int_(Omega) rho (d u)/(d t)* v + int_(Omega) mu grad u * grad v + int_(Omega) rho (u * grad) u * v - int_(Omega) p grad * v = int_(Omega)f * v + int_(Gamma_N) h * v forall v in V, displaystyle int_(Omega) q grad * u = 0 forall q in Q.
-      L_f 50 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 77.47%
+[50] (Discrete velocity)
+      (w_i, (d u_j)/(d t)) = - (w_i, (u *grad) u_j) - nu (grad w_i: grad u_j) + (w_i, f^S).
+      L_f 50 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 78.71%
 
 [51] (Discrete velocity)
-      (w_i, (du_j)/(d t)) = - (w_i, (u*grad)u_j) - nu (gradw_i: gradu_j) + (w_i, f^S).
-      L_f 51 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 78.00%
+      grad varphi = ((d varphi)/(d x), (d varphi)/(d y))^T, grad* varphi = ((d varphi)/(d y), -(d varphi)/(d x))^T .
+      L_f 51 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 79.24%
 
-[52] (Discrete velocity)
-      grad varphi = ((d varphi)/(d x), (d varphi)/(d y))^T, [5pt] grad* varphi = ((d varphi)/(d y), -(d varphi)/(d x))^T.
-      L_f 52 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 78.52%
+[52] (Pressure recovery)
+      (g_i, grad p) = - (g_i, (u *grad) u_j) - nu (grad g_i: grad u_j) + (g_i, f^I)
+      L_f 52 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 79.77%
 
-[53] (Pressure recovery)
-      (g_i, grad p) = - (g_i, (u*grad)u_j) - nu (gradg_i: gradu_j) + (g_i, f^I)
-      L_f 53 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 79.04%
+[53] (Continuity equation for incompressible fluid)
+      (d rho)/(d t) + grad*(rho u)= 0
+      L_f 53 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 80.31%
 
 [54] (Continuity equation for incompressible fluid)
-      frac Dm Dt = iiint_V (frac D rho Dt + rho (grad * u))dV frac D rho Dt + rho (grad * u) =(d rho)/(d t) + (grad rho) * u + rho (grad * u)= (d rho)/(d t) + grad*(rho u)= 0
-      L_f 54 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 79.57%
+      rho (grad * u) = 0
+      L_f 54 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 80.84%
 
 [55] (Continuity equation for incompressible fluid)
-      (d rho)/(d t) + grad*(rho u)= 0
-      L_f 55 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 80.09%
+      (grad * u) = 0
+      L_f 55 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 81.37%
 
 [56] (Continuity equation for incompressible fluid)
-      rho (grad * u) = 0
-      L_f 56 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 80.62%
+      grad^(2) u =grad (grad * u)-grad * (grad * u)
+      L_f 56 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 81.90%
 
 [57] (Continuity equation for incompressible fluid)
-      rho != 0
-      L_f 57 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 81.14%
+      omega = grad * u
+      L_f 57 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 82.43%
 
 [58] (Continuity equation for incompressible fluid)
-      (grad * u) = 0
-      L_f 58 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 81.66%
+      grad^(2) u = - (grad * (grad * u)) = - (grad * omega)
+      L_f 58 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 82.97%
 
-[59] (Continuity equation for incompressible fluid)
-      grad^(2) u =grad (grad * u)-grad * (grad * u)
-      L_f 59 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 82.19%
+[59] (Stream function for incompressible 2D fluid)
+      u_z = 0
+      L_f 59 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 83.50%
 
-[60] (Continuity equation for incompressible fluid)
-      boldsymbol omega = grad * u
-      L_f 60 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 82.71%
+[60] (Stream function for incompressible 2D fluid)
+      rho ((d u_x)/(d t) + u_x (d u_x)/(d x) + u_y (d u_x)/(d y)) = -(d p)/(d x) + mu ((d^2 u_x)/(d x^2) + (d^2 u_x)/(d y^2)) + rho g_x rho ((d u_y)/(d t) + u_x (d u_y)/(d x) + u_y (d u_y)/(d y)) = -(d p)/(d y) + mu ((d^2 u_y)/(d x^2) + (d^2 u_y)/(d y^2)) + rho g_y.
+      L_f 60 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 84.03%
 
-[61] (Continuity equation for incompressible fluid)
-      grad^(2)u = - (grad * (grad * u)) = - (grad * boldsymbol omega)
-      L_f 61 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 83.23%
+[61] (Stream function for incompressible 2D fluid)
+      u_x = (d psi)/(d y); u_y = -(d psi)/(d x)
+      L_f 61 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 84.56%
 
 [62] (Stream function for incompressible 2D fluid)
-      u_z = 0
-      L_f 62 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 83.76%
+      (d)/(d t) (grad^2 psi) + (d psi)/(d y) (d)/(d x) (grad^2 psi) - (d psi)/(d x) (d)/(d y) (grad^2 psi) = nu grad^4 psi
+      L_f 62 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 85.10%
 
 [63] (Stream function for incompressible 2D fluid)
-      rho ((d u_x)/(d t) + u_x (d u_x)/(d x) + u_y (d u_x)/(d y)) = -(d p)/(d x) + mu ((d^2 u_x)/(d x^2) + (d^2 u_x)/(d y^2)) + rho g_x rho ((d u_y)/(d t) + u_x (d u_y)/(d x) + u_y (d u_y)/(d y)) = -(d p)/(d y) + mu ((d^2 u_y)/(d x^2) + (d^2 u_y)/(d y^2)) + rho g_y.
-      L_f 63 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 84.28%
-
-[64] (Stream function for incompressible 2D fluid)
-      u_x = (d psi)/(d y); u_y = -(d psi)/(d x)
-      L_f 64 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 84.81%
-
-[65] (Stream function for incompressible 2D fluid)
-      (d)/(d t) (grad^2 psi) + (d psi)/(d y) (d)/(d x) (grad^2 psi) - (d psi)/(d x) (d)/(d y) (grad^2 psi) = nu grad^4 psi
-      L_f 65 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 85.33%
-
-[66] (Stream function for incompressible 2D fluid)
       (d)/(d t) (grad^2 psi) + (d (psi, grad^2 psi))/(d(y,x)) = nu grad^4 psi .
-      L_f 66 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 85.85%
+      L_f 63 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 85.63%
 
-[67] (Parallel flow)
+[64] (Parallel flow)
       (d^2 u)/(d y^2) = -1; u(0) = u(1) = 0.
-      L_f 67 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 86.38%
+      L_f 64 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 86.16%
 
-[68] (Parallel flow)
+[65] (Parallel flow)
       u(y) = (y - y^2)/(2).
-      L_f 68 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 86.90%
+      L_f 65 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 86.69%
 
-[69] (Radial flow)
+[66] (Radial flow)
       (d^2 f)/(d z^2) + R f^2 = -1; f(-1) = f(1) = 0.
-      L_f 69 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 87.43%
+      L_f 66 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 87.23%
 
-[70] (A three-dimensional steady-state vortex solution)
-      rho (x, y, z) = (3B)/(r^2 + x^2 + y^2 + z^2) p(x, y, z) = (-A^2B)/((r^2 + x^2 + y^2 + z^2)^3) u(x, y, z) = (A)/((r^2 + x^2 + y^2 + z^2)^2) [2(-ry + xz); 2(rx + yz); r^2 - x^2 - y^2 + z^2] g = 0 mu = 0
-      L_f 70 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 87.95%
+[67] (A three-dimensional steady-state vortex solution)
+      rho (x, y, z) = (3B)/(r^2 + x^2 + y^2 + z^2) p(x, y, z) = (-A^2B)/((r^2 + x^2 + y^2 + z^2)^3) u (x, y, z) = (A)/((r^2 + x^2 + y^2 + z^2)^2) [2(-ry + xz); 2(rx + yz); r^2 - x^2 - y^2 + z^2] g = 0 mu = 0
+      L_f 67 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 87.76%
+
+[68] (Viscous three-dimensional periodic solutions)
+      T^3 = R^3/ L Z^3
+      L_f 68 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 88.29%
+
+[69] (Viscous three-dimensional periodic solutions)
+      u_x = (4 sqrt(2))/(3 sqrt(3)) U_0 [sin (k x - (pi)/(3)) cos (k y + (pi)/(3)) sin (k z + (pi)/(2)) - cos (k z - (pi)/(3)) sin (k x + (pi)/(3)) sin (k y + (pi)/(2))] e^(-3 nu k^2 t) u_y = (4 sqrt(2))/(3 sqrt(3)) U_0 [sin (k y - (pi)/(3)) cos (k z + (pi)/(3)) sin (k x + (pi)/(2)) - cos (k x - (pi)/(3)) sin (k y + (pi)/(3)) sin (k z +(pi)/(2))] e^(-3 nu k^2 t) u_z = (4 sqrt(2))/(3 sqrt(3)) U_0 [sin (k z - (pi)/(3)) cos (k x + (pi)/(3)) sin (k y + (pi)/(2)) - cos (k y - (pi)/(3)) sin (k z + (pi)/(3)) sin (k x + (pi)/(2))] e^(-3 nu k^2 t)
+      L_f 69 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 88.82%
+
+[70] (Viscous three-dimensional periodic solutions)
+      k = 2 pi /L
+      L_f 70 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 89.35%
 
 [71] (Viscous three-dimensional periodic solutions)
-      T^3 = R^3/ LZ^3
-      L_f 71 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 88.47%
+      t = 0
+      L_f 71 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 89.89%
 
 [72] (Viscous three-dimensional periodic solutions)
-      u_x = (4 sqrt(2))/(3 sqrt(3)) U_0 [sin (k x - frac pi 3) cos (k y + frac pi 3) sin (k z + frac pi 2) - cos (k z - frac pi 3) sin (k x + frac pi 3) sin (k y + frac pi 2)] e^(-3 nu k^2 t) u_y = (4 sqrt(2))/(3 sqrt(3)) U_0 [sin (k y - frac pi 3) cos (k z + frac pi 3) sin (k x + frac pi 2) - cos (k x - frac pi 3) sin (k y + frac pi 3) sin (k z + frac pi 2)] e^(-3 nu k^2 t) u_z = (4 sqrt(2))/(3 sqrt(3)) U_0 [sin (k z - frac pi 3) cos (k x + frac pi 3) sin (k y + frac pi 2) - cos (k y - frac pi 3) sin (k z + frac pi 3) sin (k x + frac pi 2)] e^(-3 nu k^2 t)
-      L_f 72 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 89.00%
+      p = p_0 - rho_0 || u ||^2/2
+      L_f 72 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 90.42%
 
 [73] (Viscous three-dimensional periodic solutions)
-      k = 2 pi /L
-      L_f 73 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 89.52%
-
-[74] (Viscous three-dimensional periodic solutions)
-      t = 0
-      L_f 74 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 90.05%
-
-[75] (Viscous three-dimensional periodic solutions)
-      p = p_0 - rho_0 \| u \|^2/2
-      L_f 75 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 90.57%
-
-[76] (Viscous three-dimensional periodic solutions)
       omega = sqrt(3) k u
-      L_f 76 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 91.09%
+      L_f 73 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 90.95%
+
+[74] (Cartesian coordinates)
+      u = (u_x, u_y, u_z)
+      L_f 74 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 91.48%
+
+[75] (Cartesian coordinates)
+      x: rho (d_t u_x + u_x d_x u_x + u_y d_y u_x + u_z d_z u_x) = -d_x p + mu (d_x^2 u_x + d_y^2 u_x + d_z^2 u_x) + (1)/(3) mu d_x (d_x u_x + d_y u_y + d_z u_z) + rho g_x
+      L_f 75 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 92.02%
+
+[76] (Cartesian coordinates)
+      y: rho (d_t u_y + u_x d_x u_y + u_y d_y u_y + u_z d_z u_y) = - d_y p + mu (d_x^2 u_y + d_y^2 u_y + d_z^2 u_y) + (1)/(3) mu d_y (d_x u_x + d_y u_y + d_z u_z) + rho g_y
+      L_f 76 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 92.55%
 
 [77] (Cartesian coordinates)
-      u = (u_x, u_y, u_z)
-      L_f 77 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 91.62%
+      z: rho (d_t u_z + u_x d_x u_z + u_y d_y u_z + u_z d_z u_z) = - d_z p + mu (d_x^2 u_z + d_y^2 u_z + d_z^2 u_z) + (1)/(3) mu d_z (d_x u_x + d_y u_y + d_z u_z) + rho g_z.
+      L_f 77 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 93.08%
 
 [78] (Cartesian coordinates)
-      x: rho (d_t u_x + u_x d_x u_x + u_y d_y u_x + u_z d_z u_x) = -d_x p + mu (d_x^2 u_x + d_y^2 u_x + d_z^2 u_x) + (1)/(3) mu d_x (d_x u_x + d_y u_y + d_z u_z) + rho g_x
-      L_f 78 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 92.14%
+      d_t rho + d_x (rho u_x) + d_y (rho u_y) + d_z (rho u_z) = 0.
+      L_f 78 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 93.61%
 
 [79] (Cartesian coordinates)
-      y: rho (d_t u_y + u_x d_x u_y + u_y d_y u_y + u_z d_z u_y) = - d_y p + mu (d_x^2 u_y + d_y^2 u_y + d_z^2 u_y) + (1)/(3) mu d_y (d_x u_x + d_y u_y + d_z u_z) + rho g_y
-      L_f 79 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 92.67%
+      (D rho)/(D t) = 0
+      L_f 79 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 94.14%
 
 [80] (Cartesian coordinates)
-      z: rho (d_t u_z + u_x d_x u_z + u_y d_y u_z + u_z d_z u_z) = - d_z p + mu (d_x^2 u_z + d_y^2 u_z + d_z^2 u_z) + (1)/(3) mu d_z (d_x u_x + d_y u_y + d_z u_z) + rho g_z.
-      L_f 80 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 93.19%
-
-[81] (Cartesian coordinates)
-      d_t rho + d_x (rho u_x) + d_y (rho u_y) + d_z (rho u_z) = 0.
-      L_f 81 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 93.71%
-
-[82] (Cartesian coordinates)
-      (D rho)/(Dt) = 0
-      L_f 82 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 94.24%
-
-[83] (Cartesian coordinates)
       d_x u_x + d_y u_y + d_z u_z = 0.
-      L_f 83 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 94.76%
+      L_f 80 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 94.68%
+
+[81] (Cylindrical coordinates)
+      r: rho (d_t u_r + u_r d_r u_r + (u_varphi)/(r) d_varphi u_r + u_z d_z u_r - (u_varphi^2)/(r)) = - d_r p + mu ((1)/(r) d_r (r d_r u_r) + (1)/(r^2) d_varphi^2 u_r + d_z^2 u_r - (u_r)/(r^2) - (2)/(r^2) d_varphi u_varphi) + (1)/(3) mu d_r ((1)/(r) d_r (r u_r) + (1)/(r) d_varphi u_varphi + d_z u_z) + rho g_r
+      L_f 81 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 95.21%
+
+[82] (Cylindrical coordinates)
+      varphi : rho (d_t u_varphi + u_r d_r u_varphi + (u_varphi)/(r) d_varphi u_varphi + u_z d_z u_varphi + (u_r u_varphi)/(r)) = -(1)/(r) d_varphi p + mu ((1)/(r) d_r (r d_r u_varphi) + (1)/(r^2) d_varphi^2 u_(varphi) + d_z^2 u_(varphi) - (u_varphi)/(r^2) + (2)/(r^2) d_varphi u_r) + (1)/(3) mu (1)/(r) d_varphi ((1)/(r) d_r (r u_r) + (1)/(r) d_varphi u_varphi + d_z u_z) + rho g_varphi
+      L_f 82 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 95.74%
+
+[83] (Cylindrical coordinates)
+      z: rho (d_t u_z + u_r d_r u_z + (u_varphi)/(r) d_varphi u_z + u_z d_z u_z) = - d_z p + mu ((1)/(r) d_r (r d_r u_z) + (1)/(r^2) d_varphi^2 u_z + d_z^2 u_z) + (1)/(3) mu d_z ((1)/(r) d_r (r u_r) + (1)/(r) d_varphi u_varphi + d_z u_z) + rho g_z.
+      L_f 83 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 96.27%
 
 [84] (Cylindrical coordinates)
-      r: rho (d_t u_r + u_r d_r u_r + (u_ varphi)/(r) d_ varphi u_r + u_z d_z u_r - (u_ varphi^2)/(r)) = - d_r p + mu ((1)/(r) d_r (r d_r u_r) + (1)/(r^2) d_ varphi^2 u_r + d_z^2 u_r - (u_r)/(r^2) - (2)/(r^2) d_ varphi u_ varphi) + (1)/(3) mu d_r ((1)/(r) d_r (r u_r) + (1)/(r) d_ varphi u_ varphi + d_z u_z) + rho g_r [8px]
-      L_f 84 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 95.28%
+      d_t rho + (1)/(r) d_r (rho r u_r) + (1)/(r) d_varphi (rho u_varphi) + d_z (rho u_z) = 0.
+      L_f 84 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 96.81%
 
 [85] (Cylindrical coordinates)
-      varphi : rho (d_t u_ varphi + u_r d_r u_ varphi + (u_ varphi)/(r) d_ varphi u_ varphi + u_z d_z u_ varphi + (u_r u_ varphi)/(r)) = -(1)/(r) d_ varphi p + mu ((1)/(r) d_r (r d_r u_ varphi) + (1)/(r^2) d_ varphi^2 u_(varphi) + d_z^2 u_(varphi) - (u_ varphi)/(r^2) + (2)/(r^2) d_ varphi u_r) + (1)/(3) mu (1)/(r) d_ varphi ((1)/(r) d_r (r u_r) + (1)/(r) d_ varphi u_ varphi + d_z u_z) + rho g_ varphi [8px]
-      L_f 85 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 95.81%
+      u_phi = 0
+      L_f 85 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 97.34%
 
 [86] (Cylindrical coordinates)
-      z: rho (d_t u_z + u_r d_r u_z + (u_ varphi)/(r) d_ varphi u_z + u_z d_z u_z) = - d_z p + mu ((1)/(r) d_r (r d_r u_z) + (1)/(r^2) d_ varphi^2 u_z + d_z^2 u_z) + (1)/(3) mu d_z ((1)/(r) d_r (r u_r) + (1)/(r) d_ varphi u_ varphi + d_z u_z) + rho g_z.
-      L_f 86 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 96.33%
-
-[87] (Cylindrical coordinates)
-      d_t rho + (1)/(r) d_r (rho r u_r) + (1)/(r) d_ varphi (rho u_ varphi) + d_z (rho u_z) = 0.
-      L_f 87 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 96.86%
-
-[88] (Cylindrical coordinates)
-      u_ phi = 0
-      L_f 88 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 97.38%
-
-[89] (Cylindrical coordinates)
       rho (d_t u_r + u_r d_r u_r + u_z d_z u_r) = - d_r p + mu ((1)/(r) d_r (r d_r u_r) + d_z^2 u_r - (u_r)/(r^2)) + rho g_r rho (d_t u_z + u_r d_r u_z + u_z d_z u_z) = - d_z p + mu ((1)/(r) d_r (r d_r u_z) + d_z^2 u_z) + rho g_z (1)/(r) d_r (r u_r) + d_z u_z = 0.
-      L_f 89 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 97.90%
+      L_f 86 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 97.87%
+
+[87] (Spherical coordinates)
+      r: rho (d_t u_r + u_r d_r u_r + (u_varphi)/(r sin theta) d_varphi u_r + (u_theta)/(r) d_theta u_r - (u_varphi^2 + u_theta^2)/(r)) = - d_r p + mu ((1)/(r^2) d_r (r^2 d_r u_r) + (1)/(r^2 sin^2 theta) d_varphi^2 u_r + (1)/(r^2 sin theta) d_theta (sin theta d_theta u_r) - 2(u_r + d_theta u_theta + u_theta cot theta)/(r^2) - (2)/(r^2 sin theta) d_varphi u_varphi) + (1)/(3) mu d_r ((1)/(r^2) d_r (r^2 u_r) + (1)/(r sin theta) d_theta (u_theta sin theta) + (1)/(r sin theta) d_varphi u_varphi) + rho g_r
+      L_f 87 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 98.40%
+
+[88] (Spherical coordinates)
+      varphi : rho (d_t u_varphi + u_r d_r u_varphi + (u_varphi)/(r sin theta) d_varphi u_varphi + (u_theta)/(r) d_theta u_varphi + (u_r u_varphi + u_varphi u_theta cot theta)/(r)) = -(1)/(r sin theta) d_varphi p + mu ((1)/(r^2) d_r (r^2 d_r u_varphi) + (1)/(r^2 sin^2 theta) d_varphi^2 u_varphi + (1)/(r^2 sin theta) d_theta (sin theta d_theta u_varphi) + (2 sin theta d_varphi u_r + 2 cos theta d_varphi u_theta - u_varphi)/(r^2 sin^2 theta)) + (1)/(3) mu (1)/(r sin theta) d_varphi ((1)/(r^2) d_r (r^2 u_r) + (1)/(r sin theta) d_theta (u_theta sin theta) + (1)/(r sin theta) d_varphi u_varphi) + rho g_varphi
+      L_f 88 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 98.94%
+
+[89] (Spherical coordinates)
+      theta : rho (d_t u_theta + u_r d_r u_theta + (u_varphi)/(r sin theta) d_varphi u_theta + (u_theta)/(r) d_theta u_theta + (u_r u_theta - u_varphi^2 cot theta)/(r)) = -(1)/(r) d_theta p + mu ((1)/(r^2) d_r (r^2 d_r u_theta) + (1)/(r^2 sin^2 theta) d_varphi^2 u_theta + (1)/(r^2 sin theta) d_theta (sin theta d_theta u_theta) + (2)/(r^2) d_theta u_r - (u_theta + 2 cos theta d_varphi u_varphi)/(r^2 sin^2 theta)) + (1)/(3) mu (1)/(r) d_theta ((1)/(r^2) d_r (r^2 u_r) + (1)/(r sin theta) d_theta (u_theta sin theta) + (1)/(r sin theta) d_varphi u_varphi) + rho g_theta .
+      L_f 89 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 99.47%
 
 [90] (Spherical coordinates)
-      r: rho (d_t u_r + u_r d_r u_r + (u_ varphi)/(r sin theta) d_ varphi u_r + (u_ theta)/(r) d_ theta u_r - (u_ varphi^2 + u_ theta^2)/(r)) = - d_r p + mu ((1)/(r^2) d_r (r^2 d_r u_r) + (1)/(r^2 sin^2 theta) d_ varphi^2 u_r + (1)/(r^2 sin theta) d_ theta (sin theta d_ theta u_r) - 2 frac u_r + d_ theta u_ theta + u_ theta cot theta r^2 - (2)/(r^2 sin theta) d_ varphi u_ varphi) + (1)/(3) mu d_r ((1)/(r^2) d_r (r^2 u_r) + (1)/(r sin theta) d_ theta (u_ theta sin theta) + (1)/(r sin theta) d_ varphi u_ varphi) + rho g_r [8px]
-      L_f 90 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 98.43%
-
-[91] (Spherical coordinates)
-      varphi : rho (d_t u_ varphi + u_r d_r u_ varphi + (u_ varphi)/(r sin theta) d_ varphi u_ varphi + (u_ theta)/(r) d_ theta u_ varphi + (u_r u_ varphi + u_ varphi u_ theta cot theta)/(r)) = -(1)/(r sin theta) d_ varphi p + mu ((1)/(r^2) d_r (r^2 d_r u_ varphi) + (1)/(r^2 sin^2 theta) d_ varphi^2 u_ varphi + (1)/(r^2 sin theta) d_ theta (sin theta d_ theta u_ varphi) + frac 2 sin theta d_ varphi u_r + 2 cos theta d_ varphi u_ theta - u_ varphi r^2 sin^2 theta) + (1)/(3) mu (1)/(r sin theta) d_ varphi ((1)/(r^2) d_r (r^2 u_r) + (1)/(r sin theta) d_ theta (u_ theta sin theta) + (1)/(r sin theta) d_ varphi u_ varphi) + rho g_ varphi [8px]
-      L_f 91 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 98.95%
-
-[92] (Spherical coordinates)
-      theta : rho (d_t u_ theta + u_r d_r u_ theta + (u_ varphi)/(r sin theta) d_ varphi u_ theta + (u_ theta)/(r) d_ theta u_ theta + (u_r u_ theta - u_ varphi^2 cot theta)/(r)) = -(1)/(r) d_ theta p + mu ((1)/(r^2) d_r (r^2 d_r u_ theta) + (1)/(r^2 sin^2 theta) d_ varphi^2 u_ theta + (1)/(r^2 sin theta) d_ theta (sin theta d_ theta u_ theta) + (2)/(r^2) d_ theta u_r - frac u_ theta + 2 cos theta d_ varphi u_ varphi r^2 sin^2 theta) + (1)/(3) mu (1)/(r) d_ theta ((1)/(r^2) d_r (r^2 u_r) + (1)/(r sin theta) d_ theta (u_ theta sin theta) + (1)/(r sin theta) d_ varphi u_ varphi) + rho g_ theta .
-      L_f 92 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 99.48%
-
-[93] (Spherical coordinates)
-      d_t rho + (1)/(r^2) d_r (rho r^2 u_r) + (1)/(r sin theta) d_ varphi (rho u_ varphi) + (1)/(r sin theta) d_ theta (sin theta rho u_ theta) = 0.
-      L_f 93 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 100.00%
+      d_t rho + (1)/(r^2) d_r (rho r^2 u_r) + (1)/(r sin theta) d_varphi (rho u_varphi) + (1)/(r sin theta) d_theta (sin theta rho u_theta) = 0.
+      L_f 90 | N_s 1.0 | share 0.53% | Xi 0.00224 | cumulative 100.00%
 
 CLOSURE: cumulative 100.00% | carried 0.42000 | nest entropic debt Xi 0.42000
 
