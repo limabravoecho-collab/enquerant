@@ -184,8 +184,8 @@ EQ will not start until the knowledge base is built. Complete the mining steps
 above first; the volumes must sit beside the runtime files.
 
 Type `!help` for the codes, `!about` for what the screen labels mean,
-`!spfs` for the formula system, and `!brief` to save the last reading as a
-structural brief.
+`!spfs` for the formula system, and `!brief` (or the SAVE BRIEF button) to
+save the last reading as a structural brief.
 
 ---
 
