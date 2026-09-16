@@ -368,7 +368,7 @@ class EnquerantOrchestrator:
 
         # Determine spatial/logical nesting parameters based on FISSN ontological mapping and intent
         s_depth = intent_data.get("fissn_coordinate", 1.0)
-        fissn_desc = intent_data.get("fissn_description", "Tier I.0: Micro-Physical Substrate")
+        fissn_desc = intent_data.get("fissn_description", "Tier 1.0: Fundamental Forces & Chemical Dynamics")
         l_tier = 4
         flux = 0.1
 
@@ -401,54 +401,20 @@ class EnquerantOrchestrator:
             clean_input_lower = re.sub(r'[^\w\s]', '', clean_query).lower()
             query_words = clean_input_lower.split()
 
-            scored_records = []
-            for r in self.delm.records:
-                if r.get("relation") in ignored_relations:
-                    continue
-                subj = (r.get("subject") or "").lower()
-                if not subj:
-                    continue
-                
-                subj_clean = re.sub(r'[^\w\s]', '', subj).lower()
-                subj_words = subj_clean.split()
-                
-                # Pure Algorithmic Contiguous Word Sequence Match (Longest exact combined word string)
-                max_contiguous_streak = 0
-                for i in range(len(query_words)):
-                    for j in range(len(subj_words)):
-                        k = 0
-                        while (i + k < len(query_words)) and (j + k < len(subj_words)) and (query_words[i + k] == subj_words[j + k]):
-                            k += 1
-                        if k > max_contiguous_streak:
-                            max_contiguous_streak = k
-
-                # Score scales quadratically with the length of the longest exact combined word string
-                score = 0
-                # Enforce a strict minimum contiguous streak of at least 2 matching words 
-                # to prevent single-word keyword magnets (like 'hypothesis', 'paradox', etc.) from colliding.
-                if max_contiguous_streak >= 2:
-                    score = (max_contiguous_streak ** 2) * 100
-                    # Bonus if the entire subject matches as an exact substring
-                    if subj_clean in clean_input_lower:
-                        score += 500
-
-                if score > 0:
-                    scored_records.append((score, r))
-            
-            # Sort by highest cryptographic/topological proximity score and apply minimum threshold filter
-            scored_records.sort(key=lambda x: x[0], reverse=True)
-            for score, r in scored_records:
-                # Require a valid multi-word score threshold (>= 400 for a 2-word streak) to prevent weak collisions
-                if score >= 400 and r not in matched_records:
-                    matched_records.append(r)
-                    if len(matched_records) >= 8:
-                        break
+            # Same streak scoring as ScienceBlock, via its pair index.
+            matched_records = list(self.science._streak_match(clean_query))
 
             # Fallback: rarity-weighted record text search when subject streak match finds nothing
             if not matched_records:
-                chat_cats = set(self.grammar.reply_of) | set(self.grammar.reply_of.values())
-                topics = self.grammar.topic_words(clean_query, chat_cats)
-                matched_records = self.grammar.retrieve_topic(topics) if topics else self.grammar.retrieve(clean_query, 24)
+                topics = self.science.topics(clean_query)
+                # An unknown subject word blocked the topics: show nothing
+                # rather than a loose nearest match.
+                blocked = not topics and bool(self.grammar.topic_words(
+                    clean_query, self.science.chat_cats))
+                if blocked:
+                    matched_records = []
+                else:
+                    matched_records = self.grammar.retrieve_topic(topics) if topics else self.grammar.retrieve(clean_query, 24)
 
             # Selected tier overrides search results and telemetry tier
             if getattr(self, "tier_records", None):
