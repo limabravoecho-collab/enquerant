@@ -1,21 +1,15 @@
 #!/usr/bin/env python3
 """
-science_block.py — DEIE science block for the NiiChii hybrid
+science_block.py — DEIE science block and structural brief source
 ================================================================================
-Assembles the Mode 2 structural reading as a markdown block, for display
-between NiiChii's framing prose and NiiChii's closing prose.
+Assembles the Mode 2 structural reading as a markdown block, and supplies
+the figures the structural brief is built from.
 
-Ported from the standalone EQ orchestrator. Differences, all deliberate:
-
-- No chat. The acknowledgment line built from RESEARCH_ACKNOWLEDGMENT is
-  dropped: NiiChii's prose does that work.
 - No orchestrator state. Every call takes its inputs and returns its outputs.
-  Navigation state belongs in the browser session, not on a server object.
-- Ambiguous tiers return the tier list and nothing else, so NiiChii's prose can
-  ask which reading the user meant. Showing one tier's block beside a list that
-  says the question is ambiguous would contradict itself on screen.
+- Ambiguous tiers return the tier list and nothing else, so the user can
+  choose which reading they meant.
 - Nothing is written to the engine. The SPFS engine is used for pure operators
-  only, so a displayed block cannot disturb live telemetry.
+  only, so a computed block cannot disturb live telemetry.
 
 Every scientific word, formula and value in the output is copied from a DELM
 record. The bracketed structural lines are computed. Nothing is generated.
@@ -225,8 +219,8 @@ class ScienceBlock:
     def tier_list_block(self, groups: Dict[str, List[Dict[str, Any]]]) -> Tuple[str, List[Tuple[str, int]]]:
         """
         The tier list, returned with the options so the caller can put them in
-        the session. NiiChii's prose asks which the user meant; the numbered
-        list is there for anyone who would rather point than type.
+        the session. The numbered list lets the user pick the reading they
+        meant.
         """
         options = sorted(groups.items())
         lines = ["**The records for this span several nests. Type in the "

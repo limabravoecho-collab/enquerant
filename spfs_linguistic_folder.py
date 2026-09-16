@@ -67,7 +67,7 @@ class SPFSLinguisticFolder:
     def fold_chat_to_prose(query: str, grammar: Any, engine: Any, k_units: int = 8, constraints: Any = None, allowed_topics: Any = None, units_override: Any = None, max_sentences: int = 2) -> str:
         """
         Chat mode fold. Zero words in py.
-        Shapes and words from matched gis chat units, extra words from niichii subjects.
+        Shapes and words from matched gis chat units, extra words from knowledge base subjects.
         Built output never equals the input or a whole bin sentence.
         Whole bin sentence only when nothing can be built and it is a statement.
         """

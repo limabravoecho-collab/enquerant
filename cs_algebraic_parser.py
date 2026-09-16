@@ -179,7 +179,7 @@ class CSApAlgebraicParser:
             lean = grammar.chat_lean(text, chat_cats)
             strong = lean is None or lean > 0.0
             # A knowledge base topic outranks chat lean. topic_words already
-            # requires the term to appear in a niichii record subject and to
+            # requires the term to appear in a knowledge base record subject and to
             # lean science, so a stray mention in one mined chat sentence
             # cannot pull a science query into chat.
             topics = grammar.topic_words(text, chat_cats)
