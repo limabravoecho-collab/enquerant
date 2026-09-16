@@ -6,8 +6,11 @@ what it holds, where each subject sits, and what it connects to.
 
 The same input always gives the same output.
 
-Maker Note: EQ DELM's are intentionally built to 4 MB so it can be used for
-legacy/obsolete systems. You can tinker with the py files as you see fit. EQ
+Maker Note: EQ DELM's are intentionally built to about 4 MB each so they can be
+used on legacy/obsolete systems. A full volume may run slightly over 4 MB,
+because the last record is always kept whole.
+
+You can tinker with the py files as you see fit. EQ
 requires no internet connection to function.
 
 ---
@@ -56,7 +59,7 @@ setup:
 
 - `examples/riemann-hypothesis-brief.txt` — a settled subject in a
   dimensionless nest, where entropic debt reads as incompleteness in the
-  record. No bridged nest rests on firmer ground.
+  record. One bridged nest, 0.0, rests on firmer ground.
 - `examples/navier-stokes-brief.txt` — an unsettled subject in a dimensional
   nest, where the same figure reads as disorder in the system. Two bridged
   nests rest on firmer ground than its own.
@@ -73,7 +76,8 @@ programmer or AI tool will help you do it.
 
 ## Building the knowledge base
 
-Maker Note: On my setup the mining process takes around 30+ seconds. Your speed
+Maker Note: On my setup (Ryzen 5 7600, NVMe SSD) the one-time cache build takes
+about 4 minutes for 6,937 titles, and mining takes about 40 seconds. Your speed
 results will vary.
 
 EQ needs its DELM volumes before it can do anything. They are not shipped: the
@@ -83,8 +87,10 @@ from the source rather than receiving a binary.
 1. Download the Wikipedia multistream dump and its index, once, from
    https://dumps.wikimedia.org/enwiki/latest/
 
-   - `enwiki-latest-pages-articles-multistream.xml.bz2` (~22 GB)
-   - `enwiki-latest-pages-articles-multistream-index.txt.bz2` (~250 MB)
+   - `enwiki-latest-pages-articles-multistream.xml.bz2` (~25 GB)
+   - `enwiki-latest-pages-articles-multistream-index.txt.bz2` (~270 MB)
+
+   Sizes grow with each Wikipedia release.
 
    Put both in `delm_miner/wiki_dump/`, or set `WIKI_DUMP_DIR` to point
    wherever they live.
@@ -107,7 +113,10 @@ If you change the miner's cleaning rules, delete `article_cache/` before
 re-mining. The cache holds already-cleaned text, so a rule change has no
 effect until the cache is rebuilt.
 
-4. Copy the sealed volumes up to the runtime directory.
+4. Copy the sealed volumes up to the runtime directory. Move any older
+   volumes out first: EQ loads every `niichii_v*.bin` it finds, so leftover
+   higher-numbered volumes from a previous build would load alongside the new
+   ones.
 
    ```
    cp delm_volumes/niichii_v*.bin ..
@@ -125,13 +134,13 @@ from the source.
 
 ## The article lists
 
-`delm_miner/article_lists/` holds 1,183 article titles across 12 FISSN
+`delm_miner/article_lists/` holds 6,937 article titles across all 14 FISSN
 coordinates, one file per coordinate. Which tier an article belongs to is a
-classification decision, made once per list, by hand. No classifier guesses.
+classification decision made by the maker, per source list, with titles that
+fit more than one tier placed by hand. No classifier guesses.
 
-Tiers 4.1 (Reflexive Epistemics & Cultural Records) and 4.2 (Semiotic &
-Aesthetic Projections) appear in the FISSN registry but have no article list.
-That is deliberate, not an omission.
+A title listed in more than one file is mined once, into the first file by
+name.
 
 Add your own titles to any list and re-mine. Adding a subject is article titles
 plus a re-mine, never a hand-written record.
@@ -161,7 +170,10 @@ if you want to explore. The shipped bin is the one described here.
 python3 enquerant_gui.py
 ```
 
-Boot is about 2.5 seconds. The knowledge base, the glyph grammar and the
+Boot is about 10 seconds with the full article lists (about 174,000
+records, about 600 MB of memory).
+
+The knowledge base, the glyph grammar and the
 cross-tier bridge matrix are built in memory at every start; nothing is cached
 to disk, because the same records always produce the same matrix.
 
