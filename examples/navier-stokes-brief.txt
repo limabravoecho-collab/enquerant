@@ -2,9 +2,11 @@
 STRUCTURAL BRIEF — NAVIER-STOKES EQUATIONS
 ==============================================================================
 
-Nest       : 1.0  (Tier I.0: Fundamental Forces & Chemical Dynamics)
-Generated  : 2026-09-15 01:09 UTC
-Engine     : *REDACTED*.AI / DEIE — deterministic, CPU, no language model
+Nest       : 1.0  (Tier 1.0: Fundamental Forces & Chemical Dynamics)
+Generated  : 2026-09-16 03:15 UTC
+Engine     : EnQuerant (EQ) V2.0 / DEIE — deterministic, CPU, no language model
+Note       : F_0 here is fixed per subject. The on-screen F_0 also
+             varies with the query text and the session tick.
 
 Every figure below is computed and every formula copied from a source
 record. Nothing here is generated and nothing is argued. Section 5 states
@@ -14,14 +16,14 @@ the method and the limits.
 1. THE READING
 ==============================================================================
 
-Navier-Stokes equations is filed at nest 1.0. That nest is settled to 0.54:
-54% of its records rest on ground the source literature does not mark as
+Navier-Stokes equations is filed at nest 1.0. That nest is settled to 0.47:
+47% of its records rest on ground the source literature does not mark as
 provisional. It carries an entropic debt of 0.42000. It shares terms with 4
-other nests — 6.1 via quantum, navierstokes, mechanics; 2.0 via einstein,
-mass, motion; 0.1 via inequality, elementary, induction; 2.1 via temperature,
-diffusion, planetary. The best-grounded of its neighbours is nest 6.1, settled
-to 0.57. The source states 93 formulas for it, in the order given below. It
-marks no dependency between them.
+other nests — 2.0 via planetary, orbital, radiation; 0.1 via particle,
+newtons, hilbert; 3.0 via molecular, conservation, electron; 6.1 via
+navierstokes, impedance, momentum. The best-grounded of its neighbours is nest
+0.0, settled to 0.93. The source states 93 formulas for it, in the order given
+below. It marks no dependency between them.
 
 ==============================================================================
 2. OBSERVATIONS
@@ -30,9 +32,9 @@ marks no dependency between them.
 Measurements and comparisons only. Each states what is the case; none
 proposes what it means.
 
-- Nest 1.0 is settled to 0.54 against a mean of 0.52 across 12 nests: rank 6 of 12.
-- 4 bridged nests rest on firmer ground than this one: 6.1 (0.57), 0.1 (0.70), 6.2 (0.56), 0.0 (0.91).
-- 2 bridges reach three tiers or further: 6.1 via quantum, navierstokes, 6.2 via quantum, century.
+- Nest 1.0 is settled to 0.47 against a mean of 0.36 across 14 nests: rank 4 of 14.
+- 3 bridged nests rest on firmer ground than this one: 0.1 (0.67), 0.0 (0.93), 6.2 (0.55).
+- 1 bridge reaches three tiers or further: 6.1 via navierstokes, impedance.
 - 93 steps are stated; 62 fall at or past the finite logic ceiling (k = 32) and carry an identical share of the nest's debt.
 - The first step carries 16.77% of the nest's debt; the last carries 0.52%.
 - The formulas are drawn from 16 distinct sections of the source.
@@ -44,11 +46,15 @@ proposes what it means.
 • 1. Master Formula (F_0): F_0 = ∮ [ R · ( N_s(L_f) ⊕ Δ P ) ] dt [SPFS Proprietary]
 • 2. Component Operator (N_s): N_s(L_f) = Σ [ ω_i · ψ(s_i, f) ] [SPFS Proprietary]
 • 3. Empirical Formula (DELM): The Navier–Stokes equations ( ) describe the motion of viscous fluids.
-• 4. FISSN Ontological Coordinate & Telemetry: Tier: Tier I.0: Fundamental Forces & Chemical Dynamics (tier 1.0) | F_0: 19.015266
+• 4. FISSN Ontological Coordinate & Telemetry: Tier: Tier 1.0: Fundamental Forces & Chemical Dynamics (tier 1.0) | F_0: 13.674018
   - [Nest Exchange / Dependent Load]: 1.0 (100%, Xi 0.420)
-  - [Cross-Tier Bridges / SMAC]: 6.1 via quantum, navierstokes, mechanics | 2.0 via einstein, mass, motion | 0.1 via inequality, elementary, induction | 2.1 via temperature, diffusion, planetary
-  - [Source Nests / Correction Draw]: 6.1 (settled 0.57) | 0.1 (settled 0.70) | 2.0 (settled 0.48) | 6.2 (settled 0.56)
-  - [Negentropic Reading]: target nest 1.0 settled 0.54 | local entropic debt Xi 0.420 | debt carried to dependent nests 0.420 | coupled nests 1
+  - [Cross-Tier Bridges / SMAC]: 2.0 via planetary, orbital, radiation | 0.1 via particle, newtons, hilbert | 3.0 via molecular, conservation, electron | 6.1 via navierstokes, impedance, momentum
+  - [Source Nests / Correction Draw]: 0.1 (settled 0.67) | 0.0 (settled 0.93) | 6.1 (settled 0.41) | 6.2 (settled 0.55)
+  - [Parallel Nest 0.0 via balance]: Description logic — There are general, spatial, temporal, spatiotemporal, and fuzzy descri
+  - [Parallel Nest 0.1 via balance]: Combinatorial design — Combinatorial design theory is the part of combinatorial mathematics t
+  - [Parallel Nest 2.0 via balance]: Chandrasekhar limit — The Chandrasekhar limit is the mass above which electron degeneracy pr
+  - [Parallel Nest 2.1 via balance]: Hydrostatic equilibrium — In fluid mechanics, hydrostatic equilibrium, also called hydrostatic b
+  - [Negentropic Reading]: target nest 1.0 settled 0.47 | local entropic debt Xi 0.420 | debt carried to dependent nests 0.420 | coupled nests 1
   - [Structural Notice / Dislocation]: [Potential Placeholder / Ontological Shift] — Closed-loop manifold equilibrium verified across FISSN tier 1.0 (Inter-tier dependency network stable).
   - [Epistemic Re-indexing]: Human Consensus Anchor (Tier 1.0) -> True SPFS Crystalline Anchor (Tier 1.0) prognostic alignment verified.
 
@@ -67,19 +73,19 @@ proposes what it means.
       L_f 2 | N_s 1.0 | share 8.38% | Xi 0.03521 | cumulative 25.15%
 
 [3] (General continuum equations)
-      mathbf u otimes mathbf u = mathbf u mathbf u^(mathsf T)
+      u otimes u = u u^(T)
       L_f 3 | N_s 1.0 | share 5.59% | Xi 0.02347 | cumulative 30.74%
 
 [4] (Compressible flow)
-      varepsilon (grad u) = (1)/(2)grad u + (1)/(2) (grad u)^(mathsf T)
+      varepsilon (grad u) = (1)/(2)grad u + (1)/(2) (grad u)^(T)
       L_f 4 | N_s 1.0 | share 4.19% | Xi 0.01760 | cumulative 34.93%
 
 [5] (Compressible flow)
-      sigma (boldsymbol varepsilon) = -p mathbf I + C : boldsymbol varepsilon
+      sigma (boldsymbol varepsilon) = -p I + C : boldsymbol varepsilon
       L_f 5 | N_s 1.0 | share 3.35% | Xi 0.01408 | cumulative 38.28%
 
 [6] (Compressible flow)
-      boldsymbol sigma = -p mathbf I + lambda (grad cdotu) mathbf I + mu (gradu + (gradu)^T).
+      boldsymbol sigma = -p I + lambda (grad cdotu) I + mu (gradu + (gradu)^T).
       L_f 6 | N_s 1.0 | share 2.79% | Xi 0.01174 | cumulative 41.07%
 
 [7] (Compressible flow)
@@ -87,7 +93,7 @@ proposes what it means.
       L_f 7 | N_s 1.0 | share 2.40% | Xi 0.01006 | cumulative 43.47%
 
 [8] (Compressible flow)
-      tr (boldsymbol I) = 3.
+      tr (I) = 3.
       L_f 8 | N_s 1.0 | share 2.10% | Xi 0.00880 | cumulative 45.57%
 
 [9] (Compressible flow)
@@ -95,31 +101,31 @@ proposes what it means.
       L_f 9 | N_s 1.0 | share 1.86% | Xi 0.00782 | cumulative 47.43%
 
 [10] (Compressible flow)
-      boldsymbol sigma = - [p - (lambda + tfrac 23 mu) (grad cdotu)] mathbf I + mu (gradu + (gradu)^T - tfrac 23 (grad cdotu) mathbf I)
+      boldsymbol sigma = - [p - (lambda + (2)/(3) mu) (grad cdotu)] I + mu (gradu + (gradu)^T - (2)/(3) (grad cdotu) I)
       L_f 10 | N_s 1.0 | share 1.68% | Xi 0.00704 | cumulative 49.10%
 
 [11] (Compressible flow)
-      zeta = lambda + tfrac 23 mu,
+      zeta = lambda + (2)/(3) mu,
       L_f 11 | N_s 1.0 | share 1.52% | Xi 0.00640 | cumulative 50.63%
 
 [12] (Compressible flow)
-      boldsymbol sigma = -p mathbf I + mu (gradu + (gradu)^T) + (zeta - tfrac 2 3 mu) (grad cdotu) mathbf I.
+      boldsymbol sigma = -p I + mu (gradu + (gradu)^T) + (zeta - (2)/(3) mu) (grad cdotu) I.
       L_f 12 | N_s 1.0 | share 1.40% | Xi 0.00587 | cumulative 52.03%
 
 [13] (Compressible flow)
-      p = - tfrac 1 3 tr (boldsymbol sigma) + zeta (grad cdotu)
+      p = - (1)/(3) tr (boldsymbol sigma) + zeta (grad cdotu)
       L_f 13 | N_s 1.0 | share 1.29% | Xi 0.00542 | cumulative 53.32%
 
 [14] (Compressible flow)
-      boldsymbol sigma ' = boldsymbol tau = mu [gradu + (gradu)^T - tfrac 23 (grad cdotu) mathbf I]
+      boldsymbol sigma ' = boldsymbol tau = mu [gradu + (gradu)^T - (2)/(3) (grad cdotu) I]
       L_f 14 | N_s 1.0 | share 1.20% | Xi 0.00503 | cumulative 54.51%
 
 [15] (Compressible flow)
-      rho (D u)/(D t) = (d)/(d t) (rho mathbf u) + grad * (rho mathbf u otimes mathbf u)
+      rho (D u)/(D t) = (d)/(d t) (rho u) + grad * (rho u otimes u)
       L_f 15 | N_s 1.0 | share 1.12% | Xi 0.00469 | cumulative 55.63%
 
 [16] (Compressible flow)
-      grad*(grad* mathbf u) mathbf I=grad (grad * mathbf u), p = p - zeta grad * u,
+      grad*(grad* u) I=grad (grad * u), p = p - zeta grad * u,
       L_f 16 | N_s 1.0 | share 1.05% | Xi 0.00440 | cumulative 56.68%
 
 [17] (Compressible flow)
@@ -135,7 +141,7 @@ proposes what it means.
       L_f 19 | N_s 1.0 | share 0.88% | Xi 0.00371 | cumulative 59.48%
 
 [20] (Compressible flow)
-      mathbf u*grad mathbf u = (grad* mathbf u)* mathbf u + tfrac 12grad mathbf u^2,
+      u*grad u = (grad* u)* u + (1)/(2)grad u^2,
       L_f 20 | N_s 1.0 | share 0.84% | Xi 0.00352 | cumulative 60.32%
 
 [21] (Compressible flow)
@@ -143,7 +149,7 @@ proposes what it means.
       L_f 21 | N_s 1.0 | share 0.80% | Xi 0.00335 | cumulative 61.12%
 
 [22] (Incompressible flow)
-      varepsilon = tfrac 1 2 (grad u + grad u^T)
+      varepsilon = (1)/(2) (grad u + grad u^T)
       L_f 22 | N_s 1.0 | share 0.76% | Xi 0.00320 | cumulative 61.88%
 
 [23] (Incompressible flow)
@@ -159,11 +165,11 @@ proposes what it means.
       L_f 25 | N_s 1.0 | share 0.67% | Xi 0.00282 | cumulative 63.98%
 
 [26] (Incompressible flow)
-      overbrace vphantom ()/() underbrace (d u)/(d t)_(Variation) + underbrace vphantom ()/() (u * grad) u_(Convective acceleration)^(Inertia (per volume)) = overbrace vphantom (d)/(d) underbrace vphantom ()/() -grad w_(Internal source) + underbrace vphantom ()/() nu grad^2 u_(Diffusion)^(Divergence of stress) + underbrace vphantom ()/() g_(External source).
+      overbrace vphantom ()/() underbrace (d u)/(d t)_(Variation) + underbrace vphantom ()/() (u * grad) u_([Convective; acceleration])^(Inertia (per volume)) = overbrace vphantom (d)/(d) underbrace vphantom ()/() -grad w_([Internal; source]) + underbrace vphantom ()/() nu grad^2 u_(Diffusion)^(Divergence of stress) + underbrace vphantom ()/() g_([External; source]).
       L_f 26 | N_s 1.0 | share 0.64% | Xi 0.00271 | cumulative 64.62%
 
 [27] (Incompressible flow)
-      mathbf g = - grad varphi
+      g = - grad varphi
       L_f 27 | N_s 1.0 | share 0.62% | Xi 0.00261 | cumulative 65.24%
 
 [28] (Incompressible flow)
@@ -192,7 +198,7 @@ proposes what it means.
       L_f 33 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 68.57%
 
 [34] (Strong form)
-      Omega subset mathbb R^d (d=2, 3)
+      Omega subset R^d (d=2, 3)
       L_f 34 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 69.09%
 
 [35] (Strong form)
@@ -204,7 +210,7 @@ proposes what it means.
       L_f 36 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 70.14%
 
 [37] (Strong form)
-      rho (d u)/(d t) + rho (u * grad) u - grad * sigma (u, p) = f in Omega * (0, T) grad * u = 0 in Omega * (0, T) u = g on Gamma_D * (0, T) sigma (u, p) n = h on Gamma_N * (0, T) u(0)= u_0 in Omega * \ 0\
+      rho (d u)/(d t) + rho (u * grad) u - grad * sigma (u, p) = f in Omega * (0, T) grad * u = 0 in Omega * (0, T) u = g on Gamma_D * (0, T) sigma (u, p) n = h on Gamma_N * (0, T) u(0)= u_0 in Omega * 0
       L_f 37 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 70.66%
 
 [38] (Strong form)
@@ -212,7 +218,7 @@ proposes what it means.
       L_f 38 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 71.18%
 
 [39] (Strong form)
-      varepsilon (u) = tfrac 1 2 ((grad u) + (grad u)^T).
+      varepsilon (u) = (1)/(2) ((grad u) + (grad u)^T).
       L_f 39 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 71.71%
 
 [40] (Strong form)
@@ -220,11 +226,11 @@ proposes what it means.
       L_f 40 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 72.23%
 
 [41] (Strong form)
-      grad * sigma (u, p) = grad * (-p I + 2 mu varepsilon (u)) = - grad p + 2 mu grad * varepsilon (u) = - grad p + 2 mu grad * [tfrac 1 2 ((grad u) + (grad u)^T)] = -grad p + mu (Delta u + grad * (grad u)^T) = -grad p + mu (Delta u + grad underbrace (grad * u)_(=0)) = -grad p + mu Delta u.
+      grad * sigma (u, p) = grad * (-p I + 2 mu varepsilon (u)) = - grad p + 2 mu grad * varepsilon (u) = - grad p + 2 mu grad * [(1)/(2) ((grad u) + (grad u)^T)] = -grad p + mu (Delta u + grad * (grad u)^T) = -grad p + mu (Delta u + grad underbrace (grad * u)_(=0)) = -grad p + mu Delta u.
       L_f 41 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 72.76%
 
 [42] (Strong form)
-      sigma (u, p) n = (-p I + 2 mu varepsilon (u))n = -p n + mu (d boldsymbol u)/(d n).
+      sigma (u, p) n = (-p I + 2 mu varepsilon (u))n = -p n + mu (d u)/(d n).
       L_f 42 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 73.28%
 
 [43] (Weak form)
@@ -248,7 +254,7 @@ proposes what it means.
       L_f 47 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 75.90%
 
 [48] (Weak form)
-      V = [H_0^1(Omega)]^d = \ v in [H^1(Omega)]^d: v = 0 on Gamma_D \, Q = L^2(Omega)
+      V = [H_0^1(Omega)]^d = v in [H^1(Omega)]^d: v = 0 on Gamma_D, Q = L^2(Omega)
       L_f 48 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 76.42%
 
 [49] (Weak form)
@@ -256,7 +262,7 @@ proposes what it means.
       L_f 49 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 76.95%
 
 [50] (Weak form)
-      find u in L^2 (mathbb R^+ [H^1(Omega)]^d) cap C^0 (mathbb R^+ [L^2(Omega)]^d) such that: [5pt] displaystyle int_(Omega) rho (d u)/(d t)* v + int_(Omega) mu grad u * grad v + int_(Omega) rho (u * grad) u * v - int_(Omega) p grad * v = int_(Omega)f * v + int_(Gamma_N) h * v forall v in V, displaystyle int_(Omega) q grad * u = 0 forall q in Q.
+      find u in L^2 (R^+ [H^1(Omega)]^d) cap C^0 (R^+ [L^2(Omega)]^d) such that: [5pt] displaystyle int_(Omega) rho (d u)/(d t)* v + int_(Omega) mu grad u * grad v + int_(Omega) rho (u * grad) u * v - int_(Omega) p grad * v = int_(Omega)f * v + int_(Gamma_N) h * v forall v in V, displaystyle int_(Omega) q grad * u = 0 forall q in Q.
       L_f 50 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 77.47%
 
 [51] (Discrete velocity)
@@ -336,7 +342,7 @@ proposes what it means.
       L_f 69 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 87.43%
 
 [70] (A three-dimensional steady-state vortex solution)
-      rho (x, y, z) = (3B)/(r^2 + x^2 + y^2 + z^2) p(x, y, z) = (-A^2B)/((r^2 + x^2 + y^2 + z^2)^3) u(x, y, z) = (A)/((r^2 + x^2 + y^2 + z^2)^2) 2(-ry + xz) 2(rx + yz) r^2 - x^2 - y^2 + z^2 g = 0 mu = 0
+      rho (x, y, z) = (3B)/(r^2 + x^2 + y^2 + z^2) p(x, y, z) = (-A^2B)/((r^2 + x^2 + y^2 + z^2)^3) u(x, y, z) = (A)/((r^2 + x^2 + y^2 + z^2)^2) [2(-ry + xz); 2(rx + yz); r^2 - x^2 - y^2 + z^2] g = 0 mu = 0
       L_f 70 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 87.95%
 
 [71] (Viscous three-dimensional periodic solutions)
@@ -360,7 +366,7 @@ proposes what it means.
       L_f 75 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 90.57%
 
 [76] (Viscous three-dimensional periodic solutions)
-      omega =sqrt(3) k u
+      omega = sqrt(3) k u
       L_f 76 | N_s 1.0 | share 0.52% | Xi 0.00220 | cumulative 91.09%
 
 [77] (Cartesian coordinates)
@@ -463,7 +469,7 @@ Terms
 
     Settled share
         The proportion of a nest's records whose subject is not flagged, 0.00
-        to 1.00. Logic sits near 0.91, physiology near 0.35.
+        to 1.00. Logic sits near 0.93, physiology near 0.30.
 
     Flagged record
         An ontological dislocation: the subject rests on a placeholder or an
@@ -532,7 +538,15 @@ Order of operations
     The corpus does not mark logical dependency between formulas, so column 1
     is a faithful source sequence, not a derived order. Domain conditions
     ("x >= 2", "T > 0") are held in the corpus but excluded from the sequence:
-    a condition is stated, but it is not a step.
+    a condition is stated, but it is not a step. Source fragments with an
+    empty side ("B =") are excluded for the same reason.
+
+    The weighting makes that order consequential. Where a subject's formulas
+    are simultaneous constraints rather than derivation steps — a kinematic
+    relation and an equation-of-state parameter, say — reordering them in the
+    source would redistribute the debt between them with nothing physical
+    changing. The ledger records the order the source states, not causal flow.
+    Read the shares as source precedence and weigh them accordingly.
 
 Limits
     The document reports what the knowledge base holds. A subject absent from
