@@ -23,6 +23,8 @@ from active_whiteboard import ActiveWhiteboard
 from spfs_linguistic_folder import SPFSLinguisticFolder
 from glyph_grammar import GlyphGrammar
 from smac_engine import SMACEngine
+from science_block import ScienceBlock
+from brief import Brief
 
 UNDETECTED_TEXT = "Input not detected. Please type your request again."
 DISTRESS_TEXT = (
@@ -68,6 +70,11 @@ class EnquerantOrchestrator:
         self.offer_topic = None
         
         self.gis_active = True
+
+        # 8. Structural brief: the reading as a plain text document.
+        self.science = ScienceBlock(self.delm, self.grammar, self.parser, self.smac)
+        self.brief = Brief(self.science)
+        self.last_science_query = None
 
     def close(self):
         """Unmaps memory crystals and closes runtime handles cleanly."""
@@ -610,6 +617,7 @@ class EnquerantOrchestrator:
 
         else:
             # Mode 2: Exploration & Problem Solving with Pedagogical Sequence
+            self.last_science_query = clean_query
             response_lines.append("### SPFS Exploration & Problem Solving (Mode 2)")
             # PSCS-N 1.4.2: Mode 1 chat line above the Mode 2 sequence, built
             # from the RESEARCH_ACKNOWLEDGMENT pool via units_override. No reply
@@ -695,7 +703,7 @@ class EnquerantOrchestrator:
                 if dislocation_info:
                     is_plc = True
                     ent_debt = self.spfs.compute_entropic_debt(s_depth)
-            response_lines.append(f"• **4. FISSN Ontological Coordinate & Telemetry:** Tier: `{fissn_desc}` ($s = {s_depth}$) | $F_0$: `{f0_output:.6f}`")
+            response_lines.append(f"• **4. FISSN Ontological Coordinate & Telemetry:** Tier: `{fissn_desc}` (tier `{s_depth}`) | $F_0$: `{f0_output:.6f}`")
 
             # Dissipative structures: nest coupling and carried entropic load
             source_nests = {}
@@ -907,6 +915,27 @@ class EnquerantOrchestrator:
 
         return formatted_response, ui_telemetry
 
+    def _write_brief(self) -> str:
+        """Writes the structural brief for the last science reading."""
+        q = self.last_science_query
+        if not q:
+            return "[STATUS]: No reading to report. Ask about a subject first."
+        out = self.science.render(q, self.science.retrieve(q))
+        subject = out.get("math_subject")
+        if not subject or not out.get("block"):
+            return "[STATUS]: No reading to report for this query."
+        from datetime import datetime, timezone
+        now = datetime.now(timezone.utc)
+        doc = self.brief.build(subject, out.get("tier") or 1.0, out["block"],
+                               out.get("avenues"), now.strftime("%Y-%m-%d %H:%M UTC"))
+        safe = re.sub(r"[^A-Za-z0-9]+", "-", subject).strip("-").lower()[:48]
+        folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), "briefs")
+        os.makedirs(folder, exist_ok=True)
+        path = os.path.join(folder, f"eq-brief-{safe}-{now.strftime('%Y-%m-%d')}.txt")
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(doc)
+        return f"[STATUS]: Brief written: {path}"
+
     def stream_turn(self, query: str, chunk_delay: float = 0.0) -> Generator[Dict[str, Any], None, None]:
         """
         Outputs response text at CPU hardware limits without artificial throttling,
@@ -915,6 +944,11 @@ class EnquerantOrchestrator:
         """
         clean_query = query.strip()
         
+        if clean_query.lower() == "!brief":
+            yield {"type": "token", "content": self._write_brief()}
+            yield {"type": "done", "telemetry": self._idle_telemetry()}
+            return
+
         # Intercept system command files (!help, !about, !spfs, etc.)
         if clean_query.startswith("!"):
             cmd_target = clean_query[1:].lower()
