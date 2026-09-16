@@ -3,7 +3,7 @@
 mine_delm_complete.py — DELM Extraction Miner, deterministic edition.
 ================================================================================
 Reads named Wikipedia articles out of the multistream archive and writes sealed
-niichii volumes. No model, no GPU, no generation. Every character written was
+knowledge base volumes. No model, no GPU, no generation. Every character written was
 copied from the source.
 
 WHAT CHANGED AND WHY
@@ -38,8 +38,8 @@ Three record kinds, all from one article:
 
 DOWNLOAD (one time, then offline forever):
     https://dumps.wikimedia.org/enwiki/latest/
-        enwiki-latest-pages-articles-multistream.xml.bz2        (~22 GB)
-        enwiki-latest-pages-articles-multistream-index.txt.bz2  (~250 MB)
+        enwiki-latest-pages-articles-multistream.xml.bz2        (~25 GB)
+        enwiki-latest-pages-articles-multistream-index.txt.bz2  (~270 MB)
 
 RUN:
     python3 mine_delm_complete.py --build-index    (once)
